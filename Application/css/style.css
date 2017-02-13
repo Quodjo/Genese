@@ -1,0 +1,66 @@
+#loginCard {
+	position: absolute;
+	top: 50%;
+	right: 2.5%;
+	padding: 20px;
+	transform: translateY(-50%);
+	resize: vertical;
+	/*background-color: #be1e2d;*/
+}
+
+#loginBTN{
+	width: 35%;
+}
+
+/* label focus color */
+.input-field input[type=text]:focus + label {
+	color: #be1e2d;
+}
+/* label underline focus color */
+.input-field input[type=text]:focus {
+	border-bottom: 1px solid #be1e2d;
+	box-shadow: 0 1px 0 0 #be1e2d;
+}
+/* valid color */
+.input-field input[type=text].valid {
+	border-bottom: 1px solid #9d1e2d;
+	box-shadow: 0 1px 0 0 #9d1e2d;
+}
+
+/* label focus color */
+.input-field input[type=password]:focus + label {
+	color: #be1e2d;
+}
+/* label underline focus color */
+.input-field input[type=password]:focus {
+	border-bottom: 1px solid #be1e2d;
+	box-shadow: 0 1px 0 0 #be1e2d;
+}
+/* valid color */
+.input-field input[type=password].valid {
+	border-bottom: 1px solid #9d1e2d;
+	box-shadow: 0 1px 0 0 #9d1e2d;
+}
+
+/* label focus color */
+.input-field input[type=email]:focus + label {
+	color: #be1e2d;
+}
+/* label underline focus color */
+.input-field input[type=email]:focus {
+	border-bottom: 1px solid #be1e2d;
+	box-shadow: 0 1px 0 0 #be1e2d;
+}
+/* valid color */
+.input-field input[type=email].valid {
+	border-bottom: 1px solid #9d1e2d;
+	box-shadow: 0 1px 0 0 #9d1e2d;
+}
+
+#forgotPasswordModal h4 {
+	padding-top: 2.5%;
+	padding-bottom: 2.5%;
+	color: #ffffff;
+	text-align: center;
+	background-color: #9d1e2d; 
+}
