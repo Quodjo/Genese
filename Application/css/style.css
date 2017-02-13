@@ -1,4 +1,3 @@
-
 #loginCard {
 	position: absolute;
 	top: 50%;
@@ -56,4 +55,12 @@
 .input-field input[type=email].valid {
 	border-bottom: 1px solid #9d1e2d;
 	box-shadow: 0 1px 0 0 #9d1e2d;
+}
+
+#forgotPasswordModal h4 {
+	padding-top: 2.5%;
+	padding-bottom: 2.5%;
+	color: #ffffff;
+	text-align: center;
+	background-color: #9d1e2d; 
 }

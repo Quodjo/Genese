@@ -12,7 +12,7 @@
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <link rel="icon" href="Images/logo.png" type="image/png">
+  <link rel="icon" href="images/logo.png" type="image/png">
 </head>
 <body>
 
@@ -27,7 +27,7 @@
     </div>
 
     <div class="card-content ">
-      <form>
+      <form id ="signupForm" method="POST" action="">
        <div class="row">
         <div class="input-field col s6">
           <input id="first_name" type="text" class="validate" autofocus>
