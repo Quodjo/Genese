@@ -18,26 +18,26 @@
 <!-- <div class = "center" id ="menLog">
   <img src="../images/logo.png"  >
 </div> -->
+<div id="containerRes">
+  <div class="card-header" id ="menLog" style=" margin: 0 auto; width: 15%; height: 15%">
 
-<div class="card-header" id ="menLog" style=" margin: 0 auto; width: 15%; height: 15%">
+    <img class="responsive-img" src="../images/logo.png"> 
+  </div>
 
-  <img class="responsive-img" src="../images/logo.png"> 
-</div>
+  <img class="responsive-img" src="../images/bk.jpg"> 
 
-<img class="responsive-img" src="../images/bk.jpg"> 
+  <div class="card bordered z-depth-2 " style="margin-right: 5%; width:45%; float: left;" id="indexCard" >
 
-<div class="card bordered z-depth-2 " style="margin-right: 5%; width:45%; float: left;" id="indexCard" >
-
-  <div class="card-content ">
-    <form id ="indexPage" method="POST" action="">
-     <div class="row">
-      <div class="input-field col s12">
-        <input id="id_numberIndex" type="text" class="validate" placeholder="ID Number" >
+    <div class="card-content ">
+      <form id ="indexPage" method="POST" action="">
+       <div class="row">
+        <div class="input-field col s12">
+          <input id="id_numberIndex" type="text" class="validate" placeholder="ID Number" >
+        </div>
       </div>
-    </div>
-    <a class="btn-floating btn-large waves-effect waves-light #00ff00 " id = "numberIndexSend"><i class="material-icons right">send</i></a>
-  </form>
-</div>
+      <a class="btn-floating btn-large waves-effect waves-light #00ff00 " id = "numberIndexSend"><i class="material-icons right">send</i></a>
+    </form>
+  </div>
 </div>
 
 <ul id="slide-out" class="side-nav">
@@ -63,7 +63,7 @@
     <h5>Admin Name</h5>
   </div>
 </div>
-
+</div>
 
 <!--Import jQuery before materialize.js-->
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>

@@ -1,3 +1,21 @@
+#container {
+	width:100vw;
+	height: 100vh;
+	overflow: hidden;
+}
+
+#containerRes{
+	width:100vw;
+	height: 100vh;
+	overflow: hidden;
+	border-left: 0;
+	border-right: 0;
+	border-top: 0;
+	border-bottom: 2.5vh;
+	border-style: solid;
+	border-bottom-color: #be1e2d;
+}
+
 #loginCard {
 	position: absolute;
 	top: 50%;
@@ -5,18 +23,17 @@
 	padding: 20px;
 	transform: translateY(-50%);
 	resize: vertical;
-	/*background-color: #be1e2d;*/
 }
 
 #indexCard {
-	position: absolute;
+	position: relative;
 	top: 50%;
 	left: 5%;
 	padding: 20px;
-	transform: translateY(-50%);
+	transform: translateY(-250%);
 	resize: vertical;
 	background-color: #be1e2d;
-	border-radius: 25px; 
+	border-radius: 15px; 
 }
 
 #menuBtn {
@@ -110,8 +127,10 @@
 }
 
 #numberIndexSend{
+	position: absolute;
 	background-color: #00ff00;
-	float: right;
+	transform: translateY(25%);
+	right: 5%;
 }
 
 #adminDP{
