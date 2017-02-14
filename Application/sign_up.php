@@ -68,7 +68,7 @@
     <div class="card-action clearfix">
       <div class="center">
         <div class="col s12 text-p">
-          <a href="login.php" style="font-size: 12px" >Log In!</a>
+        <a href="login.php" style="font-size: 1em" >Log In!</a>
         </div>
       </div>
     </div>

@@ -18,7 +18,7 @@
 <!-- <div class = "center" id ="menLog">
   <img src="../images/logo.png"  >
 </div> -->
-<div id="containerRes">
+<div id="container">
   <div class="card-header" id ="menLog" style=" margin: 0 auto; width: 15%; height: 15%">
 
     <img class="responsive-img" src="../images/logo.png"> 
@@ -43,19 +43,17 @@
 <ul id="slide-out" class="side-nav">
   <li><div class="userView">
     <div class="background">
-      <img src="#">
+      <img src="../images/sidImage.jpeg">
     </div>
-    <a href="#!user"><img class="circle" src="images/yuna.jpg"></a>
-    <a href="#!name"><span class="white-text name">John Doe</span></a>
-    <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
+    <a href="#!user"><img class="circle" src="../images/admin.jpg"></a>
   </div></li>
-  <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
-  <li><a href="#!">Second Link</a></li>
+
+  <li><a href="#!"><i class="material-icons">store</i></a></li>
   <li><div class="divider"></div></li>
-  <li><a class="subheader">Subheader</a></li>
-  <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+  <li><a href="#!"><i class="material-icons">credit_card</i></a></li>
+  <li><a href="#!" id="logOut" class="center"><i class="material-icons">lock</i></a></li>
 </ul>
-<a href="#slide-out" data-activates="slide-out" class="button-collapse show-on-large" ><i class="material-icons" style="font-size: 50px;" id ="menuBtn">menu</i></a>
+<a href="#slide-out" data-activates="slide-out" class="button-collapse show-on-large" ><i class="material-icons" style="font-size: 4rem;" id ="menuBtn">menu</i></a>
 
 
 <div class="row" id="nameDisplay">
@@ -65,17 +63,24 @@
 </div>
 </div>
 
+
 <!--Import jQuery before materialize.js-->
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script type="text/javascript" src="js/materialize.min.js"></script>
+<script type="text/javascript" src="../js/materialize.min.js"></script>
 <script>
+// Initialize collapse button
+$(".button-collapse").sideNav();
+  // Initialize collapsible (uncomment the line below if you use the dropdown variation)
+  // $('.collapsible').collapsible();
   $('.button-collapse').sideNav({
-      menuWidth: 300, // Default is 240
-      closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+      menuWidth: 300, // Default is 300
+      edge: 'right', // Choose the horizontal origin
+      closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+      draggable: true // Choose whether you can drag to open on touch screens
     }
     );
-  $('.collapsible').collapsible();
 
-</script>
+  </script>
+
 </body>
 </html>
