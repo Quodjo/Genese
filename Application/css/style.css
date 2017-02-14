@@ -19,6 +19,31 @@
 	border-radius: 25px; 
 }
 
+#menuBtn {
+	position: fixed;
+	top: 5%;
+	left: 2%;
+	padding: 20px;
+	transform: translateY(-50%);
+	resize: vertical;
+	color: #000000;
+}
+
+#nameDisplay {
+	position: fixed;
+	top: 5%;
+	right: 5%;
+	transform: translateY(-50%);
+
+}
+
+#menLog {
+	margin: 0;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 50%);
+}
+
 #loginBTN{
 	width: 35%;
 }
@@ -87,4 +112,8 @@
 #numberIndexSend{
 	background-color: #00ff00;
 	float: right;
+}
+
+#adminDP{
+
 }

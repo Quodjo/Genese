@@ -16,14 +16,14 @@
 </head>
 <body>
 
-  <img class="responsive-img" src="Images/login_background.jpg"> 
+  <img class="responsive-img" src="images/login_background.jpg"> 
 
 
   <div class="card bordered z-depth-2 " style="margin-right: 5%; width:35%; float: right;" id="loginCard" >
 
     <div class="card-header" style=" margin: 0 auto; width: 40%; height: 40%">
 
-      <img class="responsive-img" src="Images/logo.png"> 
+      <img class="responsive-img" src="images/logo.png"> 
     </div>
 
     <div class="card-content ">
