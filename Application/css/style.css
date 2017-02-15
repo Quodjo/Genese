@@ -40,8 +40,16 @@
 	border-radius: 15px; 
 }
 
-#transCard h3, h4, h5{
+#transCard h4, h5 {
 	color:#ffffff;
+}
+
+#transCard h5 {
+	color:#ffffff;
+}
+
+#hbtn{
+	background-color: #00ff00;
 }
 
 #transCard button{
@@ -106,14 +114,18 @@
 	left: 30%;
 	margin:0 auto;
 	padding: 20px;
-	transform: translateY(-135%);
+	transform: translateY(-155%);
 	resize: vertical;
 	background-color: #be1e2d;
 	border-radius: 15px; 
 }
+#checkCard h2, h4 {
+	display: inline;
+	color:#000000;
+}
 
 #checkCard h3, h4, h5{
-	color:#ffffff;
+	color:#000000;
 }
 
 #loginBTN{

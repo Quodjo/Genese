@@ -42,7 +42,7 @@
          </div>
          <div class="input-field col s12">
            <h4 style="margin-top: 2.5%;">Full Name</h4>
-           <h5 style="margin-top: -3%;">ID Number</h5>
+           <h5 style="margin-top: -1%;">ID Number</h5>
          </div>
        </div>
        <a href = "transsuccess.php" class="btn-floating btn-large halfway-fab " type="submit" name="action" style="width: 35%; font-size: 30px">PROCEED
@@ -60,8 +60,8 @@
 <a href="#slide-out" data-activates="slide-out" class="button-collapse show-on-large" ><i class="material-icons" style="font-size: 3rem;" id ="menuBtn">menu</i></a>
 
 <div class="row valign-wrapper" id="nameDisplay" style="top:6%;">
-      <p style="padding-right: 1em ;">Admin Name</p><img class="circle responsive-img" src="../images/admin.jpg" style="width:8%; height: 8%; border:0.25rem solid #be1e2d;">
-    </div>
+  <p style="padding-right: 1em ;">Admin Name</p><img class="circle responsive-img" src="../images/admin.jpg" style="width:8%; height: 8%; border:0.25rem solid #be1e2d;">
+</div>
 
 
 
