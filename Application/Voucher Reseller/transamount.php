@@ -21,12 +21,12 @@
       <img class="responsive-img" src="../images/logo.png"> 
     </div>
 
-    <img class="responsive-img" src="../images/bk.jpg"> 
+    <img class="responsive-img" src="../images/trans.jpg"> 
 
     <div class="card bordered z-depth-2 " style="margin-right: 5%; width:40%; float: left;" id="transCard" >
 
       <div class="card-content ">
-        <form id ="indexPage" method="POST" action="">
+        <form id ="indexPage" method="POST" action="verifytrans.php">
          <div class="row">
           <a href="hompage.php"><i class="material-icons" style="font-size: 3rem;" id ="backBtn">send</i></a>
           <div class="input-field col s12">

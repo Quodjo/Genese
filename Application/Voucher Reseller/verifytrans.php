@@ -21,29 +21,36 @@
       <img class="responsive-img" src="../images/logo.png"> 
     </div>
 
-    <img class="responsive-img" src="../images/bk.jpg"> 
+    <img class="responsive-img" src="../images/trans.jpg"> 
 
     <div class="card bordered z-depth-2 " style="margin-right: 5%; width:40%; float: left;" id="transCard" >
 
       <div class="card-content ">
         <form id ="indexPage" method="POST" action="">
          <div class="row">
-          <a href="hompage.php"><i class="material-icons" style="font-size: 3rem;" id ="backBtn">send</i></a>
+          <a href="transamount.php"><i class="material-icons" style="font-size: 3rem;" id ="backBtn">send</i></a>
           <div class="input-field col s12">
-           <h3 class="center"><strong>Full Name</strong></h3>
-           <h5 class="center" style="margin-top: -5%;">ID Number</h5>
+           <h5 class="center">You Are About To Transfer</h5>
          </div>
          <div class="input-field col s12">
-         <input id="id_transAmt" type="text" class="validate" placeholder="Amount" >
-        </div>
-        <div class="center">
-          <div class="input-field col s12">
-            <button class="waves-effect waves-light btn-large" type="submit" name="action" style="width: 70%; font-size: 30px" >TRANSFER<i class="material-icons right" style="font-size:2.5rem">send</i></button>
-          </div>
-        </div>
-      </div>
-    </form>
-  </div>
+         <div class="center">
+             <h1 style="margin-top: -6%; font-size: 6rem;"><strong>GHS500</strong></h1>
+           </div>
+         </div>
+         <div class="input-field col s12">
+           <h5 class="center" style="margin-top: -12%;">To The Account:</h5>
+         </div>
+         <div class="input-field col s12">
+           <h4 style="margin-top: 2.5%;">Full Name</h4>
+           <h5 style="margin-top: -3%;">ID Number</h5>
+         </div>
+       </div>
+       <button href = "#" class="btn-floating btn-large halfway-fab " type="submit" name="action" style="width: 35%; font-size: 30px">PROCEED
+       </button>
+     </form>
+   </div>
+ </form>
+</div>
 </div>
 
 <ul id="slide-out" class="side-nav">

@@ -40,7 +40,7 @@
 	border-radius: 15px; 
 }
 
-#transCard h3, h5{
+#transCard h3, h4, h5{
 	color:#ffffff;
 }
 
@@ -49,6 +49,10 @@
 	border-radius: 5em; 
 }
 
+#transCard a{
+	background-color: #00ff00;
+	border-radius: 5em; 
+}
 #menuBtn {
 	position: fixed;
 	top: 6%;
