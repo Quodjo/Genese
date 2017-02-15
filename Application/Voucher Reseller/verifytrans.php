@@ -33,7 +33,7 @@
            <h5 class="center">You Are About To Transfer</h5>
          </div>
          <div class="input-field col s12">
-         <div class="center">
+           <div class="center">
              <h1 style="margin-top: -6%; font-size: 6rem;"><strong>GHS500</strong></h1>
            </div>
          </div>
@@ -45,12 +45,11 @@
            <h5 style="margin-top: -3%;">ID Number</h5>
          </div>
        </div>
-       <button href = "#" class="btn-floating btn-large halfway-fab " type="submit" name="action" style="width: 35%; font-size: 30px">PROCEED
-       </button>
+       <a href = "transsuccess.php" class="btn-floating btn-large halfway-fab " type="submit" name="action" style="width: 35%; font-size: 30px">PROCEED
+       </a>
      </form>
    </div>
- </form>
-</div>
+ </div>
 </div>
 
 <ul id="slide-out" class="side-nav">
@@ -61,8 +60,8 @@
 <a href="#slide-out" data-activates="slide-out" class="button-collapse show-on-large" ><i class="material-icons" style="font-size: 3rem;" id ="menuBtn">menu</i></a>
 
 <div class="row valign-wrapper" id="nameDisplay" style="top:6%;">
-  <p>Admin Name</p><img class="circle responsive-img" src="../images/admin.jpg" style="width:8%; height: 8%; border:0.25rem solid #be1e2d;">
-</div>
+      <p style="padding-right: 1em ;">Admin Name</p><img class="circle responsive-img" src="../images/admin.jpg" style="width:8%; height: 8%; border:0.25rem solid #be1e2d;">
+    </div>
 
 
 

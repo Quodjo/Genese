@@ -94,6 +94,28 @@
 	transform: translate(-50%, 50%);
 }
 
+#checkImage{
+	margin: 0;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 60%);
+}
+
+#checkCard{
+	position: relative;
+	left: 30%;
+	margin:0 auto;
+	padding: 20px;
+	transform: translateY(-135%);
+	resize: vertical;
+	background-color: #be1e2d;
+	border-radius: 15px; 
+}
+
+#checkCard h3, h4, h5{
+	color:#ffffff;
+}
+
 #loginBTN{
 	width: 35%;
 }

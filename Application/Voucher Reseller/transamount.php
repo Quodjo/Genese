@@ -34,9 +34,9 @@
            <h5 class="center" style="margin-top: -5%;">ID Number</h5>
          </div>
          <div class="input-field col s12">
-         <input id="id_transAmt" type="text" class="validate" placeholder="Amount" >
-        </div>
-        <div class="center">
+           <input id="id_transAmt" type="text" class="validate" placeholder="Amount" >
+         </div>
+         <div class="center">
           <div class="input-field col s12">
             <button class="waves-effect waves-light btn-large" type="submit" name="action" style="width: 70%; font-size: 30px" >TRANSFER<i class="material-icons right" style="font-size:2.5rem">send</i></button>
           </div>
@@ -54,9 +54,8 @@
 <a href="#slide-out" data-activates="slide-out" class="button-collapse show-on-large" ><i class="material-icons" style="font-size: 3rem;" id ="menuBtn">menu</i></a>
 
 <div class="row valign-wrapper" id="nameDisplay" style="top:6%;">
-  <p>Admin Name</p><img class="circle responsive-img" src="../images/admin.jpg" style="width:8%; height: 8%; border:0.25rem solid #be1e2d;">
-</div>
-
+      <p style="padding-right: 1em ;">Admin Name</p><img class="circle responsive-img" src="../images/admin.jpg" style="width:8%; height: 8%; border:0.25rem solid #be1e2d;">
+    </div>
 
 
 <!--Import jQuery before materialize.js-->

@@ -45,8 +45,8 @@
   <a href="#slide-out" data-activates="slide-out" class="button-collapse show-on-large" ><i class="material-icons" style="font-size: 3rem;" id ="menuBtn">menu</i></a>
 
   <div class="row valign-wrapper" id="nameDisplay" style="top:6%;">
-    <p>Admin Name</p><img class="circle responsive-img" src="../images/admin.jpg" style="width:8%; height: 8%; border:0.25rem solid #be1e2d;">
-  </div>
+      <p style="padding-right: 1em ;">Admin Name</p><img class="circle responsive-img" src="../images/admin.jpg" style="width:8%; height: 8%; border:0.25rem solid #be1e2d;">
+    </div>
 
 
 
@@ -61,10 +61,10 @@ $(".button-collapse").sideNav();
   $('.button-collapse').sideNav({
       menuWidth: 90, // Default is 300
       edge: 'right', // Choose the horizontal origin
-      closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+     closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
       draggable: true // Choose whether you can drag to open on touch screens
     }
-    );
+    ); 
 
   </script>
 
