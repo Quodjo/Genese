@@ -29,10 +29,29 @@
 	background-color: #be1e2d;
 	border-radius: 15px; 
 }
+#transCard{
+	position: relative;
+	left: 30%;
+	margin:0 auto;
+	padding: 20px;
+	transform: translateY(-135%);
+	resize: vertical;
+	background-color: #be1e2d;
+	border-radius: 15px; 
+}
+
+#transCard h3, h5{
+	color:#ffffff;
+}
+
+#transCard button{
+	background-color: #00ff00;
+	border-radius: 5em; 
+}
 
 #menuBtn {
 	position: fixed;
-	top: 5%;
+	top: 6%;
 	right: 2%;
 	padding: 20px;
 	transform: translateY(-50%);
@@ -40,12 +59,28 @@
 	color: #000000;
 }
 
+#backBtn {
+	position: fixed;
+	top: 1%;
+	left: 2%;
+	padding: 20px;
+	transform: translateY(-50%);
+	resize: vertical;
+	color: #ffffff;
+	-moz-transform: scaleX(-1);
+	-o-transform: scaleX(-1);
+	-webkit-transform: scaleX(-1);
+	transform: scaleX(-1);
+	filter: FlipH;
+	-ms-filter: "FlipH";
+}
+
 #nameDisplay {
 	position: fixed;
 	top: 5%;
 	left: 5%;
 	transform: translateY(-50%);
-
+	font-size: 1.5em;
 }
 
 #menLog {
@@ -120,6 +155,13 @@
 	text-align: center;
 	font-size: 2em;
 	height: 10vh; 
+}
+#id_transAmt{
+	background-color: #ffffff;
+	border-radius: 0.5em;
+	text-align: center;
+	font-size: 2em;
+	height: 12vh; 
 }
 
 #numberIndexSend{
