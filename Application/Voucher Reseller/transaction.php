@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Homepage||Reseller||Food</title>
+  <title>Transactions ||Reseller||Food</title>
 
   <!--Import Google Icon Font-->
   <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -16,25 +16,20 @@
 </head>
 <body>
   <div id="container">
-    <div class="card-header" id ="menLog" style=" margin: 0 auto; width: 15%; height: 15%">
 
+
+    <div class="card-header" id ="menLog" style=" margin: 0 auto; width: 15%; height: 15%">
       <img class="responsive-img" src="../images/logo.png"> 
     </div>
 
-    <img class="responsive-img" src="../images/bk.jpg"> 
-
-    <div class="card bordered z-depth-2 " style="margin-right: 5%; width:45%; float: left;" id="indexCard" >
-
-      <div class="card-content ">
-        <form id ="indexPage" method="POST" action="">
-         <div class="row">
-          <div class="input-field col s12">
-            <input id="id_numberIndex" type="text" class="validate" placeholder="ID Number" >
-          </div>
-        </div>
-        <a href = "transamount.php" class="btn-floating btn-large waves-effect waves-light #00ff00 " id = "numberIndexSend"><i class="material-icons right" style="font-size:2.5rem">send</i></a>
-      </form>
+    <div id="pageTitle" >
+      <h2><strong>TRANSACTIONS</strong></h2>
     </div>
+
+    <div class="fixed-action-btn horizontal">
+     <a href="hompage.php" class="btn-floating btn-large" id = "hbtn">
+      <i class="large material-icons" style="font-size: 3rem;">add</i>
+    </a>
   </div>
 
   <ul id="slide-out" class="side-nav">
@@ -61,10 +56,10 @@ $(".button-collapse").sideNav();
   $('.button-collapse').sideNav({
       menuWidth: 90, // Default is 300
       edge: 'right', // Choose the horizontal origin
-     closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+      closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
       draggable: true // Choose whether you can drag to open on touch screens
     }
-    ); 
+    );
 
   </script>
 

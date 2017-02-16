@@ -47,16 +47,17 @@
    </div>
 
    <div class="fixed-action-btn horizontal">
-   <a href="hompage.php" class="btn-floating btn-large" id = "hbtn">
+     <a href="hompage.php" class="btn-floating btn-large" id = "hbtn">
       <i class="large material-icons" style="font-size: 3rem;">add</i>
     </a>
   </div>
 
   <ul id="slide-out" class="side-nav">
-    <li><a href="#!"><i class="material-icons">store</i></a></li>
+    <li><a href="transaction.php"><i class="material-icons">store</i></a></li>
     <li><a href="hompage.php"><i class="material-icons">credit_card</i></a></li>
     <li><a href="#!" id="logOut" class="center"><i class="material-icons">lock</i></a></li>
   </ul>
+  
   <a href="#slide-out" data-activates="slide-out" class="button-collapse show-on-large" ><i class="material-icons" style="font-size: 3rem;" id ="menuBtn">menu</i></a>
 
   <div class="row valign-wrapper" id="nameDisplay" style="top:6%;">
