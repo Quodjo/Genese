@@ -1,3 +1,15 @@
+#container{
+	width:100vw;
+	height: 100vh;
+	overflow: hidden;
+	border-left: 0;
+	border-right: 0;
+	border-top: 0;
+	border-bottom: 2.5vh;
+	border-style: solid;
+	border-bottom-color: #be1e2d;
+}
+
 #loginCard {
 	position: absolute;
 	top: 50%;
@@ -5,7 +17,122 @@
 	padding: 20px;
 	transform: translateY(-50%);
 	resize: vertical;
-	/*background-color: #be1e2d;*/
+}
+
+#indexCard {
+	position: relative;
+	top: 50%;
+	left: 5%;
+	padding: 20px;
+	transform: translateY(-220%);
+	resize: vertical;
+	background-color: #be1e2d;
+	border-radius: 15px; 
+}
+#transCard{
+	position: relative;
+	left: 30%;
+	margin:0 auto;
+	padding: 20px;
+	transform: translateY(-135%);
+	resize: vertical;
+	background-color: #be1e2d;
+	border-radius: 15px; 
+}
+
+#transCard h4, h5 {
+	color:#ffffff;
+}
+
+#transCard h5 {
+	color:#ffffff;
+}
+
+#hbtn{
+	background-color: #00ff00;
+}
+
+#transCard button{
+	background-color: #00ff00;
+	border-radius: 5em; 
+}
+
+#transCard a{
+	background-color: #00ff00;
+	border-radius: 5em; 
+}
+#menuBtn {
+	position: fixed;
+	top: 6%;
+	right: 2%;
+	padding: 20px;
+	transform: translateY(-50%);
+	resize: vertical;
+	color: #000000;
+}
+
+#backBtn {
+	position: fixed;
+	top: 1%;
+	left: 2%;
+	padding: 20px;
+	transform: translateY(-50%);
+	resize: vertical;
+	color: #ffffff;
+	-moz-transform: scaleX(-1);
+	-o-transform: scaleX(-1);
+	-webkit-transform: scaleX(-1);
+	transform: scaleX(-1);
+	filter: FlipH;
+	-ms-filter: "FlipH";
+}
+
+#nameDisplay {
+	position: fixed;
+	top: 5%;
+	left: 5%;
+	transform: translateY(-50%);
+	font-size: 1.5em;
+}
+
+#menLog {
+	margin: 0;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 50%);
+}
+
+#pageTitle {
+	margin: 0 auto;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 130%);
+}
+
+#checkImage{
+	margin: 0;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 60%);
+}
+
+#checkCard{
+	position: relative;
+	left: 30%;
+	margin:0 auto;
+	padding: 20px;
+	transform: translateY(-155%);
+	resize: vertical;
+	background-color: #be1e2d;
+	border-radius: 15px; 
+}
+#checkCard h2, h4 {
+	display: inline;
+	color:#000000;
+}
+
+#checkCard h3, h4, h5{
+	color:#000000;
 }
 
 #loginBTN{
@@ -62,5 +189,34 @@
 	padding-bottom: 2.5%;
 	color: #ffffff;
 	text-align: center;
-	background-color: #9d1e2d; 
+	background-color: #9d1e2d;
+
+
+}
+
+#id_numberIndex {
+	background-color: #ffffff;
+	border-radius: 2.5em;
+	text-align: center;
+	font-size: 2em;
+	height: 10vh; 
+}
+#id_transAmt{
+	background-color: #ffffff;
+	border-radius: 0.5em;
+	text-align: center;
+	font-size: 2em;
+	height: 12vh; 
+}
+
+#numberIndexSend{
+	position: absolute;
+	background-color: #00ff00;
+	transform: translateY(25%);
+	right: 5%;
+}
+
+#logOut{
+	position: fixed;
+	bottom: 8%;
 }
