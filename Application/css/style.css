@@ -106,8 +106,7 @@
 	margin: 0 auto;
 	position: absolute;
 	left: 50%;
-	transform: translate(-50%, 50%);
-	color: #00ff00;
+	transform: translate(-50%, 130%);
 }
 
 #checkImage{
