@@ -15,13 +15,20 @@
   <link rel="icon" href="../images/logo.png" type="image/png">
 </head>
 <body>
-  <div class="parallax-container" id="page1">
+  <div class="parallax-container" id="searchPage">
 
     <div class="card-header" id ="menLog" style=" margin: 0 auto; width: 10%; height: 10%">
 
       <img class="responsive-img" src="../images/logo.png"> 
     </div>
 
+    <div id ="searchDiv" >
+      <form id ="search" method="POST" action="">
+        <div class="input-field col s12">
+          <input id="idSearch" type="text" class="validate" placeholder="Search Menu" >
+        </div>
+      </form>
+    </div>
     <div class="parallax"><img src="../images/trans.jpg"></div>
 
     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -30,26 +37,31 @@
     S1920-567.883,1920-567.883v-243.402H0V-625.658z"/>
     <path fill="#BE202E" d="M-24.522,79.327c0,0,203.319-103.153,600.456-67.3s534.058,91.088,760.015,73.162S1946,0,1946,0v272.715
     H-26.043L-24.522,79.327z"/>
+
   </svg>
 </div>
-<div class="section white" id="page2">
+<!-- <div class="section white">
+    <div class="row container">
+      <h2 class="header">Parallax</h2>
+      <p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling.</p>
+    </div>
+  </div> -->
+  <div class="section white" id="menuPage" style="height: 100vh; background-color: #00ff00;" >
 
-  <div class="row container" >
-<h2 class="center">Menu</h2>
-    <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-    width="100vw" height="auto" viewBox="0 0 1920 245.228" enable-background="new 0 0 1920 245.228" xml:space="preserve">
-    <path fill="#BE202E" d="M-15,186.351c0,0,113.108,81.371,505.867,37.66s617.45-19.3,840.917,2.555S1935,245.039,1935,245.039V-2.285
-    H-15V186.351z"/>
-    <path display="none" fill="#BE202E" d="M-24.522,79.327c0,0,203.319-103.153,600.456-67.3s534.058,91.088,760.015,73.162
-    S1946,0,1946,0v272.715H-26.043L-24.522,79.327z"/>
-  </svg>
+    <div class="row container" >
 
-  
-  <p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling.</p>
+      <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+      width="100vw" height="auto" viewBox="0 0 1920 245.228" enable-background="new 0 0 1920 245.228" xml:space="preserve">
+      <path fill="#BE202E" d="M-15,186.351c0,0,113.108,81.371,505.867,37.66s617.45-19.3,840.917,2.555S1935,245.039,1935,245.039V-2.285
+      H-15V186.351z"/></path>
+      <path display="none" fill="#BE202E" d="M-24.522,79.327c0,0,203.319-103.153,600.456-67.3s534.058,91.088,760.015,73.162
+      S1946,0,1946,0v272.715H-26.043L-24.522,79.327z"/></path>
+      <g>
+        <text text-anchor="middle" x="50%" y="50%" font-size="4em" fill="#f2f2f2">Menu</text>
+      </g>
+    </svg>
+  </div>
 </div>
-</div>
-<div class="parallax-container">
-
 </div>
 
 
@@ -61,10 +73,10 @@
   <li><a href="#!" id="logOut" class="center"><i class="material-icons">lock</i></a></li>
 </ul>
 
-<a href="#slide-out" data-activates="slide-out" class="button-collapse show-on-large" ><i class="material-icons" style="font-size: 3rem; color:#d3d3d3;" id ="menuBtn">menu</i></a>
+<a href="#slide-out" data-activates="slide-out" class="button-collapse show-on-large" ><i class="material-icons" style="font-size: 3rem; color:#000000;" id ="menuBtn">menu</i></a>
 
 <div class="row valign-wrapper" id="nameDisplay" style="top:6%;">
-  <p style="padding-right: 1em ; color:#d3d3d3;">Admin Name</p><img class="circle responsive-img" src="../images/admin.jpg" style="width:8%; height: 8%; border:0.25rem solid #be1e2d;">
+  <p style="padding-right: 1em ; color:#000000;">Admin Name</p><img class="circle responsive-img" src="../images/admin.jpg" style="width:8%; height: 8%; border:0.25rem solid #be1e2d;">
 </div>
 
 
