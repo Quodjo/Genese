@@ -61,6 +61,7 @@
 	background-color: #00ff00;
 	border-radius: 5em; 
 }
+
 #menuBtn {
 	position: fixed;
 	top: 6%;
@@ -219,4 +220,53 @@
 #logOut{
 	position: fixed;
 	bottom: 8%;
+}
+
+.parallax-container {
+	height: 100vh;
+}
+
+#searchPage #menuPage{
+	position: relative;
+}
+
+#Layer_1{
+	position: absolute;
+	bottom: -40%;
+}
+
+#Layer_2{
+	position: absolute;
+	left:0%;
+	top: 61.5%;
+}
+
+#menuPage{
+	border-left: 0;
+	border-right: 0;
+	border-top: 0;
+	border-bottom: 2.5vh;
+	border-style: solid;
+	border-bottom-color: #be1e2d;
+}
+
+#idSearch {
+	background-color: #ffffff;
+	border-radius: 0.5em;
+	border-style: solid;
+    border-width: 0.1em;
+	border-color: #be1e2d;
+	text-align: center;
+	font-size: 2em;
+	height: 10vh;
+	
+}
+
+#searchDiv {
+	margin: 0;
+	position: relative;
+	left: 50%;
+	top: 30%;
+	width: 60%;
+	transform: translate(-50%, 50%);
 }
