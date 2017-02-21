@@ -15,57 +15,62 @@
   <link rel="icon" href="../images/logo.png" type="image/png">
 </head>
 <body>
-  <div class="parallax-container" id="searchPage">
+  <div id = "container">
+   <!--  <div class="parallax-container" >
+      <div class="card-header" id ="menLog" style=" margin: 0 auto; width: 10%; height: 10%">
+        <img class="responsive-img" src="../images/logo.png"> 
+      </div>
+      <div id ="searchDiv" >
+        <form id ="search" method="POST" action="">
+          <div class="input-field col s12">
+            <input id="idSearch" type="text" class="validate" placeholder="Search Menu" autofocus>
+          </div>
+        </form>
+      </div>
+      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+      width="100vw" height="95vh" viewBox="0 0 1920 268.715" enable-background="new 0 0 1920 268.715" xml:space="preserve">
+      <path display="none" fill="#BE202E" d="M0-625.658c0,0,111.434,80.104,498.081,37.074c386.647-43.03,607.971-19,827.96,2.515
+      S1920-567.883,1920-567.883v-243.402H0V-625.658z"/>
+      <path fill="#BE202E" d="M-24.522,79.327c0,0,203.319-103.153,600.456-67.3s534.058,91.088,760.015,73.162S1946,0,1946,0v272.715
+      H-26.043L-24.522,79.327z"/>
+      <div class="parallax"><img src="../images/trans.jpg"></div>
 
-    <div class="card-header" id ="menLog" style=" margin: 0 auto; width: 10%; height: 10%">
+    </div> -->
 
-      <img class="responsive-img" src="../images/logo.png"> 
+    <div class="section white">
+      <div class="row container">
+        <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        width="100vw" height="auto" viewBox="0 0 1920 245.228" enable-background="new 0 0 1920 245.228" xml:space="preserve">
+        <path fill="#BE202E" d="M-15,186.351c0,0,113.108,81.371,505.867,37.66s617.45-19.3,840.917,2.555S1935,245.039,1935,245.039V-2.285
+        H-15V186.351z"/></path>
+        <path display="none" fill="#BE202E" d="M-24.522,79.327c0,0,203.319-103.153,600.456-67.3s534.058,91.088,760.015,73.162
+        S1946,0,1946,0v272.715H-26.043L-24.522,79.327z"/></path>
+        <g>
+          <text text-anchor="middle" x="50%" y="50%" font-size="4em" fill="#f2f2f2">Menu</text>
+        </g>
+      </svg>
     </div>
+  </div>
 
-    <div id ="searchDiv" >
-      <form id ="search" method="POST" action="">
-        <div class="input-field col s12">
-          <input id="idSearch" type="text" class="validate" placeholder="Search Menu" >
-        </div>
-      </form>
-    </div>
-    <div class="parallax"><img src="../images/trans.jpg"></div>
+  <div class="section white">
 
-    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-    width="100vw" height="auto" viewBox="0 0 1920 268.715" enable-background="new 0 0 1920 268.715" xml:space="preserve">
-    <path display="none" fill="#BE202E" d="M0-625.658c0,0,111.434,80.104,498.081,37.074c386.647-43.03,607.971-19,827.96,2.515
-    S1920-567.883,1920-567.883v-243.402H0V-625.658z"/>
-    <path fill="#BE202E" d="M-24.522,79.327c0,0,203.319-103.153,600.456-67.3s534.058,91.088,760.015,73.162S1946,0,1946,0v272.715
-    H-26.043L-24.522,79.327z"/>
+    <!-- <?php
 
-  </svg>
-</div>
-<!-- <div class="section white">
-    <div class="row container">
-      <h2 class="header">Parallax</h2>
-      <p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling.</p>
-    </div>
-  </div> -->
-  <div class="section white" id="menuPage" style="height: 100vh; background-color: #00ff00;" >
+    $dataInDB = 36;
+    $row = $dataInDB/6;
+    for ($x = 0; $x < $row; $x++)
+    {
+      echo '<div class="row">';
+        for ($i=0; $i < 6; $i++){
+          echo '<div class="col s12 m4 l2 center"><p>s12 m4</p></div>';
+        }
+      echo '</div>';
+    }
+    ?> -->
 
-    <div class="row container" >
-
-      <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-      width="100vw" height="auto" viewBox="0 0 1920 245.228" enable-background="new 0 0 1920 245.228" xml:space="preserve">
-      <path fill="#BE202E" d="M-15,186.351c0,0,113.108,81.371,505.867,37.66s617.45-19.3,840.917,2.555S1935,245.039,1935,245.039V-2.285
-      H-15V186.351z"/></path>
-      <path display="none" fill="#BE202E" d="M-24.522,79.327c0,0,203.319-103.153,600.456-67.3s534.058,91.088,760.015,73.162
-      S1946,0,1946,0v272.715H-26.043L-24.522,79.327z"/></path>
-      <g>
-        <text text-anchor="middle" x="50%" y="50%" font-size="4em" fill="#f2f2f2">Menu</text>
-      </g>
-    </svg>
   </div>
 </div>
 </div>
-
-
-
 
 <ul id="slide-out" class="side-nav">
   <li><a href="transaction.php"><i class="material-icons">store</i></a></li>
