@@ -17,12 +17,12 @@
 <body>
 
   <div id="container">
-    <img class="responsive-img" src="images/login_background.jpg"> 
+    <img class="responsive-img" src="images/bk1.jpg"> 
 
 
     <div class="card bordered z-depth-2 " style="margin-right: 5%; width:35%; float: right;" id="loginCard" >
 
-      <div class="card-header" style=" margin: 0 auto; width: 40%; height: 40%">
+      <div class="card-header" style=" margin: 0 auto; width: 30%; height: 30%">
 
         <img class="responsive-img" src="images/logo.png"> 
       </div>
