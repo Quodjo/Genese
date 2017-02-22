@@ -16,7 +16,7 @@
 </head>
 <body>
   <div id = "container">
-   <!--  <div class="parallax-container" >
+    <div class="parallax-container" >
       <div class="card-header" id ="menLog" style=" margin: 0 auto; width: 10%; height: 10%">
         <img class="responsive-img" src="../images/logo.png"> 
       </div>
@@ -33,44 +33,38 @@
       S1920-567.883,1920-567.883v-243.402H0V-625.658z"/>
       <path fill="#BE202E" d="M-24.522,79.327c0,0,203.319-103.153,600.456-67.3s534.058,91.088,760.015,73.162S1946,0,1946,0v272.715
       H-26.043L-24.522,79.327z"/>
-      <div class="parallax"><img src="../images/trans.jpg"></div>
+    </svg>
+    <div class="parallax"><img src="../images/trans.jpg"></div>
 
-    </div> -->
-
-    <div class="section white">
-      <div class="row container">
-        <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-        width="100vw" height="auto" viewBox="0 0 1920 245.228" enable-background="new 0 0 1920 245.228" xml:space="preserve">
-        <path fill="#BE202E" d="M-15,186.351c0,0,113.108,81.371,505.867,37.66s617.45-19.3,840.917,2.555S1935,245.039,1935,245.039V-2.285
-        H-15V186.351z"/></path>
-        <path display="none" fill="#BE202E" d="M-24.522,79.327c0,0,203.319-103.153,600.456-67.3s534.058,91.088,760.015,73.162
-        S1946,0,1946,0v272.715H-26.043L-24.522,79.327z"/></path>
-        <g>
-          <text text-anchor="middle" x="50%" y="50%" font-size="4em" fill="#f2f2f2">Menu</text>
-        </g>
-      </svg>
-    </div>
   </div>
 
+
+
   <div class="section white">
+    <?php
 
-    <!-- <?php
-
-    $dataInDB = 36;
+    $dataInDB = 12;
     $row = $dataInDB/6;
     for ($x = 0; $x < $row; $x++)
     {
       echo '<div class="row">';
-        for ($i=0; $i < 6; $i++){
-          echo '<div class="col s12 m4 l2 center"><p>s12 m4</p></div>';
-        }
-      echo '</div>';
-    }
-    ?> -->
+      for ($i=0; $i < 6; $i++){
+        echo '<div class="col s12 m4 l2 center"><div class="card">
+        <div class="card-image">
+          <img src="../images/foodimage.jpg">
+          <span class="card-title">Food</span>
+          <a class="btn-floating large halfway-fab waves-effect waves-light red">10.00</a>
+        </div>
+        
+      </div>
+    </div>';
+  }
+  echo '</div>';
+}
+?>
+</div>
+</div>
 
-  </div>
-</div>
-</div>
 
 <ul id="slide-out" class="side-nav">
   <li><a href="transaction.php"><i class="material-icons">store</i></a></li>
