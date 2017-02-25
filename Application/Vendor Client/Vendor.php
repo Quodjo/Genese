@@ -17,13 +17,15 @@
 
 </head>
 
-<body>
+
+<body style="background-image:url(../images/trans.jpg)">
 <!--Container-->
 <div id=container>
 <!--First Row-->
 	<div class="row" style="border:1px solid red">
 		<div class="col l0" style="border:1px solid green">
-			<ul id="slide-out" class="side-nav">
+			
+<ul id="slide-out" class="side-nav">
 		      <li><div class="userView">
 		        <div class="background">
 		          <div class="card-panel" style="background: rgba(100, 0, 0, 0.7);height:100%"></div>
@@ -43,7 +45,6 @@
 		    <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons" style="font-size: 3rem;color:black">menu</i></a>
 		</div>
 
-
 		<div class="col l3" style="border:1px solid green">
 			<img style=" margin: 0 auto; width: 30%; height: 30%" class="responsive-img" src="../images/logo.png"> 
 		</div>
@@ -57,28 +58,63 @@
 		</div>
 
 	</div>
-<!--Second row-->
-	<div class="row" style="border:1px solid red">
 
-		<div class="col l8" style="border:1px solid green">
-			Order Buttons go here
+<!--Second row-->
+	<div class="row" style="height:4%"></div>
+
+<!--Thirdrow-->
+	<div class="row" style="border:1px solid red">
+<!-- First Column -->
+		<div class="col l9" style="border:1px solid green;height:680px">
+			
+			<div class="row" style="height:25%;border:1px solid orange"></div>
+
+			<div class="row" style="height:80%;border:1px solid orange">
+				<div class="center-align" style="padding-top: 10px">
+
+				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);">Order #1</button>
+				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);">Order #2</button>
+				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);">Order #3</button>
+				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);">Order #4</button>
+				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);">Order #5</button>
+				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);">Order #6</button>
+				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);">Order #7</button>
+				</div>
+			        
+			     <div class="center-align" style="padding-top: 10px">
+
+			     <button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);">Order #8</button>
+			     <button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);">Order #9</button>
+			     <button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);">Order #10</button>
+			     <button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);">Order #11</button>
+			     <button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);">Order #12</button>
+			     <button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);">Order #13</button>
+			     <button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);">Order #14</button>
+
+			      </div>
+			          
+
+				
+
+			</div>
+
+			
+
 		</div>
 
 
-		<div align=center class="col l4" style="border:1px solid yellow; font-family: ‘Courier New’, Courier, monospace;" > 
+		<div align=center class="col l3" style="border:1px solid yellow; font-family: ‘Courier New’, Courier, monospace;width:25%" > 
 			<div class="card grey darken-1" style="height:40px"><span style="color:white" class="card-title" >IN KITCHEN</span>
 			
 			</div>
 
 
-				<div class="card blue-grey darken-1">
+				<div class="card blue-grey darken-1" style="height:600px">
 	            <div class="card-content white-text">
 	              <span class="card-title"></span>
 	              <p>Processed orders go here<br><br>
+	              </p>
 
-	              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-	              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-	              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 	            </div>
 	           
 	            
@@ -99,7 +135,6 @@
 
  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script type="text/javascript" src="../js/materialize.min.js"></script>
-
   <script>
 // Initialize collapse button
 $(".button-collapse").sideNav();
@@ -130,6 +165,16 @@ $(".button-collapse").sideNav();
     ); 
 
   </script>
+
+ <script>
+$(document).ready(function() {
+  $("#order2, #order1").on('click', function() {
+    $(this).removeClass("waves-effect waves-light submit").addClass('disabled');
+  });
+});
+</script>
+
+
 </div>
 
 	
