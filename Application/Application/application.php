@@ -15,7 +15,7 @@
   <link rel="icon" href="../images/logo.png" type="image/png">
 </head>
 <body>
-  <div id = "container">
+  <div >
     <div class="parallax-container" >
       <div class="card-header" id ="menLog" style=" margin: 0 auto; width: 10%; height: 10%">
         <img class="responsive-img" src="../images/logo.png"> 
@@ -36,33 +36,37 @@
     </svg>
     <div class="parallax"><img src="../images/trans.jpg"></div>
 
+  </div id = "#headerPain">
+  <div>
+  <div class="card-header" id ="menLog" style="margin: 0 auto; color:#f2f2f2;">
+    <h3>Menu</h3>
   </div>
+  <img style="" src="../images/header.png"> 
+</div>
+<div class="section white">
 
+ <?php
 
+ $dataInDB = 6;
+ $row = $dataInDB/6;
+ for ($x = 0; $x < $row; $x++)
+ {
+  echo '<div class="row">';
+  for ($i=0; $i < 6; $i++){
+    echo '<div class="col s12 m4 l2 center"><div class="card">
+    <div class="card-image">
+      <img src="../images/foodimage.jpg">
+      <span class="card-title">Food</span>
+      <a class="btn-floating large halfway-fab waves-effect waves-light red">10.00</a>
+    </div>
 
-  <div class="section white">
-    <?php
-
-    $dataInDB = 12;
-    $row = $dataInDB/6;
-    for ($x = 0; $x < $row; $x++)
-    {
-      echo '<div class="row">';
-      for ($i=0; $i < 6; $i++){
-        echo '<div class="col s12 m4 l2 center"><div class="card">
-        <div class="card-image">
-          <img src="../images/foodimage.jpg">
-          <span class="card-title">Food</span>
-          <a class="btn-floating large halfway-fab waves-effect waves-light red">10.00</a>
-        </div>
-        
-      </div>
-    </div>';
-  }
-  echo '</div>';
+  </div>
+</div>';
+}
+echo '</div>';
 }
 ?>
-</div>
+</div> 
 </div>
 
 
@@ -72,10 +76,10 @@
   <li><a href="#!" id="logOut" class="center"><i class="material-icons">lock</i></a></li>
 </ul>
 
-<a href="#slide-out" data-activates="slide-out" class="button-collapse show-on-large" ><i class="material-icons" style="font-size: 3rem; color:#000000;" id ="menuBtn">menu</i></a>
+<a href="#slide-out" data-activates="slide-out" class="button-collapse show-on-large" ><i class="material-icons" style="font-size: 3rem; color:#f2f2f2;" id ="menuBtn">menu</i></a>
 
 <div class="row valign-wrapper" id="nameDisplay" style="top:6%;">
-  <p style="padding-right: 1em ; color:#000000;">Admin Name</p><img class="circle responsive-img" src="../images/admin.jpg" style="width:8%; height: 8%; border:0.25rem solid #be1e2d;">
+  <p style="padding-right: 1em ; color:#f2f2f2;">Admin Name</p><img class="circle responsive-img" src="../images/admin.jpg" style="width:8%; height: 8%; border:0.25rem solid #be1e2d;">
 </div>
 
 
