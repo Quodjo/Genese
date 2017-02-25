@@ -60,16 +60,16 @@
 	</div>
 
 <!--Second row-->
-	<div class="row" style="height:4%"></div>
+
 
 <!--Thirdrow-->
 	<div class="row" style="border:1px solid red">
 <!-- First Column -->
 		<div class="col l9" style="border:1px solid green;height:680px">
 			
-			<div class="row" style="height:25%;border:1px solid orange"></div>
+			
 
-			<div class="row" style="height:80%;border:1px solid orange">
+			<div class="row" style="height:80%;border:1px solid orange;padding-top: 15%">
 				<div class="center-align" style="padding-top: 10px">
 
 				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);">Order #1</button>
@@ -78,12 +78,11 @@
 				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);">Order #4</button>
 				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);">Order #5</button>
 				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);">Order #6</button>
-				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);">Order #7</button>
 				</div>
 			        
 			     <div class="center-align" style="padding-top: 10px">
 
-			     <button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);">Order #8</button>
+
 			     <button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);">Order #9</button>
 			     <button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);">Order #10</button>
 			     <button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);">Order #11</button>
