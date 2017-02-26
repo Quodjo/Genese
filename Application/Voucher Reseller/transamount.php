@@ -28,41 +28,41 @@
       <div class="card-content ">
         <form id ="indexPage" method="POST" action="verifytrans.php">
          <div class="row">
-          <a href="hompage.php"><i class="material-icons" style="font-size: 3rem;" id ="backBtn">send</i></a>
-          <div class="input-field col s12">
-           <h3 class="center"><strong>Full Name</strong></h3>
-           <h5 class="center" style="margin-top: -5%;">ID Number</h5>
-         </div>
-         <div class="input-field col s12">
-           <input id="id_transAmt" type="text" class="validate" placeholder="Amount" >
-         </div>
-         <div class="center">
-          <div class="input-field col s12">
-            <button class="waves-effect waves-light btn-large" type="submit" name="action" style="width: 70%; font-size: 30px" >TRANSFER<i class="material-icons right" style="font-size:2.5rem">send</i></button>
+           <a href="hompage.php"><i class="material-icons" style="font-size: 3rem;" id ="backBtn">send</i></a>
+           <div class="input-field col s12">
+             <h3 class="center"><strong>Full Name</strong></h3>
+             <h5 class="center" style="margin-top: -5%;">ID Number</h5>
+           </div>
+           <div class="input-field col s12">
+             <input id="id_transAmt" type="text" class="validate" placeholder="Amount" >
+           </div>
+           <div class="center">
+            <div class="input-field col s12">
+              <button class="waves-effect waves-light btn-large" type="submit" name="action" style="width: 70%; font-size: 30px" >TRANSFER<i class="material-icons right" style="font-size:2.5rem">send</i></button>
+            </div>
           </div>
         </div>
-      </div>
-    </form>
+      </form>
+    </div>
   </div>
-</div>
 
-<ul id="slide-out" class="side-nav">
-  <li><a href="transaction.php"><i class="material-icons">store</i></a></li>
-  <li><a href="hompage.php"><i class="material-icons">credit_card</i></a></li>
-  <li><a href="#!" id="logOut" class="center"><i class="material-icons">lock</i></a></li>
-</ul>
+  <ul id="slide-out" class="side-nav">
+    <li><a href="transaction.php"><i class="material-icons">store</i></a></li>
+    <li><a href="hompage.php"><i class="material-icons">credit_card</i></a></li>
+    <li><a href="#!" id="logOut" class="center"><i class="material-icons">lock</i></a></li>
+  </ul>
 
-<a href="#slide-out" data-activates="slide-out" class="button-collapse show-on-large" ><i class="material-icons" style="font-size: 3rem;" id ="menuBtn">menu</i></a>
+  <a href="#slide-out" data-activates="slide-out" class="button-collapse show-on-large" ><i class="material-icons" style="font-size: 3rem;" id ="menuBtn">menu</i></a>
 
-<div class="row valign-wrapper" id="nameDisplay" style="top:6%;">
-  <p style="padding-right: 1em ;">Admin Name</p><img class="circle responsive-img" src="../images/admin.jpg" style="width:8%; height: 8%; border:0.25rem solid #be1e2d;">
-</div>
+  <div class="row valign-wrapper" id="nameDisplay" style="top:6%;">
+    <p style="padding-right: 1em ;">Admin Name</p><img class="circle responsive-img" src="../images/admin.jpg" style="width:8%; height: 8%; border:0.25rem solid #be1e2d;">
+  </div>
 
 
-<!--Import jQuery before materialize.js-->
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script type="text/javascript" src="../js/materialize.min.js"></script>
-<script>
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="../js/materialize.min.js"></script>
+  <script>
 // Initialize collapse button
 $(".button-collapse").sideNav();
   // Initialize collapsible (uncomment the line below if you use the dropdown variation)
