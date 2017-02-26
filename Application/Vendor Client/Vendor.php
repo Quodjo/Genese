@@ -65,14 +65,28 @@
 <!-- First Column -->
 		<div class="col l9" style="height:680px">
 
-
-				<div id="modal1" class="modal">
+<!--modal to create the pop ups-->
+				<div align=center id="modal1" class="modal">
 					<div class="modal-content">
-						<h4>Modal Header</h4>
-						<p>A bunch of text</p>
+						<h4 style="font-size:350%;"><  #BB-ORDER NO.</h4><br>
+            <div class="divider red darken-4" style="height:10px"></div>
+						<p1 style ="font-size:170%">20202018:John Doe </p1><br>
+            <div class="divider"></div>
+
+            <div class="divider"></div>
+            <div class="grey">
+            <p2 style ="font-size:180%">Jollof + Fish  1/2P</p2><br><br>
+          </div>
+              <div class="divider grey lighten-5" style="height:8px" ></div>
+            <div class="grey">
+            <p3>Khebab Sausage style  2</p3><br>
+            <p4>Vita Milk  2</p4><br>
+            <p5>Bottled Water  2</p5><br>
+            </div>
 					</div>
 					<div class="modal-footer">
-						<a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+						<a href="#!" class=" modal-action modal-close orange waves-effect waves- btn-flat ">Add to Kitchen</a>
+
 					</div>
 				</div>
 
@@ -157,9 +171,9 @@ $(".button-collapse").sideNav();
      closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
       draggable: true // Choose whether you can drag to open on touch screens
   }
-  ); 
+  );
 
-  
+
 // Initialize collapse button
 $(".button-collapse").sideNav();
   // Initialize collapsible (uncomment the line below if you use the dropdown variation)
@@ -170,9 +184,9 @@ $(".button-collapse").sideNav();
      closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
       draggable: true // Choose whether you can drag to open on touch screens
   }
-  ); 
+  );
 
-  
+
   $(document).ready(function() {
   	$("#order2, #order1").on('click', function() {
   		$(this).removeClass("waves-effect waves-light submit").addClass('disabled');
@@ -188,10 +202,10 @@ $(".button-collapse").sideNav();
       startingTop: '4%', // Starting top style attribute
       endingTop: '10%', // Ending top style attribute
       ready: function(modal, trigger) { // Callback for Modal open. Modal and trigger parameters available.
-      	alert("Ready");
-      	console.log(modal, trigger);
+      	//alert("MOVES TO KITCHEN");
+      	//console.log(modal, trigger);
       },
-      complete: function() { alert('Closed'); } // Callback for Modal close
+      complete: function() { alert('ORDER MOVES TO KITCHEN'); } // Callback for Modal close
   }
   );
 
