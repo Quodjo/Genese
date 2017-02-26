@@ -99,21 +99,21 @@
 </div>
 <div class="section white">
 
-<div class = "pagebtn">
-      <ul class="pagination">
-    <li class="disabled"><a href="#!"></a></li>
-    <li class="active"><a href="#!">Meal</a></li>
-    <li class="waves-effect"><a href="#!">Soda</a></li>
-    <li class="waves-effect"><a href="#!">Protein</a></li>
-    <li class="waves-effect"><a href="#!">Pastry</a></li>
-    <li class="waves-effect"><a href="#!"></a></li>
+
+<div class="row">
+    <div class="col s12">
+    <div class = "pagebtn">
+      <ul class="pagination tabs">
+    <li class="tab col s3"><a href="#test1">Meal</a></li>
+        <li class="tab col s3"><a class="active" href="#test2">Soda</a></li>
+        <li class="tab col s3"><a href="#test3">Protein</a></li>
+        <li class="tab col s3"><a href="#test4">Pastry</a></li>
   </ul>
 </div>
-
-
-
-
- <?php
+      
+    </div>
+    <div id="test1" class="col s12">
+      <?php
 
  $dataInDB = 36;
  $row = $dataInDB/6;
@@ -134,6 +134,89 @@
 echo '</div>';
 }
 ?>
+
+
+    </div>
+
+    <div id="test2" class="col s12">
+      <?php
+
+ $dataInDB = 36;
+ $row = $dataInDB/6;
+ for ($x = 0; $x < $row; $x++)
+ {
+  echo '<div class="row">';
+  for ($i=0; $i < 6; $i++){
+    echo '<div class="col s12 m4 l2 center"><div class="card">
+    <div class="card-image foodSel">
+      <a href="#modal1"><a href="#modal3"><img src="../images/soda.png"></a>
+      <span class="card-title">Food</span>
+      <a class="btn-floating large halfway-fab waves-effect waves-light red">10.00</a>
+    </div>
+
+  </div>
+</div>';
+}
+echo '</div>';
+}
+?>
+
+    </div>
+
+    <div id="test3" class="col s12">
+      <?php
+
+ $dataInDB = 36;
+ $row = $dataInDB/6;
+ for ($x = 0; $x < $row; $x++)
+ {
+  echo '<div class="row">';
+  for ($i=0; $i < 6; $i++){
+    echo '<div class="col s12 m4 l2 center"><div class="card">
+    <div class="card-image foodSel">
+      <a href="#modal1"><a href="#modal3"><img src="../images/foodimage.jpg"></a>
+      <span class="card-title">Food</span>
+      <a class="btn-floating large halfway-fab waves-effect waves-light red">10.00</a>
+    </div>
+
+  </div>
+</div>';
+}
+echo '</div>';
+}
+?>
+    </div>
+
+    <div id="test4" class="col s12">
+      <?php
+
+ $dataInDB = 36;
+ $row = $dataInDB/6;
+ for ($x = 0; $x < $row; $x++)
+ {
+  echo '<div class="row">';
+  for ($i=0; $i < 6; $i++){
+    echo '<div class="col s12 m4 l2 center"><div class="card">
+    <div class="card-image foodSel">
+      <a href="#modal1"><a href="#modal3"><img src="../images/foodimage.jpg"></a>
+      <span class="card-title">Food</span>
+      <a class="btn-floating large halfway-fab waves-effect waves-light red">10.00</a>
+    </div>
+
+  </div>
+</div>';
+}
+echo '</div>';
+}
+?>
+
+    </div>
+  </div>
+
+
+
+
+ 
 </div> 
 </div>
 
