@@ -130,9 +130,79 @@
 		</div>		
 				
 <!--Fourth row-->
-		<div class="row" style="border:1px solid orange;padding-top: 2%">
+		<div class="row" style="padding-top: 2%">
 
-		<div id="test1" class="col s12">Test 1</div>
+		<div id="test1" class="col s12">
+
+		<div class="center-align" style="padding-top: 10px">
+
+				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:320px;background-color:rgba(110,0,0,0.7);" data-target="modal1" >
+				 <img src="../images/jollof.jpg" style="width:100%;height:100%; margin-left: -30%"> 
+
+				Order #1</button>
+				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:320px;background-color:rgba(110,0,0,0.7);" data-target="modal1" >
+				<!-- <img src="../images/jollof.jpg" style="width:180%;height:80%; margin-left: -30%"> -->
+
+				Order #1</button>
+				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:320px;background-color:rgba(110,0,0,0.7);" data-target="modal1" >
+				<!-- <img src="../images/jollof.jpg" style="width:180%;height:80%; margin-left: -30%"> -->
+
+				Order #1</button>
+
+				
+		</div>
+
+		<div class="center-align" style="padding-top: 10px">
+
+				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:320px;background-color:rgba(110,0,0,0.7);" data-target="modal1" >
+				<!-- <img src="../images/jollof.jpg" style="width:180%;height:80%; margin-left: -30%"> -->
+
+				Order #1</button>
+				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:320px;background-color:rgba(110,0,0,0.7);" data-target="modal1" >
+				<!-- <img src="../images/jollof.jpg" style="width:180%;height:80%; margin-left: -30%"> -->
+
+				Order #1</button>
+				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:320px;background-color:rgba(110,0,0,0.7);" data-target="modal1" >
+				<!-- <img src="../images/jollof.jpg" style="width:180%;height:80%; margin-left: -30%"> -->
+
+				Order #1</button>
+		</div>
+
+		<div class="center-align" style="padding-top: 10px">
+
+				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:320px;background-color:rgba(110,0,0,0.7);" data-target="modal1" >
+				<!-- <img src="../images/jollof.jpg" style="width:180%;height:80%; margin-left: -30%"> -->
+
+				Order #1</button>
+				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:320px;background-color:rgba(110,0,0,0.7);" data-target="modal1" >
+				<!-- <img src="../images/jollof.jpg" style="width:180%;height:80%; margin-left: -30%"> -->
+
+				Order #1</button>
+				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:320px;background-color:rgba(110,0,0,0.7);" data-target="modal1" >
+				<!-- <img src="../images/jollof.jpg" style="width:180%;height:80%; margin-left: -30%"> -->
+
+				Order #1</button>
+		</div>
+
+		<div class="center-align" style="padding-top: 10px">
+
+				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:320px;background-color:rgba(110,0,0,0.7);" data-target="modal1" >
+				<!-- <img src="../images/jollof.jpg" style="width:180%;height:80%; margin-left: -30%"> -->
+
+				Order #1</button>
+				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:320px;background-color:rgba(110,0,0,0.7);" data-target="modal1" >
+				<!-- <img src="../images/jollof.jpg" style="width:180%;height:80%; margin-left: -30%"> -->
+
+				Order #1</button>
+				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:320px;background-color:rgba(110,0,0,0.7);" data-target="modal1" >
+				<!-- <img src="../images/jollof.jpg" style="width:180%;height:80%; margin-left: -30%"> -->
+
+				Order #1</button>
+		</div>
+
+
+
+		</div>
 		<div id="test2" class="col s12">Test 2</div>
 		<div id="test3" class="col s12">Test 3</div>
 							    
