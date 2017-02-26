@@ -11,14 +11,14 @@
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <link rel="icon" href="../images/logo.png" type="image/png">
+  <link rel="icon" href="../images/whiteLogo.png" type="image/png">
 
 
 
 </head>
 
 
-<body style="background-image:url(../images/trans.jpg)">
+<body style="background-image:url(../images/background_Head.jpg)">
 <!--Container-->
 <div id=container>
 
@@ -43,49 +43,64 @@
 		      <li><a href="Inventory.php"><i class="material-icons" style="font-size: 4rem;padding-left: 35%">view_module</i> <br><h6 align =center>Inventory</h3></a></li>
 
 		    </ul>
-		    <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons" style="font-size: 3rem;color:black">menu</i></a>
+		    <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons" style="font-size: 3rem;color:white; padding-top: 50%">menu</i></a>
 		</div>
 
-		<div class="col l3" >
-			<img style=" margin: 0 auto; width: 30%; height: 30%" class="responsive-img" src="../images/logo.png">
+		<div class="col l3" style="margin-top:1%%">
+			<img style=" margin: 0 auto; width: 30%; height: 30%;" class="responsive-img" src="../images/whiteLogo.png">
 		</div>
 
-		<div class="col l5" align =center style="font-family: ‘Courier New’, Courier, monospace; ">
-			<h4 >ORDERS</h4>
+		<div class="col l5" align =center style="font-family: ‘Courier New’, Courier, monospace; padding-top: 2.5% ">
+			<h4 style="color: white">ORDERS</h4>
 		</div>
 
-		<div align=right class="col l3" >
-			<img class="circle responsive-img" src="../images/admin.jpg" style="width:12%;height: 12%;border: 0.25rem solid #be1e2d"> Admin
+		<div align=right class="col l3" style="padding-top: 1% ">
+			<img class="circle responsive-img" src="../images/admin.jpg" style="width:15%;height: 15%;border: 0.25rem solid #be1e2d;"> <h6 style="color:white;">Kojo Doe</h6>
 		</div>
 
 	</div>
 
 <!--Second row-->
-	<div class="row" style="height:80%;padding-top: 2%">
+	<div class="row" style="height:80%;padding-top: 3%">
 <!-- First Column -->
 		<div class="col l9" style="height:680px">
+
+
+				<div id="modal1" class="modal">
+					<div class="modal-content">
+						<h4>Modal Header</h4>
+						<p>A bunch of text</p>
+					</div>
+					<div class="modal-footer">
+						<a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+					</div>
+				</div>
+
+
+
+
 
 			<div class="row" style="height:80%;padding-top: 17%">
 				<div class="center-align" style="padding-top: 10px">
 
-				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);">Order #1</button>
+				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);" data-target="modal1" >Order #1</button>
 
-				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);">Order #2</button>
-				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);">Order #3</button>
-				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);">Order #4</button>
-				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);">Order #5</button>
-				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);">Order #6</button>
+				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);" data-target="modal1">Order #2</button>
+				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);" data-target="modal1">Order #3</button>
+				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);" data-target="modal1">Order #4</button>
+				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);" data-target="modal1">Order #5</button>
+				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);" data-target="modal1">Order #6</button>
 				</div>
 
 			     <div class="center-align" style="padding-top: 10px">
 
 
-			     <button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);">Order #7</button>
-			     <button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);">Order #8</button>
-			     <button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);">Order #9</button>
-			     <button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);">Order #10</button>
-			     <button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);">Order #11</button>
-			     <button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);">Order #12</button>
+			     <button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);" data-target="modal1">Order #7</button>
+			     <button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);" data-target="modal1">Order #8</button>
+			     <button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);" data-target="modal1">Order #9</button>
+			     <button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);" data-target="modal1">Order #10</button>
+			     <button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);" data-target="modal1">Order #11</button>
+			     <button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);" data-target="modal1">Order #12</button>
 
 			      </div>
 
@@ -127,11 +142,11 @@
 
 
 
+</div>
 
-
- <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script type="text/javascript" src="../js/materialize.min.js"></script>
-  <script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="../js/materialize.min.js"></script>
+	<script>
 // Initialize collapse button
 $(".button-collapse").sideNav();
   // Initialize collapsible (uncomment the line below if you use the dropdown variation)
@@ -141,13 +156,10 @@ $(".button-collapse").sideNav();
       edge: 'left', // Choose the horizontal origin
      closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
       draggable: true // Choose whether you can drag to open on touch screens
-    }
-    );
+  }
+  ); 
 
-  </script>
-
-
-<script>
+  
 // Initialize collapse button
 $(".button-collapse").sideNav();
   // Initialize collapsible (uncomment the line below if you use the dropdown variation)
@@ -157,21 +169,39 @@ $(".button-collapse").sideNav();
       edge: 'left', // Choose the horizontal origin
      closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
       draggable: true // Choose whether you can drag to open on touch screens
-    }
-    );
+  }
+  ); 
 
-  </script>
-
- <script>
-$(document).ready(function() {
-  $("#order2, #order1").on('click', function() {
-    $(this).removeClass("waves-effect waves-light submit").addClass('disabled');
+  
+  $(document).ready(function() {
+  	$("#order2, #order1").on('click', function() {
+  		$(this).removeClass("waves-effect waves-light submit").addClass('disabled');
+  	});
   });
-});
+
+
+  $('.modal').modal({
+      dismissible: true, // Modal can be dismissed by clicking outside of the modal
+      opacity: .5, // Opacity of modal background
+      inDuration: 300, // Transition in duration
+      outDuration: 200, // Transition out duration
+      startingTop: '4%', // Starting top style attribute
+      endingTop: '10%', // Ending top style attribute
+      ready: function(modal, trigger) { // Callback for Modal open. Modal and trigger parameters available.
+      	alert("Ready");
+      	console.log(modal, trigger);
+      },
+      complete: function() { alert('Closed'); } // Callback for Modal close
+  }
+  );
+
+
+
+
 </script>
 
 
-</div>
+
 
 
 
