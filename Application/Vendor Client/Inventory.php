@@ -18,8 +18,7 @@
 </head>
 
 
-<!-- <body style="background-image:url(../images/trans.jpg)"> -->
-<body>
+<body style="background-image:url(../images/background_Head.jpg)">
 <!--Container-->
 <div id=container>
 <!--First Row-->
@@ -43,90 +42,65 @@
 		      <li><a href="Inventory.php"><i class="material-icons" style="font-size: 4rem;padding-left: 35%">view_module</i> <br><h6 align =center>Inventory</h3></a></li>
 
 		    </ul>
-		    <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons" style="font-size: 3rem;color:black">menu</i></a>
+		     <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons" style="font-size: 3rem;color:white; padding-top: 50%">menu</i></a>
 		</div>
 
-		<div class="col l3" style="border:1px solid green">
-			<img style=" margin: 0 auto; width: 30%; height: 30%" class="responsive-img" src="../images/logo.png"> 
+		<div class="col l3" style="margin-top:1%%">
+			<img style=" margin: 0 auto; width: 30%; height: 30%;" class="responsive-img" src="../images/whiteLogo.png">
 		</div>
 
-		<div class="col l5" align =center style="border:1px solid yellow;font-family: ‘Courier New’, Courier, monospace; ">
-			<h4 >INVENTORY</h4>
+		<div class="col l5" align =center style="font-family: ‘Courier New’, Courier, monospace; padding-top: 2.5% ">
+			<h4 style="color: white">INVENTORY</h4>
 		</div>
 
-		<div align=right class="col l3" style="border:1px solid yellow"> 
-			<img class="circle responsive-img" src="../images/admin.jpg" style="width:12%;height: 12%;border: 0.25rem solid #be1e2d"> Admin
+		<div align=right class="col l3" style="padding-top: 1% ">
+			<img class="circle responsive-img" src="../images/admin.jpg" style="width:15%;height: 15%;border: 0.25rem solid #be1e2d;"> <h6 style="color:white;">Kojo Doe</h6>
 		</div>
 
 	</div>
 
 
 <!--Second row-->
-	<div class="row" style="border:1px solid red;padding-top: 2%">
-		
-<div class="col l4" style="border:1px solid blue">
-				fjndfjksd bfjksdf
-			</div>
-			<div class="col" style="border:1px solid violet">
-			
+<div class="row" align=center class="valign-wrapper" style="border:1px solid red;">
+		<div class="valign" style="width:100%;">
+        	<div class="container">
+           	
+		 		<div class="col s12 m6 offset-m3">
+                 
 
-      <ul class="tabs" style="width:400px" >
-        <li class="tab col s3"><a href="#test1">Test 1</a></li>
-        <li class="tab col s3"><a class="active" href="#test2">Test 2</a></li>
-      
-        <li class="tab col s3"><a href="#test3">Test 3</a></li>
-         <li class="tab col s3"><a href="#test3">Test 3</a></li>
-      </ul>
-  
-    <div id="test1" class="col s12">Test 1</div>
-    <div id="test2" class="col s12">Test 2</div>
-    <div id="test3" class="col s12">Test 3</div>
-    
-  
+						<div class="col" style="border:1px solid violet">
+									
 
+							    <ul class="tabs" style="width:560px" >
+							    <li class="tab col s3"><a href="#test1">All</a></li>
+							    <li class="tab col s3"><a class="active" href="#test2">Available</a></li>
+							      
+							    <li class="tab col s3"><a href="#test3">Unavailable</a></li>
+							   
+							   </ul>
+							  
+							    <div id="test1" class="col s12">Test 1</div>
+							    <div id="test2" class="col s12">Test 2</div>
+							    <div id="test3" class="col s12">Test 3</div>
+							    
+							  
 
-
-
-			</div>
-			<div class="col l4" style="border:1px solid violet">
-				sa,fm sdamfnsdf 
-			</div>
-
- 
-        
+						</div>
 
 
 
+	              	</div>
+	        	</div>
+    	</div>
 
 
 
-
-	</div>
+</div>
 
 <!--Third row-->
 		<div class="row" style="border:1px solid green;padding-top: 2%">
 
-		<div class="col l4">
-				
-			</div>
-			<!-- Middle Column -->
-			<div class="col l4" style="border:1px solid violet">
-			<div class="card-panel" style="height:10px">
-
-				<form>
-			       	 <div class="input-field">
-			          <input id="search grey" type="search" required>
-			          <label for="search"><i class="material-icons">search</i></label>
-			          <i class="material-icons red-text">close</i>
-			        </div>
-			    </form>
-			</div>
-
-			</div>
-			<div class="col l4" style="border:1px solid violet">
-				
-			</div>
-
+		
 		
 
 		</div>		
