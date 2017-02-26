@@ -21,10 +21,11 @@
 <body style="background-image:url(../images/trans.jpg)">
 <!--Container-->
 <div id=container>
+
 <!--First Row-->
-	<div class="row" style="border:1px solid red">
-		<div class="col l0" style="border:1px solid green">
-			
+	<div class="row" >
+		<div class="col l0">
+
 <ul id="slide-out" class="side-nav">
 		      <li><div class="userView">
 		        <div class="background">
@@ -45,41 +46,37 @@
 		    <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons" style="font-size: 3rem;color:black">menu</i></a>
 		</div>
 
-		<div class="col l3" style="border:1px solid green">
-			<img style=" margin: 0 auto; width: 30%; height: 30%" class="responsive-img" src="../images/logo.png"> 
+		<div class="col l3" >
+			<img style=" margin: 0 auto; width: 30%; height: 30%" class="responsive-img" src="../images/logo.png">
 		</div>
 
-		<div class="col l5" align =center style="border:1px solid yellow;font-family: ‘Courier New’, Courier, monospace; ">
+		<div class="col l5" align =center style="font-family: ‘Courier New’, Courier, monospace; ">
 			<h4 >ORDERS</h4>
 		</div>
 
-		<div align=right class="col l3" style="border:1px solid yellow"> 
+		<div align=right class="col l3" >
 			<img class="circle responsive-img" src="../images/admin.jpg" style="width:12%;height: 12%;border: 0.25rem solid #be1e2d"> Admin
 		</div>
 
 	</div>
 
 <!--Second row-->
-
-
-<!--Thirdrow-->
-	<div class="row" style="border:1px solid red">
+	<div class="row" style="height:80%;padding-top: 2%">
 <!-- First Column -->
-		<div class="col l9" style="border:1px solid green;height:680px">
-			
-			
+		<div class="col l9" style="height:680px">
 
-			<div class="row" style="height:80%;border:1px solid orange;padding-top: 15%">
+			<div class="row" style="height:80%;padding-top: 17%">
 				<div class="center-align" style="padding-top: 10px">
 
 				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);">Order #1</button>
+
 				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);">Order #2</button>
 				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);">Order #3</button>
 				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);">Order #4</button>
 				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);">Order #5</button>
 				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);">Order #6</button>
 				</div>
-			        
+
 			     <div class="center-align" style="padding-top: 10px">
 
 
@@ -91,20 +88,20 @@
 			     <button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);">Order #14</button>
 
 			      </div>
-			          
 
-				
+
+
 
 			</div>
 
-			
+
 
 		</div>
 
 
-		<div align=center class="col l3" style="border:1px solid yellow; font-family: ‘Courier New’, Courier, monospace;width:25%" > 
+		<div align=center class="col l3" style=" font-family: ‘Courier New’, Courier, monospace;width:25%" >
 			<div class="card grey darken-1" style="height:40px"><span style="color:white" class="card-title" >IN KITCHEN</span>
-			
+
 			</div>
 
 
@@ -115,20 +112,20 @@
 	              </p>
 
 	            </div>
-	           
-	            
+
+
 	          </div>
 
 
-		
+
 		</div>
 
 	</div>
 
-				
-				
-	
-	
+
+
+
+
 
 
 
@@ -145,7 +142,7 @@ $(".button-collapse").sideNav();
      closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
       draggable: true // Choose whether you can drag to open on touch screens
     }
-    ); 
+    );
 
   </script>
 
@@ -161,7 +158,7 @@ $(".button-collapse").sideNav();
      closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
       draggable: true // Choose whether you can drag to open on touch screens
     }
-    ); 
+    );
 
   </script>
 
@@ -176,7 +173,7 @@ $(document).ready(function() {
 
 </div>
 
-	
+
 
 
 
