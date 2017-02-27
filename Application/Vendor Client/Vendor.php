@@ -18,6 +18,7 @@
 </head>
 
 
+<<<<<<< HEAD
 <body style="background-image:url(../images/trans.jpg)">
 <!--Container-->
 <div id=container>
@@ -25,6 +26,16 @@
 	<div class="row" style="border:1px solid red">
 		<div class="col l0" style="border:1px solid green">
 			
+=======
+<body style="background-image:url(../images/background_Head.jpg)">
+<!--Container-->
+<div id=container>
+
+<!--First Row-->
+	<div class="row" >
+		<div class="col l0">
+
+>>>>>>> kojoBranch
 <ul id="slide-out" class="side-nav">
 		      <li><div class="userView">
 		        <div class="background">
@@ -42,6 +53,7 @@
 		      <li><a href="Inventory.php"><i class="material-icons" style="font-size: 4rem;padding-left: 35%">view_module</i> <br><h6 align =center>Inventory</h3></a></li>
 
 		    </ul>
+<<<<<<< HEAD
 		    <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons" style="font-size: 3rem;color:black">menu</i></a>
 		</div>
 
@@ -55,11 +67,27 @@
 
 		<div align=right class="col l3" style="border:1px solid yellow"> 
 			<img class="circle responsive-img" src="../images/admin.jpg" style="width:12%;height: 12%;border: 0.25rem solid #be1e2d"> Admin
+=======
+		    <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons" style="font-size: 3rem;color:white; padding-top: 50%">menu</i></a>
+		</div>
+
+		<div class="col l3" style="margin-top:1%%">
+			<img style=" margin: 0 auto; width: 30%; height: 30%;" class="responsive-img" src="../images/whiteLogo.png">
+		</div>
+
+		<div class="col l5" align =center style="font-family: ‘Courier New’, Courier, monospace; padding-top: 2.5% ">
+			<h4 style="color: white">ORDERS</h4>
+		</div>
+
+		<div align=right class="col l3" style="padding-top: 1% ">
+			<img class="circle responsive-img" src="../images/admin.jpg" style="width:15%;height: 15%;border: 0.25rem solid #be1e2d;"> <h6 style="color:white;">Kojo Doe</h6>
+>>>>>>> kojoBranch
 		</div>
 
 	</div>
 
 <!--Second row-->
+<<<<<<< HEAD
 	<div class="row" style="height:4%"></div>
 
 <!--Thirdrow-->
@@ -99,13 +127,84 @@
 			</div>
 
 			
+=======
+	<div class="row" style="height:80%;padding-top: 3%">
+<!-- First Column -->
+		<div class="col l9" style="height:680px">
+
+<!--modal to create the pop ups-->
+				<div align=center id="modal1" class="modal">
+					<div class="modal-content">
+						<h4 style="font-size:350%;"><  #BB-ORDER NO.</h4><br>
+            <div class="divider red darken-4" style="height:10px"></div>
+						<p1 style ="font-size:170%">20202018:John Doe </p1><br>
+            <div class="divider"></div>
+
+            <div class="divider"></div>
+            <div class="grey">
+            <p2 style ="font-size:180%">Jollof + Fish  1/2P</p2><br><br>
+          </div>
+              <div class="divider grey lighten-5" style="height:8px" ></div>
+            <div class="grey">
+            <p3>Khebab Sausage style  2</p3><br>
+            <p4>Vita Milk  2</p4><br>
+            <p5>Bottled Water  2</p5><br>
+            </div>
+					</div>
+					<div class="modal-footer">
+						<a href="#!" class=" modal-action modal-close orange waves-effect waves- btn-flat ">Add to Kitchen</a>
+
+					</div>
+				</div>
+
+
+
+
+
+			<div class="row" style="height:80%;padding-top: 17%">
+				<div class="center-align" style="padding-top: 10px">
+
+				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);" data-target="modal1" >Order #1</button>
+
+				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);" data-target="modal1">Order #2</button>
+				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);" data-target="modal1">Order #3</button>
+				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);" data-target="modal1">Order #4</button>
+				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);" data-target="modal1">Order #5</button>
+				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);" data-target="modal1">Order #6</button>
+				</div>
+
+			     <div class="center-align" style="padding-top: 10px">
+
+
+			     <button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);" data-target="modal1">Order #7</button>
+			     <button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);" data-target="modal1">Order #8</button>
+			     <button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);" data-target="modal1">Order #9</button>
+			     <button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);" data-target="modal1">Order #10</button>
+			     <button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);" data-target="modal1">Order #11</button>
+			     <button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);" data-target="modal1">Order #12</button>
+
+			      </div>
+
+
+
+
+			</div>
+
+
+>>>>>>> kojoBranch
 
 		</div>
 
 
+<<<<<<< HEAD
 		<div align=center class="col l3" style="border:1px solid yellow; font-family: ‘Courier New’, Courier, monospace;width:25%" > 
 			<div class="card grey darken-1" style="height:40px"><span style="color:white" class="card-title" >IN KITCHEN</span>
 			
+=======
+		<div align=center class="col l3" style=" font-family: ‘Courier New’, Courier, monospace;width:25%" >
+			<div class="card grey darken-1" style="height:40px"><span style="color:white" class="card-title" >IN KITCHEN</span>
+
+>>>>>>> kojoBranch
 			</div>
 
 
@@ -116,16 +215,26 @@
 	              </p>
 
 	            </div>
+<<<<<<< HEAD
 	           
 	            
 	          </div>
 
 
 		
+=======
+
+
+	          </div>
+
+
+
+>>>>>>> kojoBranch
 		</div>
 
 	</div>
 
+<<<<<<< HEAD
 				
 				
 	
@@ -136,6 +245,18 @@
  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script type="text/javascript" src="../js/materialize.min.js"></script>
   <script>
+=======
+
+
+
+
+
+</div>
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="../js/materialize.min.js"></script>
+	<script>
+>>>>>>> kojoBranch
 // Initialize collapse button
 $(".button-collapse").sideNav();
   // Initialize collapsible (uncomment the line below if you use the dropdown variation)
@@ -145,6 +266,7 @@ $(".button-collapse").sideNav();
       edge: 'left', // Choose the horizontal origin
      closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
       draggable: true // Choose whether you can drag to open on touch screens
+<<<<<<< HEAD
     }
     ); 
 
@@ -152,6 +274,12 @@ $(".button-collapse").sideNav();
 
 
 <script>
+=======
+  }
+  );
+
+
+>>>>>>> kojoBranch
 // Initialize collapse button
 $(".button-collapse").sideNav();
   // Initialize collapsible (uncomment the line below if you use the dropdown variation)
@@ -161,6 +289,7 @@ $(".button-collapse").sideNav();
       edge: 'left', // Choose the horizontal origin
      closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
       draggable: true // Choose whether you can drag to open on touch screens
+<<<<<<< HEAD
     }
     ); 
 
@@ -178,10 +307,51 @@ $(document).ready(function() {
 </div>
 
 	
+=======
+  }
+  );
+
+
+  $(document).ready(function() {
+  	$("#order2, #order1").on('click', function() {
+  		$(this).removeClass("waves-effect waves-light submit").addClass('disabled');
+  	});
+  });
+
+
+  $('.modal').modal({
+      dismissible: true, // Modal can be dismissed by clicking outside of the modal
+      opacity: .5, // Opacity of modal background
+      inDuration: 300, // Transition in duration
+      outDuration: 200, // Transition out duration
+      startingTop: '4%', // Starting top style attribute
+      endingTop: '10%', // Ending top style attribute
+      ready: function(modal, trigger) { // Callback for Modal open. Modal and trigger parameters available.
+      	//alert("MOVES TO KITCHEN");
+      	//console.log(modal, trigger);
+      },
+      complete: function() { alert('ORDER MOVES TO KITCHEN'); } // Callback for Modal close
+  }
+  );
+
+
+
+
+</script>
+
+
+
+
+
+>>>>>>> kojoBranch
 
 
 
 </body>
 
 
+<<<<<<< HEAD
 </html>
+=======
+</html>
+>>>>>>> kojoBranch
