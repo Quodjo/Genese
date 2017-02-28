@@ -48,7 +48,7 @@
     <div class="col s12 m4 l3 center">
       <div class="card-panel white">
        <div class="valign-wrapper" style="height: 0.005vh;">
-        <h4 style="color: #be1e2b;">2</h4><p style="padding-left:0.5rem">VOUCHER RESELLERS</p>
+        <h4 style="color: #be1e2b;">1</h4><p style="padding-left:0.5rem">VOUCHER RESELLERS</p>
       </div>
     </div>
   </div>

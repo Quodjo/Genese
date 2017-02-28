@@ -24,7 +24,7 @@
         <div class="nav-wrapper">
           <a href="#" class="brand-logo right"><img  style=" float:right; margin-top :.75%; margin-right :1%; width: 10%; height: 10%;" src="../images/logo.png"></a>
           <ul id="nav-mobile" class="left hide-on-med-and-down">
-          <a style="color:#be1e2d;">Super Admin Panel</a>
+            <a style="color:#be1e2d;">Super Admin Panel</a>
           </ul>
         </div>
       </nav>
@@ -32,24 +32,39 @@
     
 
     <div class="row" style="margin-top: 2%;" >
-      <div class="col s12 m4 l4 center">
+      <div style ="position: static;"  class="col s12 m4 l4 center ">
         <div class="card">
           <div class="card-content" style ="background-color: #b71c1c">
             <h2 style="color:#ffffff">Akonor</h2>
           </div>
-          <div class="card-image">
-            <a class="btn-floating halfway-fab btn-large click-to-toggle red"><i class="material-icons" style="font-size: 2em;">menu</i></a>
+          <div class="card-image fixed-action-btn horizontal">
+            <!-- <img src="images/sample-1.jpg"> -->
+            <a style=" margin-right:-8.5%; margin-bottom: -7%;" class="btn-floating halfway-fab btn-large click-to-toggle red"><i class="material-icons" style="font-size: 2em;">menu</i></a>
+            <ul style=" margin-right:-7%;">
+              <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
+              <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+              <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+              <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+            </ul>
+
           </div>
         </div>
       </div>
-      <div class="col s12 m4 l4 center">
+      <div style ="position: static;"  class="col s12 m4 l4 center ">
         <div class="card">
           <div class="card-content" style ="background-color: #b71c1c">
             <h2 style="color:#ffffff">Big Ben</h2>
           </div>
-          <div class="card-image">
+          <div class="card-image fixed-action-btn horizontal">
             <!-- <img src="images/sample-1.jpg"> -->
-            <a class="btn-floating halfway-fab btn-large click-to-toggle red"><i class="material-icons" style="font-size: 2em;">menu</i></a>
+            <a style=" margin-right:-8.5%; margin-bottom: -7%;" class="btn-floating halfway-fab btn-large click-to-toggle red"><i class="material-icons" style="font-size: 2em;">menu</i></a>
+            <ul style=" margin-right:-7%;">
+              <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
+              <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+              <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+              <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+            </ul>
+
           </div>
         </div>
       </div>
