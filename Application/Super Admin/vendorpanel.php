@@ -41,12 +41,10 @@
             <!-- <img src="images/sample-1.jpg"> -->
             <a style=" margin-right:-8.5%; margin-bottom: -7%;" class="btn-floating halfway-fab btn-large click-to-toggle red"><i class="material-icons" style="font-size: 2em;">menu</i></a>
             <ul style=" margin-right:-7%;">
-              <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
-              <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
-              <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
-              <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+              <li><a class="btn-floating red"><i class="material-icons">delete</i></a></li>
+              <li><a class="btn-floating yellow darken-1"><i class="material-icons">not_interested</i></a></li>
+              <li><a class="btn-floating green"><i class="material-icons">mode_edit</i></a></li>
             </ul>
-
           </div>
         </div>
       </div>
@@ -59,23 +57,60 @@
             <!-- <img src="images/sample-1.jpg"> -->
             <a style=" margin-right:-8.5%; margin-bottom: -7%;" class="btn-floating halfway-fab btn-large click-to-toggle red"><i class="material-icons" style="font-size: 2em;">menu</i></a>
             <ul style=" margin-right:-7%;">
-              <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
-              <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
-              <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
-              <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
-            </ul>
+             <li><a class="btn-floating red"><i class="material-icons">delete</i></a></li>
+             <li><a class="btn-floating yellow darken-1"><i class="material-icons">not_interested</i></a></li>
+             <li><a class="btn-floating green"><i class="material-icons">mode_edit</i></a></li>
+           </ul>
+         </div>
+       </div>
+     </div>
+   </div>
 
-          </div>
+   <div id="addVendor" class="modal" style="width: 35%; height: auto;">
+    <div class="modal-content">
+     <form id ="addVendorForm" method="POST" action="">
+       <div class="row">
+        <div class="input-field col s12">
+          <input id="id_number" type="text" class="validate" >
+          <label for="id_number">Vendor Name</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="managerName" type="text" class="validate" >
+          <label for="managerName">Manager's Name</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="managerNumber" type="text" class="validate" >
+          <label for="managerNumber">Manager's Number</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="email" type="email" class="validate">
+          <label for="email">Email</label>
         </div>
       </div>
-
+      <div class="row">
+        <div class="input-field col s6">
+         <input id="password" type="password" class="validate">
+         <label for="password">Create Password</label>
+       </div>
+       <div class="input-field col s6">
+         <input id="password" type="password" class="validate">
+         <label for="password">Retype Password</label>
+       </div>
+     </div>
+     <div class="center">
+      <div class="input-field col s12">
+        <button class="waves-effect waves-light btn-large #be1e2d red darken-4" type="submit" name="action" style="width: 100%; font-size: 30px" >Add Vendor</button>
+      </div>
     </div>
+  </form>
+</div>
+</div>
 
-    <div class="fixed-action-btn horizontal">
-     <a href="#" class="btn-floating btn-large" id = "hbtn">
-      <i class="large material-icons" style="font-size: 3rem;">add</i>
-    </a>
-  </div>
+<div class="fixed-action-btn horizontal">
+ <a href="#addVendor" class="btn-floating btn-large" id = "hbtn">
+  <i class="large material-icons" style="font-size: 3rem;">add</i>
+</a>
+</div>
 
 </div>
 
@@ -105,7 +140,23 @@
 <!--Import jQuery before materialize.js-->
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="../js/materialize.min.js"></script>
+<script>
+  $('.modal').modal({
+      dismissible: true, // Modal can be dismissed by clicking outside of the modal
+      opacity: .5, // Opacity of modal background
+      inDuration: 300, // Transition in duration
+      outDuration: 200, // Transition out duration
+      startingTop: '4%', // Starting top style attribute
+      endingTop: '10%', // Ending top style attribute
+      ready: function(modal, trigger) { // Callback for Modal open. Modal and trigger parameters available.
+        alert("Ready");
+        console.log(modal, trigger);
+      },
+      complete: function() { alert('Closed'); } // Callback for Modal close
+    }
+    );
 
+  </script>
 
 </body>
 </html>
