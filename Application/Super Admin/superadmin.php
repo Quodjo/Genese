@@ -65,19 +65,16 @@
 <div class="row"  style="margin-top: -50%;">
   <div class="col s12 m4 l4 center">
     <div class="card-panel white">
-      <span class="card-title">Application Users</span>
       <canvas id="myChart"></canvas>
     </div>
   </div>
   <div class="col s12 m4 l4 center">
     <div class="card-panel white">
-      <span class="card-title">Delivery Stops</span>
       <canvas id="myChart2"></canvas>
     </div>
   </div>
   <div class="col s12 m4 l4 center">
     <div class="card-panel white">
-    <span class="card-title">Reseller Sales</span>
       <canvas id="myChart3"></canvas>
     </div>
   </div>
@@ -213,10 +210,6 @@
         label: 'Essentials',
         data: [12, 19, 3, 17, 28, 24, 7],
         backgroundColor: "rgba(153,255,51,1)"
-      }, {
-        label: 'Bens Spot',
-        data: [30, 29, 5, 5, 20, 3, 10],
-        backgroundColor: "rgba(255,153,0,1)"
       }]
     }
   });
@@ -227,7 +220,7 @@ var myChart = new Chart(ctx, {
   data: {
     labels: ["On Campus", "Dufie", "Charlotte", "Hosanna", "Masere", "Colombiana", "Queen Star"],
     datasets: [{
-      label: 'Delievery',
+      label: 'Delievery Stops',
       backgroundColor: "rgba(153,255,51,0.4)",
       borderColor: "rgba(153,255,51,1)",
       data: [12, 19, 3, 17, 28, 24, 7]

@@ -41,9 +41,9 @@
             <!-- <img src="images/sample-1.jpg"> -->
             <a style=" margin-right:-8.5%; margin-bottom: -7%;" class="btn-floating halfway-fab btn-large click-to-toggle red"><i class="material-icons" style="font-size: 2em;">menu</i></a>
             <ul style=" margin-right:-7%;">
-              <li><a class="btn-floating red"><i class="material-icons">delete</i></a></li>
-              <li><a class="btn-floating yellow darken-1"><i class="material-icons">not_interested</i></a></li>
-              <li><a class="btn-floating green"><i class="material-icons">mode_edit</i></a></li>
+             <li><a href = "#delVendor" class="btn-floating red"><i class="material-icons">delete</i></a></li>
+             <li><a href = "#inactiveVendor" class="btn-floating yellow darken-1"><i class="material-icons">not_interested</i></a></li>
+             <li><a href = "#editVendor" class="btn-floating green"><i class="material-icons">mode_edit</i></a></li>
             </ul>
           </div>
         </div>
@@ -57,22 +57,85 @@
             <!-- <img src="images/sample-1.jpg"> -->
             <a style=" margin-right:-8.5%; margin-bottom: -7%;" class="btn-floating halfway-fab btn-large click-to-toggle red"><i class="material-icons" style="font-size: 2em;">menu</i></a>
             <ul style=" margin-right:-7%;">
-             <li><a class="btn-floating red"><i class="material-icons">delete</i></a></li>
-             <li><a class="btn-floating yellow darken-1"><i class="material-icons">not_interested</i></a></li>
-             <li><a class="btn-floating green"><i class="material-icons">mode_edit</i></a></li>
+             <li><a href = "#delVendor" class="btn-floating red"><i class="material-icons">delete</i></a></li>
+             <li><a href = "#inactiveVendor" class="btn-floating yellow darken-1"><i class="material-icons">not_interested</i></a></li>
+             <li><a href = "#editVendor" class="btn-floating green"><i class="material-icons">mode_edit</i></a></li>
            </ul>
          </div>
        </div>
      </div>
    </div>
 
-   <div id="addVendor" class="modal" style="width: 35%; height: auto;">
+   <!-- Modal Structure -->
+    <div id="editVendor" class="modal" style="width: 35%; height: auto;">
+    <div class="modal-content">
+     <form id ="editVendorForm" method="POST" action="">
+       <div class="row">
+        <div class="input-field col s12">
+          <input id="vNameEdit" type="text" class="validate" >
+          <label for="vNameEdit">Vendor Name</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="managerNameEdit" type="text" class="validate" >
+          <label for="managerNameEdit">Manager's Name</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="managerNumberEdit" type="text" class="validate" >
+          <label for="managerNumberEdit">Manager's Number</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="emailEdit" type="email" class="validate">
+          <label for="emailEdit">Email</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s6">
+         <input id="passwordEdit" type="password" class="validate">
+         <label for="passwordEdit">Create Password</label>
+       </div>
+       <div class="input-field col s6">
+         <input id="repasswordEdit" type="password" class="validate">
+         <label for="repasswordEdit">Retype Password</label>
+       </div>
+     </div>
+         <div class="center">
+      <div class="input-field col s12">
+        <button class="waves-effect waves-light btn-large #be1e2d red darken-4" type="submit" name="action" style="width: 100%; font-size: 30px" >Apply Changes</button>
+      </div>
+    </div>
+  </form>
+</div>
+</div>
+
+
+   <div id="inactiveVendor" class="modal" style="margin-top:15%; width: 35%; height: auto;">
+    <div class="modal-content">
+      <h5 class = "center">Are You Sure You Want To Render Vendor Inactive?</h5>
+    </div>
+
+    <div class="modal-footer">
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Yes</a>
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">No</a>
+    </div>
+  </div>
+
+  <div id="delVendor" class="modal" style="margin-top:15%; width: 35%; height: auto;">
+    <div class="modal-content">
+      <h5 class = "center">Are You Sure You Want To Delete Vendor?</h5>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Yes</a>
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">No</a>
+    </div>
+  </div>
+
+  <div id="addVendor" class="modal" style="width: 35%; height: auto;">
     <div class="modal-content">
      <form id ="addVendorForm" method="POST" action="">
        <div class="row">
         <div class="input-field col s12">
-          <input id="id_number" type="text" class="validate" >
-          <label for="id_number">Vendor Name</label>
+          <input id="vName" type="text" class="validate" >
+          <label for="vName">Vendor Name</label>
         </div>
         <div class="input-field col s6">
           <input id="managerName" type="text" class="validate" >
@@ -97,6 +160,7 @@
          <label for="password">Retype Password</label>
        </div>
      </div>
+
      <div class="center">
       <div class="input-field col s12">
         <button class="waves-effect waves-light btn-large #be1e2d red darken-4" type="submit" name="action" style="width: 100%; font-size: 30px" >Add Vendor</button>
