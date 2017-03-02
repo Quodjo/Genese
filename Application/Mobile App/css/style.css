@@ -86,9 +86,11 @@
 	height: 40%;
 }
 
-.parallax-container {
-	height: 100vh;
-	width: 100vw;
+#cartModal{
+	width: 80%;
+	height: 100%;
+	border-radius: 0.5em;
+	background-color: #b71c1c;
 }
 
 #searchBar {
@@ -105,7 +107,10 @@
 	left: 0;
 
 }
+table {
+	color: #ffffff;
 
+}
 #test1 {
 	overflow-y: scroll;
 	width: 100vw;

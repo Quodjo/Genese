@@ -74,13 +74,79 @@
 
 
   <div class="fixed-action-btn">
-    <a class="btn-floating btn-large #33691e light-green darken-4">
+    <a href="#cartModal" class="btn-floating btn-large #64dd17 light-green accent-4">
       <i class="large material-icons" style="font-size: 2rem;">shopping_basket</i>
     </a>
   </div>
-
 </div>
 
+<!-- Modal Structure -->
+<div id="cartModal" class="modal">
+  <h4 class="center" style="margin-top: 5%; color: #ffffff;">Cart</h4>
+  <div class="modal-content" style="margin-top:-8%;">
+    <div class="card-content ">
+      <p class="center white" style="margin-top: 5%; color: #9d1e2d;">Akonor</p>
+      <table >
+        <thead>
+          <tr>
+            <th data-field="item">Item</th>
+            <th data-field="uprice">Unit Price</th>
+            <th data-field="qty">Quantity</th>
+            <th data-field="sum">Sum</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Jollof</td>
+            <td>8.50</td>
+            <td>1</td>
+            <td>8.50</td>
+          </tr>
+          <td>Plantain</td>
+          <td>1.50</td>
+          <td>1</td>
+          <td>1.50</td>
+        </tr>
+        <tr>
+          <td>Water</td>
+          <td>1.20</td>
+          <td>2</td>
+          <td>2.40</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="center white" style="margin-top: 5%; color: #9d1e2d;">Big Ben</p>
+    <table >
+      <thead>
+        <tr>
+          <th data-field="item">Item</th>
+          <th data-field="uprice">Unit Price</th>
+          <th data-field="qty">Quantity</th>
+          <th data-field="sum">Sum</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>Khebab</td>
+          <td>3.50</td>
+          <td>2</td>
+          <td>7.00</td>
+        </tr>
+      </tbody>
+    </table>
+    <h4 style="text-align: right; color: #000000;"><strong>GHS19.40</strong></h4>
+    <form id = "checkOutForm" method="POST" action="">
+      <div class="center">
+        <div class="input-field col s12">
+        <button class="waves-effect waves-light btn-large #64dd17 light-green accent-4" type="submit" name="action" style="width: 100%; font-size: 30px;" >Checkout</button>
+      </div>
+    </div>
+  </form>
+</div>
+</div>
+</div>
 
 <!--Import jQuery before materialize.js-->
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -102,6 +168,21 @@
   $(document).ready(function(){
     $('ul.tabs').tabs('select_tab', 'tab_id');
   });
+
+  $('.modal').modal({
+      dismissible: true, // Modal can be dismissed by clicking outside of the modal
+      opacity: .5, // Opacity of modal background
+      inDuration: 300, // Transition in duration
+      outDuration: 200, // Transition out duration
+      startingTop: '4%', // Starting top style attribute
+      endingTop: '10%', // Ending top style attribute
+      ready: function(modal, trigger) { // Callback for Modal open. Modal and trigger parameters available.
+
+        console.log(modal, trigger);
+      },
+      complete: function() { } // Callback for Modal close
+    }
+    );
 
   $( document ).ready(function(){});
 </script>

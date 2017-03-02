@@ -82,7 +82,7 @@
 
 
 <div class="fixed-action-btn">
-  <a class="btn-floating btn-large #33691e light-green darken-4">
+  <a class="btn-floating btn-large #64dd17 light-green accent-4">
     <i class="large material-icons" style="font-size: 2rem;">shopping_basket</i>
   </a>
 </div>

@@ -60,7 +60,7 @@
 		<h4>Forgot Password</h4>
 		<div class="modal-content">
 			<div class="card-content ">
-				<form id = "loginFrom" method="POST" action="">
+				<form id = "passwordForgotFrom" method="POST" action="">
 					<div class="input-field col s12">
 						<input id="email" type="email" class="validate">
 						<label for="email">Email</label>
@@ -95,8 +95,6 @@
       complete: function() { } // Callback for Modal close
   }
   );
-
-
 </script>
 </body>
 </html>
