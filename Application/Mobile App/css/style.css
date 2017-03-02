@@ -1,0 +1,121 @@
+* {
+	box-sizing: border-box;
+}
+
+#container{
+	width:100vw;
+	height: 100vh;
+	overflow: hidden;
+	border-left: 0;
+	border-right: 0;
+	border-top: 0;
+	border-bottom: 2.5vh;
+	border-style: solid;
+	border-bottom-color: #be1e2d;
+}
+
+#loginCard {
+	position: fixed;
+	padding: 5%;
+	transform: translateY(18%);
+	resize: vertical;
+}
+
+#signUpCard{
+	position: fixed;
+	padding: 5%;
+	transform: translateY(5%);
+	resize: vertical;
+}
+
+/* label focus color */
+.input-field input[type=text]:focus + label {
+	color: #be1e2d;
+}
+/* label underline focus color */
+.input-field input[type=text]:focus {
+	border-bottom: 1px solid #be1e2d;
+	box-shadow: 0 1px 0 0 #be1e2d;
+}
+/* valid color */
+.input-field input[type=text].valid {
+	border-bottom: 1px solid #9d1e2d;
+	box-shadow: 0 1px 0 0 #9d1e2d;
+}
+
+/* label focus color */
+.input-field input[type=password]:focus + label {
+	color: #be1e2d;
+}
+/* label underline focus color */
+.input-field input[type=password]:focus {
+	border-bottom: 1px solid #be1e2d;
+	box-shadow: 0 1px 0 0 #be1e2d;
+}
+/* valid color */
+.input-field input[type=password].valid {
+	border-bottom: 1px solid #9d1e2d;
+	box-shadow: 0 1px 0 0 #9d1e2d;
+}
+
+/* label focus color */
+.input-field input[type=email]:focus + label {
+	color: #be1e2d;
+}
+/* label underline focus color */
+.input-field input[type=email]:focus {
+	border-bottom: 1px solid #be1e2d;
+	box-shadow: 0 1px 0 0 #be1e2d;
+}
+/* valid color */
+.input-field input[type=email].valid {
+	border-bottom: 1px solid #9d1e2d;
+	box-shadow: 0 1px 0 0 #9d1e2d;
+}
+
+#forgotPasswordModal h4 {
+	padding-top: 2.5%;
+	padding-bottom: 2.5%;
+	color: #ffffff;
+	text-align: center;
+	background-color: #9d1e2d;
+}
+
+#forgotPasswordModal {
+	margin-top: 30%;
+	height: 40%;
+}
+
+.parallax-container {
+	height: 100vh;
+	width: 100vw;
+}
+
+#searchBar {
+	position: fixed;
+	width: 100%;
+	margin-top: -5%;
+	padding: 5%;
+}
+
+#logOutBtn {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	left: 0;
+
+}
+
+#test1 {
+	overflow-y: scroll;
+	width: 100vw;
+	height: 75vh;
+}
+
+#mobile-demo {
+	height: 100vh;
+}
+
+#menu {
+	margin-top: 15%;
+}
