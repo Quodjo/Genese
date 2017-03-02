@@ -84,7 +84,7 @@
 <div id="cartModal" class="modal">
   <h4 class="center" style="margin-top: 5%; color: #ffffff;">Cart</h4>
   <div class="modal-content" style="margin-top:-8%;">
-    <div class="card-content ">
+    <div class="card-content" id="chkTest">
       <p class="center white" style="margin-top: 5%; color: #9d1e2d;">Akonor</p>
       <table >
         <thead>
@@ -137,16 +137,19 @@
       </tbody>
     </table>
     <h4 style="text-align: right; color: #000000;"><strong>GHS19.40</strong></h4>
-    <form id = "checkOutForm" method="POST" action="">
-      <div class="center">
-        <div class="input-field col s12">
+    
+  </div>
+
+  <form id = "checkOutForm" method="POST" action="">
+    <div class="center">
+      <div class="input-field col s12">
         <button class="waves-effect waves-light btn-large #64dd17 light-green accent-4" type="submit" name="action" style="width: 100%; font-size: 30px;" >Checkout</button>
       </div>
     </div>
   </form>
 </div>
 </div>
-</div>
+
 
 <!--Import jQuery before materialize.js-->
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
