@@ -19,6 +19,10 @@
 	padding: 5%;
 	transform: translateY(18%);
 	resize: vertical;
+	right: 0%;
+	left:0%;
+	width:100%;
+	height: auto;
 }
 
 #signUpCard{
@@ -123,4 +127,18 @@ table {
 
 #menu {
 	margin-top: 15%;
+}
+
+@media only screen and (min-device-width: 667px) and (max-device-height: 375px) and (-webkit-device-pixel-ratio: 2){
+	#container{
+		width:100vw;
+		height: 100vh;
+		overflow: hidden;
+		border-left: 0;
+		border-right: 0;
+		border-top: 0;
+		border-bottom: 2.5vh;
+		border-style: solid;
+		border-bottom-color: #c0c0c0;
+	}
 }

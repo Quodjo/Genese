@@ -16,7 +16,7 @@
 </head>
 <body>
 	<div id="container">
-		<div style="right: 0%; left:0%; width:100%; height: auto;"  id="loginCard" >
+		<div id="loginCard">
 			<div class="card-header" style=" margin: 0 auto; width: 60%; height: 60%">
 				<img class="responsive-img" src="images/logo.png"> 
 			</div>
