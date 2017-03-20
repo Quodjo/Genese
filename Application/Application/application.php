@@ -28,8 +28,12 @@
           <div class = "fleft">
 
             <div class = 'fDesc'>
-             <h1>Jollof</h1>
-
+              <div class = "details">
+                <div>
+                  <h1>Jollof</h1>
+                  <h4><span>GHC</span><span>10</span></h4>
+                </div>
+              </div>
             </div>
             
           </div>

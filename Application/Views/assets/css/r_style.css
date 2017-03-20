@@ -60,7 +60,7 @@ body {
 }
 
 .r_wrap {
-    display: table;
+    display: inline-block;
 }
 
 
