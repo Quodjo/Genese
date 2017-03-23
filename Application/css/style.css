@@ -536,7 +536,7 @@ round-button {
 
 .chekNav {
     height: inherit;
-    background-color: tomato;
+    background-color: lightslategray;
     padding: 2%;
     overflow-y: scroll;
 }
@@ -559,8 +559,8 @@ round-button {
     left: 0;
     right: 0;
     margin: 0 auto;
-    font-size: 240%;
-    color: white;
+    font-size: 450%;
+    color: black;
 }
 
 

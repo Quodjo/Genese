@@ -11,6 +11,9 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <!--Animation css-->
+    <link type="text/css" rel="stylesheet" href="../css/animate.css" />
+
     <link type="text/css" rel="stylesheet" href="../css/style.css" />
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -206,9 +209,10 @@ GHC9</a></li>
                     </div>
                 </form>
             </div>
+            <!--Scroll down icon-->
             <div class="row  idc">
-                <div class="container">
-                   <i class="fa fa-chevron-circle-down" aria-hidden="true"></i>
+                <div class="animated jello infinite container">
+                    <i class="fa fa-angle-double-down" aria-hidden="true"></i>
                 </div>
             </div>
 
@@ -236,6 +240,22 @@ GHC9</a></li>
                 <h3>Menu</h3>
             </div>
             <img style="" src="../images/header.png">
+        </div>
+        <div class="row">
+            <div class="container">
+                <!-- Dropdown Trigger -->
+                <a class='dropdown-button btn' href='#' data-activates='dropdown1'>Drop Me!</a>
+
+                <!-- Dropdown Structure -->
+                <ul id='dropdown1' class='dropdown-content'>
+                    <li><a href="#!">one</a></li>
+                    <li><a href="#!">two</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#!">three</a></li>
+                    <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+                    <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+                </ul>
+            </div>
         </div>
         <div class="section white">
 
