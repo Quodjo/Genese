@@ -377,7 +377,7 @@ round-button {
 .fmenu {
     width: 100%;
     display: block;
-    height: 80%;
+    height: 40vh;
     background-color: transparent;
 }
 
@@ -394,6 +394,10 @@ round-button {
     height: 100%;
     background-color: #f0f0f0;
     border-radius: 5%;
+}
+
+.fright {
+    overflow-y: scroll;
 }
 
 .fleft {
@@ -460,7 +464,7 @@ round-button {
     height: 80px;
     background-color: white;
     border-radius: 20%;
-    background-size: cover;
+    background-size: 50%;
     background-position: center;
     background-repeat: no-repeat;
     transition: transform 0.2s ease-in-out;
@@ -508,6 +512,55 @@ round-button {
 
 .white .row {
     margin: 0 5%;
+}
+
+.itemBtn,
+.itemBtn:hover {
+    background: none;
+    box-shadow: none;
+}
+
+.checkoutBtn {
+    position: absolute;
+    right: 0;
+    bottom: 2px;
+}
+
+.lawngreen {
+    background-color: lawngreen;
+}
+
+#checkout_slide-out {
+    overflow: hidden;
+}
+
+.chekNav {
+    height: inherit;
+    background-color: tomato;
+    padding: 2%;
+    overflow-y: scroll;
+}
+
+#userProf {
+    background-image: url(../images/kunfu.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.idc {
+    text-align: center;
+    position: relative;
+    height: 80vh;
+}
+
+.idc .container {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    font-size: 240%;
+    color: white;
 }
 
 
