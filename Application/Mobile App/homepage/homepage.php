@@ -81,7 +81,7 @@
 </div>
 
 <!-- Modal Structure -->
-<div id="cartModal" class="modal">
+<div id="cartModal" class="modal bottom-sheet">
   <h4 class="center" style="margin-top: 5%; color: #ffffff;">Cart</h4>
   <div class="modal-content" style="margin-top:-8%;">
     <div class="card-content" id="chkTest">
@@ -137,7 +137,7 @@
       </tbody>
     </table>
     <h4 style="text-align: right; color: #000000;"><strong>GHS19.40</strong></h4>
-    
+
   </div>
 
   <form id = "checkOutForm" method="POST" action="">
