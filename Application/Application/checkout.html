@@ -21,6 +21,9 @@
     <!--Animate css-->
     <link type="text/css" rel="stylesheet" href="../css/animate.css">
 
+    <!--Progress Tracker css-->
+    <link type="text/css" rel="stylesheet" href="../css/progress-wizard.min.css">
+
     <!--Xybron Styles-->
     <link type="text/css" rel="stylesheet" href="../css/r_style.css">
 
@@ -32,13 +35,13 @@
 
 <body>
     <!--Jumbotron to hold every element-->
-    <section class="rFullscreen">
+    <section class="rFullscreen checkOutPage">
         <section class="rFullWrap">
             <div class="row">
                 <div class="header col s12">
                     <div class="valign-wrapper">
                         <div class="container">
-                            <h1>Payment</h1>
+                            <h1>Place Order</h1>
                         </div>
                     </div>
                 </div>
@@ -48,13 +51,204 @@
                     <div class="slantBord col s12">
                         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 750 60.4" style="enable-background:new 0 0 750 60.4;" xml:space="preserve">
                                 <style type="text/css">
-                                    .st0{fill:tomato;}
+                                    .st0{fill:white;}
                                 </style>
                                <path class="st0" d="M0,9.6c0,0,107.8,39.8,213,32.7s198.7-31.7,278.2-23.7S669.4,58.6,750,42.3v52.5L0,95.4V9.6z"/>
                             </svg>
                     </div>
                     <section class="contentArea">
                         <!--Page contents go here-->
+                        <div class="row">
+                            <div class="container">
+
+                                <ul class="progress-indicator">
+
+                                    <li class="completed"> <span class="bubble"></span> Order Details </li>
+
+                                    <li class="completed"> <span class="bubble"></span> Payment Details </li>
+
+                                    <li> <span class="bubble"></span> Checkout </li>
+
+                                </ul>
+
+
+                            </div>
+                        </div>
+                        <!--Order details section-->
+                        <section class="orderDetails">
+                            <div class="row">
+                                <div class="container">
+                                    <nav class="checkNav">
+                                        <div class="row navTitle">
+                                            <div class="container col s12">
+                                                <div class="col s5">
+                                                    <p>Item Name</p>
+                                                </div>
+                                                <div class="col s2">
+                                                    <p>Price</p>
+                                                </div>
+                                                <div class="col s2">
+                                                    <p>Quantity</p>
+                                                </div>
+                                                <div class="col s2">
+                                                    <p>Total</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="container">
+                                    <!--Food item-->
+                                    <div class="col s12 itemBar card-panel">
+                                        <div class="item col s5">
+                                            <div class="card-panel itemHold">
+                                                <div class="itemImage col s4">
+                                                    <img src="http://www.ilovealabamafood.com/wp-content/uploads/2011/12/dish-detail-pbj.png">
+                                                </div>
+                                                <div class="itemDesc col s8">
+                                                    <div class="row">
+                                                        <h5>Item name</h5>
+                                                    </div>
+                                                    <div class="row">
+                                                        <p>Full/Half Portion</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="priceCol col s2">
+                                            <div class="valign-wrapper">
+                                                <div class="container">
+                                                    <p>GHC12</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="quantityCol col s2">
+                                            <div class="valign-wrapper">
+                                                <div class="container">
+                                                    <span>
+                                                    <i class="fa fa-plus" aria-hidden="true"></i>
+                                                </span>
+                                                    <p>10</p>
+                                                    <span>
+                                                    <i class="fa fa-minus" aria-hidden="true"></i>
+                                                </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="totalCol col s2">
+                                            <div class="valign-wrapper">
+                                                <div class="container">
+                                                    <p>GHC120</p>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="deleteCol col s1">
+                                            <div class="valign-wrapper">
+                                                <div class="container">
+                                                    <p><i class="fa fa-trash" aria-hidden="true"></i></p>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+
+                                    </div>
+                                    <!--End of food item-->
+
+                                    <!--Food item-->
+                                    <div class="col s12 itemBar card-panel">
+                                        <div class="item col s5">
+                                            <div class="card-panel itemHold">
+                                                <div class="itemImage col s4">
+                                                    <img src="http://www.ilovealabamafood.com/wp-content/uploads/2011/12/dish-detail-pbj.png">
+                                                </div>
+                                                <div class="itemDesc col s8">
+                                                    <div class="row">
+                                                        <h5>Item name</h5>
+                                                    </div>
+                                                    <div class="row">
+                                                        <p>Full/Half Portion</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="priceCol col s2">
+                                            <div class="valign-wrapper">
+                                                <div class="container">
+                                                    <p>GHC12</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="quantityCol col s2">
+                                            <div class="valign-wrapper">
+                                                <div class="container">
+                                                    <span>
+                                                    <i class="fa fa-plus" aria-hidden="true"></i>
+                                                </span>
+                                                    <p>10</p>
+                                                    <span>
+                                                    <i class="fa fa-minus" aria-hidden="true"></i>
+                                                </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="totalCol col s2">
+                                            <div class="valign-wrapper">
+                                                <div class="container">
+                                                    <p>GHC120</p>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="deleteCol col s1">
+                                            <div class="valign-wrapper">
+                                                <div class="container">
+                                                    <p><i class="fa fa-trash" aria-hidden="true"></i></p>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+
+                                    </div>
+                                    <!--End of food item-->
+                                </div>
+                            </div>
+                            <div class="row totalCheckoutAmount">
+                                <div class="container">
+                                    <div class="col s12 m3 right">
+                                        <div class="card-panel">
+                                            <span class="white-text">
+                                                <p>Total : GHC10</p>
+                                                <p>Order Charge : 15%</p>
+                                                <h4>GHC11.5</h3>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="container  checkBtns">
+                                    <a class="waves-effect waves-light checkOutBtn btn"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i>  Proceed</a>
+                                    <p>or</p>
+                                    <a class="waves-effect waves-light checkOutBtn blue btn"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i>  Continue Shopping</a>
+                                </div>
+                            </div>
+
+                        </section>
+                        <!--End of order details section-->
+
+                        <section class="payementDEtails">
+                            <div class="row">
+                                <div class="container">
+                                    <h1>sdjksd</h1>
+                                </div>
+                            </div>
+                        </section>
+
 
 
                     </section>

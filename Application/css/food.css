@@ -2,10 +2,11 @@
 
 .contentArea {
     min-height: 100vh;
+    clear: both;
 }
 
 .header {
-    height: 15rem;
+    height: 10rem;
     background-color: tomato;
     position: relative;
     z-index: -9;
@@ -18,7 +19,7 @@
 
 .gParallax {
     position: absolute;
-    top: 12rem;
+    top: 5rem;
     left: 0;
     width: 100%;
     z-index: 99;
@@ -29,4 +30,79 @@
 .slantBord {
     margin: 0;
     padding: 0 !important;
+}
+
+
+/*Progress tracking bar css*/
+
+
+/*End of progress tracker bar css*/
+
+.itemBar {
+    height: 7rem;
+}
+
+.item {
+    height: 100%;
+}
+
+.item .card-panel {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+.itemImage {
+    height: 100%;
+}
+
+.itemImage img {
+    height: 100%;
+    width: auto;
+}
+
+.priceCol,
+.quantityCol,
+.totalCol,
+.deleteCol,
+.quantityCol .valign-wrapper,
+.priceCol .valign-wrapper,
+.totalCol .valign-wrapper,
+.deleteCol .valign-wrapper {
+    height: 100%;
+    text-align: center;
+}
+
+.itemDesc {
+    padding-left: 2rem !important;
+}
+
+.itemHold {
+    box-shadow: none;
+}
+
+.navTitle {
+    text-align: center;
+}
+
+.checkNav {
+    background-color: tomato;
+}
+
+.checkOutPage .checkOutBtn {
+    background-color: lawngreen;
+}
+
+.totalCheckoutAmount .card-panel {
+    padding: 0.2rem !important;
+    text-align: center;
+    background-color: tomato !important;
+}
+
+.checkBtns {
+    text-align: center !important;
+}
+
+.checkBtns p {
+    margin: 1rem auto;
 }
