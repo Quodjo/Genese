@@ -106,3 +106,31 @@
 .checkBtns p {
     margin: 1rem auto;
 }
+
+.orderDetails {
+    display: none;
+}
+
+.billingSection nav {
+    text-align: center;
+    background-color: tomato;
+}
+
+.billingSection nav h5 {
+    margin: 0 auto;
+}
+
+.billingSection .paymentMethod {
+    text-align: center;
+    color: tomato;
+}
+
+.billingSection .paymentMethod i {
+    font-size: 250%;
+    transition: transform 0.4s ease-in-out;
+}
+
+.billingSection .paymentMethod i:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}

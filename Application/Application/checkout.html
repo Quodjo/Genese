@@ -241,41 +241,176 @@
                         </section>
                         <!--End of order details section-->
 
-                        <section class="payementDEtails">
+                        <!--Payment details section-->
+                        <section class="payementDetails">
                             <div class="row">
                                 <div class="container">
-                                    <h1>sdjksd</h1>
+                                    <!--User info section-->
+                                    <section class="col s7">
+                                        <!--SignUp default form -->
+                                        <div class="row card-panel">
+
+                                            <div class="">
+                                                <div class="row">
+                                                    <div class="col s5 right">
+                                                        <div class="chip">
+                                                            I already have an acount
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <form class="col s12">
+                                                    <div class="row">
+                                                        <div class="input-field col s6">
+                                                            <input placeholder="Placeholder" id="first_name" type="text" class="validate">
+                                                            <label for="first_name">First Name</label>
+                                                        </div>
+                                                        <div class="input-field col s6">
+                                                            <input id="last_name" type="text" class="validate">
+                                                            <label for="last_name">Last Name</label>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="input-field col s12">
+                                                            <input id="email" type="email" class="validate">
+                                                            <label for="email">Email</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="input-field col s12">
+                                                            <input id="password" type="password" class="validate">
+                                                            <label for="password">Password</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="input-field col s12">
+                                                            <input id="phoneNumber" type="tel" class="validate">
+                                                            <label for="phoneNumber">Phone Number</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="input-field col s12">
+                                                            <input id="password" type="password" class="validate">
+                                                            <label for="password">Password</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="input-field col s6">
+                                                            <select>
+                                                            <option value="" disabled selected>Choose your option</option>
+                                                            <option value="1">On Campus</option>
+                                                            <option value="2">Dufie</option>
+                                                            <option value="3">Masere</option>                                                                                                                                         
+                                                        </select>
+                                                            <label>Hostel</label>
+                                                        </div>
+                                                        <div class="input-field col s4 right">
+                                                            <input id="phoneNumber" type="tel" class="validate">
+                                                            <label for="phoneNumber">Room Number</label>
+                                                        </div>
+                                                    </div>
+
+                                                </form>
+
+                                            </div>
+                                        </div>
+                                        <!--end of signUp default form-->
+                                    </section>
+                                    <!--End of user section-->
+
+                                    <!--Billing section-->
+                                    <section class="col  s5 billingSection" ">
+                                        <div class="row ">
+                                            <div class="container card-panel " style="width : 100%; ">
+                                                <div class="row ">
+                                                    <nav class="valign-wrapper ">
+                                                        <h5>Billing Information</h5>
+                                                    </nav>
+                                                </div>
+                                                <div class="row ">
+                                                    <div class="container ">
+                                                        <div class="col s6 ">
+                                                            <p>Total : </p>
+                                                        </div>
+                                                        <div class="col s6 ">
+                                                            <h4>GHC35.25</h4>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row paymentMethod ">
+                                                    <div class="row ">
+                                                        <h5>Payment Methods</h5>
+                                                    </div>
+                                                    <div class="row ">
+                                                        <div class="col s4 " id="cashOnPU ">
+                                                            <div class="valign-wrapper ">
+                                                                <div class="container ">
+                                                                    <i class="fa fa-cc-mastercard tooltipped " data-position="bottom " data-delay="50 " data-tooltip="Mastercard " aria-hidden="true "></i>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col s4 " id="mealPlan ">
+                                                            <div class="valign-wrapper ">
+                                                                <div class="container ">
+                                                                    <i class="fa fa-credit-card-alt tooltipped " data-position="bottom " data-delay="50 " data-tooltip="Meal Plan " aria-hidden="true "></i>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col s4 " id="foodPay ">
+                                                            <div class="valign-wrapper ">
+                                                                <div class="container ">
+                                                                    <i class="fa fa-google-wallet tooltipped " data-position="bottom " data-delay="50 " data-tooltip="FoodPay " aria-hidden="true "></i>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </section>
+                                    <!--end of billing section-->
+
                                 </div>
                             </div>
                         </section>
-
+                        <!--end of payment details section-->
+                        <div class="row ">
+                            <div class="container checkBtns ">
+                                <a class="waves-effect waves-light checkOutBtn btn "><i class="fa fa-chevron-circle-right " aria-hidden="true "></i>  Proceed</a>
+                                <p>or</p>
+                                <a class="waves-effect waves-light checkOutBtn blue btn "><i class="fa fa-chevron-circle-left " aria-hidden="true "></i>  Continue Shopping</a>
+                            </div>
+                        </div>
 
 
                     </section>
 
                     <!--Footer-->
-                    <footer class="page-footer" style="background-color : tomato">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col l6 s12">
-                                    <h5 class="white-text">Food</h5>
-                                    <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+                    <footer class="page-footer " style="background-color : tomato ">
+                        <div class="container ">
+                            <div class="row ">
+                                <div class="col l6 s12 ">
+                                    <h5 class="white-text ">Food</h5>
+                                    <p class="grey-text text-lighten-4 ">You can use rows and columns here to organize your footer content.</p>
                                 </div>
-                                <div class="col l4 offset-l2 s12">
-                                    <h5 class="white-text">Links</h5>
+                                <div class="col l4 offset-l2 s12 ">
+                                    <h5 class="white-text ">Links</h5>
                                     <ul>
-                                        <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                                        <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                                        <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                                        <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                                        <li><a class="grey-text text-lighten-3 " href="#! ">Link 1</a></li>
+                                        <li><a class="grey-text text-lighten-3 " href="#! ">Link 2</a></li>
+                                        <li><a class="grey-text text-lighten-3 " href="#! ">Link 3</a></li>
+                                        <li><a class="grey-text text-lighten-3 " href="#! ">Link 4</a></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
-                        <div class="footer-copyright">
-                            <div class="container">
+                        <div class="footer-copyright ">
+                            <div class="container ">
                                 © 2017 Copyright | Food ~ Powered by Genese
-                                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+                                <a class="grey-text text-lighten-4 right " href="#! ">More Links</a>
                             </div>
                         </div>
                     </footer>
@@ -290,11 +425,11 @@
 
 
     <!--Import jQuery before materialize.js-->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="../js/materialize.min.js"></script>
+    <script type="text/javascript " src="https://code.jquery.com/jquery-2.1.1.min.js "></script>
+    <script type="text/javascript " src="../js/materialize.min.js "></script>
 
     <!--Genese javascript-->
-    <script type="text/javascript" src="../js/genese.js"></script>
+    <script type="text/javascript " src="../js/genese.js "></script>
 </body>
 
 </html>
