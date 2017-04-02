@@ -22,7 +22,7 @@
     top: 5rem;
     left: 0;
     width: 100%;
-    z-index: 99;
+    /*z-index: 99;*/
     margin: 0;
 }
 
@@ -133,4 +133,53 @@
 .billingSection .paymentMethod i:hover {
     transform: scale(1.1);
     cursor: pointer;
+}
+
+.checkoutModal {
+    width: 25%;
+    background: tomato;
+    color: white;
+    max-height: 100% !important;
+}
+
+.checkoutModal #foodPayTitle {
+    text-align: center;
+}
+
+.checkoutModal label {
+    color: white !important;
+}
+
+.checkoutModal .verifIcon {
+    color: lawngreen;
+    font-size: 50%;
+}
+
+.checkOutProcess .proceedBtn,
+.checkOutProcess .cancelBtn {
+    border-radius: 50px;
+}
+
+.checkOutProcess .proceedBtn {
+    background-color: transparent;
+    border: 1px solid lawngreen;
+    color: lawngreen;
+}
+
+.checkOutProcess .cancelBtn {
+    background-color: transparent;
+    border: 1px solid orangered;
+    color: orangered;
+}
+
+.checkOutProcess .proceedBtn:hover {
+    background-color: lawngreen;
+    border: none;
+    color: white;
+}
+
+.checkOutProcess .cancelBtn:hover {
+    background-color: orangered;
+    border: none;
+    color: white;
 }
