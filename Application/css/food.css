@@ -183,3 +183,49 @@
     border: none;
     color: white;
 }
+
+.payementDetails {
+    display: none;
+}
+
+.checkOutSection .mainRow {
+    background: aliceblue;
+    min-height: 40rem;
+    text-align: center;
+    padding-top: 5rem;
+}
+
+.mainVAlign {
+    height: inherit;
+}
+
+.checkOutSection .imageWrap {
+    width: 15rem;
+    height: 15rem;
+    background-color: lightblue;
+    margin: 0 auto;
+}
+
+.checkOutSection .txtWrap {
+    margin: 0 auto;
+    font-size: 900%;
+}
+
+.receiptSect {
+    margin-top: 2rem;
+}
+
+.receiptSect>* {
+    display: inline-block;
+    margin: 0.5rem;
+}
+
+.checkOutSection .userView {
+    background-color: tomato;
+}
+
+.checkOutSection .content {
+    background: aliceblue;
+    height: 60%;
+    overflow-y: auto;
+}

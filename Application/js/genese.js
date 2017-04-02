@@ -44,3 +44,20 @@
       // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
       $('.modal').modal();
   });
+
+  $('.receipt').sideNav({
+      menuWidth: 450, // Default is 300
+      edge: 'left', // Choose the horizontal origin
+      closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+      draggable: false // Choose whether you can drag to open on touch screens
+  });
+
+
+  $(document).ready(function() {
+      var $toastContent = $("<a class='waves-effect waves-light btn' onclick = \"alert('Hello')\">Make a request</a>");
+      Materialize.toast('Want your food delivered?', 4000)
+      setTimeout(function() {
+          Materialize.toast($toastContent, 55000)
+
+      }, 4000);
+  });
