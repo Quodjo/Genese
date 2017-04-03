@@ -53,7 +53,7 @@
   });
 
 
-  $(document).ready(function() {
+  $('.checkOutPage').ready(function() {
       var $toastContent = $("<a class='waves-effect waves-light btn' onclick = \"testFunct()\">Make a request</a>");
       Materialize.toast('Want your food delivered?', 4000)
       setTimeout(function() {
@@ -66,28 +66,52 @@
       alert("This callback function will do something.");
   }
 
-  /*Scrol fire - Display nav bar after scrolling an entire page*/
-  $('.siteNav').hide();
-  var displayNav = [
 
-      {
-          selector: '.menuHead',
-          offset: 500,
-          callback: function(el) {
-              $('.siteNav').show(200);
-          }
+
+
+  var x = 0;
+  var siteNavBar = $('.siteNav');
+
+  $(document).on('scroll', function() {
+
+      var s = $(document).scrollTop();
+
+      if (s > 500) {
+          siteNavBar.removeClass('siteNav_hide');
+          siteNavBar.addClass('siteNav_reveal');
+          $('.siteNav .brand-logo').show();
+          console.log(s);
+      } else if (s <= 50) {
+          siteNavBar.removeClass('siteNav_reveal');
+          siteNavBar.addClass('siteNav_hide');
+          $('.siteNav .brand-logo').hide();
+          console.log(s);
       }
-  ];
-  Materialize.scrollFire(displayNav);
 
-  var hideNav = [
 
-      {
-          selector: '.parallax-container',
-          offset: 0,
-          callback: function(el) {
-              $('.siteNav').hide(200);
+
+  });
+
+
+  $(document).ready(function() {
+      $('.carousel').carousel();
+  });
+
+  //Slideshow
+  $(function() {
+      $("#slides").slidesjs({
+          effect: {
+              slide: {
+                  // Slide effect settings.
+                  speed: 200
+                      // [number] Speed in milliseconds of the slide animation.
+              },
+              fade: {
+                  speed: 300,
+                  // [number] Speed in milliseconds of the fade animation.
+                  crossfade: true
+                      // [boolean] Cross-fade the transition.
+              }
           }
-      }
-  ];
-  Materialize.scrollFire(hideNav);
+      });
+  });

@@ -354,10 +354,42 @@ footer {
     }
 }
 
+#slides {
+    display: none;
+}
+
 .siteNav {
     position: fixed !important;
     top: 0;
     z-index: 90;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.siteNav_reveal {
+    background-color: tomato;
+}
+
+.siteNav_hide {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.siteNav .valign-wrapper,
+.siteNav .mainRow {
+    height: inherit;
+}
+
+.siteNav .nav-wrapper {
+    padding: 0 2rem;
+}
+
+.siteNav .brand-logo {
+    display: none;
+}
+
+footer {
+    background-color: tomato;
 }
 
 .side-nav {
@@ -369,7 +401,7 @@ footer {
     padding-top: 42.75vh;
 }
 
-round-button {
+.round-button {
     width: 25%;
 }
 
