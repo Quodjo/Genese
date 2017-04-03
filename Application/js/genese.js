@@ -53,7 +53,7 @@
   });
 
 
-  $('.checkOutPage').ready(function() {
+  $('.checkOutPage').load(function() {
       var $toastContent = $("<a class='waves-effect waves-light btn' onclick = \"testFunct()\">Make a request</a>");
       Materialize.toast('Want your food delivered?', 4000)
       setTimeout(function() {
@@ -92,26 +92,9 @@
 
   });
 
-
-  $(document).ready(function() {
-      $('.carousel').carousel();
-  });
-
-  //Slideshow
   $(function() {
-      $("#slides").slidesjs({
-          effect: {
-              slide: {
-                  // Slide effect settings.
-                  speed: 200
-                      // [number] Speed in milliseconds of the slide animation.
-              },
-              fade: {
-                  speed: 300,
-                  // [number] Speed in milliseconds of the fade animation.
-                  crossfade: true
-                      // [boolean] Cross-fade the transition.
-              }
-          }
+      $(".rslides").responsiveSlides({
+          speed: 2000, // Integer: Speed of the transition, in milliseconds
+          timeout: 6000
       });
   });

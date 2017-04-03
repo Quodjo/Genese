@@ -268,8 +268,21 @@ h5 {
     bottom: 8%;
 }
 
-.parallax-container {
+.parallax-container,
+.parallax .rslides,
+.parallax li {
     height: 100vh;
+}
+
+.parallax:after {
+    content: '';
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.20);
+    mix-blend-mode: overlay;
 }
 
 #searchPage #menuPage {
@@ -321,7 +334,7 @@ h5 {
 
 #idSearch {
     background-color: #ffffff;
-    border-radius: 0.5em;
+    border-radius: 50px;
     border-style: solid;
     border-width: 0.1em;
     border-color: tomato;
@@ -340,11 +353,32 @@ h5 {
     z-index: 90;
 }
 
+.advert {
+    height: 25rem;
+    background-color: white;
+    position: relative;
+    left: 0;
+    color: white;
+    background-image: url(../images/login_background.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.advert a {
+    border-radius: 50px;
+}
+
+
+/*
 header,
 main,
 footer {
     padding-left: 300px;
 }
+*/
 
 @media only screen and (max-width: 992px) {
     header,
@@ -352,10 +386,6 @@ footer {
     footer {
         padding-left: 0;
     }
-}
-
-#slides {
-    display: none;
 }
 
 .siteNav {
