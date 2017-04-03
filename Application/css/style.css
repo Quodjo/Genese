@@ -337,6 +337,7 @@ h5 {
     top: 30%;
     width: 60%;
     transform: translate(-50%, 50%);
+    z-index: 90;
 }
 
 header,
@@ -606,10 +607,13 @@ round-button {
 
 .gWrapper {}
 
+
+/*
 .foodSection .row {
     margin: 0;
     display: flex;
 }
+*/
 
 .foodSection .container {
     width: 85%;
@@ -625,7 +629,7 @@ round-button {
 }
 
 .foodSection .card {
-    margin: 5%;
+    /*margin: 5%;*/
     border-top: 2px solid tomato;
     transition: transform 0.4s ease-in-out;
 }
@@ -636,8 +640,6 @@ round-button {
 
 .foodSection .wrapper {
     margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
 }
 
 .itemCategory {

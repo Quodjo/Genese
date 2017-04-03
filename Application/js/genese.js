@@ -54,10 +54,14 @@
 
 
   $(document).ready(function() {
-      var $toastContent = $("<a class='waves-effect waves-light btn' onclick = \"alert('Hello')\">Make a request</a>");
+      var $toastContent = $("<a class='waves-effect waves-light btn' onclick = \"testFunct()\">Make a request</a>");
       Materialize.toast('Want your food delivered?', 4000)
       setTimeout(function() {
           Materialize.toast($toastContent, 55000)
 
       }, 4000);
   });
+
+  function testFunct() {
+      alert("This callback function will do something.");
+  }

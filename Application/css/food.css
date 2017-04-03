@@ -90,7 +90,7 @@
 }
 
 .checkOutPage .checkOutBtn {
-    background-color: lawngreen;
+    background-color: limegreen;
 }
 
 .totalCheckoutAmount .card-panel {
@@ -151,7 +151,7 @@
 }
 
 .checkoutModal .verifIcon {
-    color: lawngreen;
+    color: limegreen;
     font-size: 50%;
 }
 
@@ -162,8 +162,8 @@
 
 .checkOutProcess .proceedBtn {
     background-color: transparent;
-    border: 1px solid lawngreen;
-    color: lawngreen;
+    border: 1px solid limegreen;
+    color: limegreen;
 }
 
 .checkOutProcess .cancelBtn {
@@ -173,7 +173,7 @@
 }
 
 .checkOutProcess .proceedBtn:hover {
-    background-color: lawngreen;
+    background-color: limegreen;
     border: none;
     color: white;
 }
@@ -209,6 +209,7 @@
 .checkOutSection .txtWrap {
     margin: 0 auto;
     font-size: 900%;
+    color: limegreen;
 }
 
 .receiptSect {
@@ -228,4 +229,21 @@
     background: aliceblue;
     height: 60%;
     overflow-y: auto;
+}
+
+#receiptOut {
+    text-align: left;
+}
+
+.foodReceipt {
+    border-top: 2px dashed tomato !important;
+    border-bottom: 2px solid tomato;
+}
+
+.requestDeliveryBtn {
+    background-color: limegreen;
+}
+
+.viewReceiptBtn {
+    background-color: tomato;
 }
