@@ -629,7 +629,7 @@ round-button {
 }
 
 .foodSection .card {
-    /*margin: 5%;*/
+    margin: 5%;
     border-top: 2px solid tomato;
     transition: transform 0.4s ease-in-out;
 }
