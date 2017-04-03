@@ -354,8 +354,10 @@ footer {
     }
 }
 
-nav {
-    width: 80%;
+.siteNav {
+    position: fixed !important;
+    top: 0;
+    z-index: 90;
 }
 
 .side-nav {
@@ -560,10 +562,10 @@ round-button {
 }
 
 .chekNav {
-    height: inherit;
+    height: 50%;
     background-color: white;
     padding: 2%;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 #userProf {
@@ -626,12 +628,16 @@ round-button {
 
 .foodSection .card-image {
     max-height: 70% !important;
+    width: 200px;
+    margin: 0 auto;
 }
 
 .foodSection .card {
     margin: 5%;
     border-top: 2px solid tomato;
     transition: transform 0.4s ease-in-out;
+    height: 350px !important;
+    padding-top: 1rem;
 }
 
 .foodSection .card:hover {

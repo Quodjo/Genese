@@ -65,3 +65,29 @@
   function testFunct() {
       alert("This callback function will do something.");
   }
+
+  /*Scrol fire - Display nav bar after scrolling an entire page*/
+  $('.siteNav').hide();
+  var displayNav = [
+
+      {
+          selector: '.menuHead',
+          offset: 500,
+          callback: function(el) {
+              $('.siteNav').show(200);
+          }
+      }
+  ];
+  Materialize.scrollFire(displayNav);
+
+  var hideNav = [
+
+      {
+          selector: '.parallax-container',
+          offset: 0,
+          callback: function(el) {
+              $('.siteNav').hide(200);
+          }
+      }
+  ];
+  Materialize.scrollFire(hideNav);
