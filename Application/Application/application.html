@@ -159,7 +159,7 @@
             <div>
                 <!--Fixed button on the page that acts as the checkout button-->
                 <div class="fixed-action-btn">
-                    <span class="new badge cartNumber" data-badge-caption="">4</span>
+                    <p class=" cartNumberOfItems">0</p>
                     <a class="button-collapse btn-floating btn-large lawngreen" data-activates="checkout_slide-out">
                         <i class="large material-icons">shopping_basket</i>
                     </a>
@@ -194,7 +194,7 @@
                     </li>
                     <div class="chekNav">
                         <div class="row">
-                            <a class="waves-effect waves-light btn checkoutbtn"><i class="fa fa-shopping-cart" aria-hidden="true"></i><span> Checkout</span></a>
+                            <a href="checkout.html" class="waves-effect waves-light btn checkoutbtn"><i class="fa fa-shopping-cart" aria-hidden="true"></i><span> Checkout</span></a>
                         </div>
                         <div class="row">
                             <div class="container">
@@ -577,7 +577,7 @@
                                             <h1>Advert</h1>
                                         </div>
                                         <div class="row">
-                                            <a class="waves-effect waves-light btn">button</a>
+                                            <a class="waves-effect waves-light btn">Buy</a>
                                         </div>
                                     </div>
                                 </div>
@@ -842,6 +842,17 @@
 
     <!--Genese javascript-->
     <script type="text/javascript" src="../js/genese.js"></script>
+
+    <script>
+        $('.fcontainer').ready(startSlide());
+
+        function startSlide() {
+            $(".rslides").responsiveSlides({
+                speed: 2000, // Integer: Speed of the transition, in milliseconds
+                timeout: 6000
+            });
+        }
+    </script>
 
 
 

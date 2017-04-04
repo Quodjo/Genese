@@ -728,9 +728,14 @@ footer {
     margin: 4% auto;
 }
 
-.cartNumber {
-    min-width: 1rem !important;
-    margin-left: 0 !important;
+.cartNumberOfItems {
+    max-width: 2rem;
+    max-height: 2rem;
+    border-radius: 50px;
+    background-color: orangered;
+    color: white;
+    text-align: center;
+    margin: 0 auto 0 2rem;
 }
 
 .chekNav .checkoutbtn {

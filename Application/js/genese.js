@@ -11,7 +11,7 @@
 
       setTimeout(function() {
           Materialize.toast('Your meal has been added to the cart.', 3000, 'rounded');
-          $('.cartNumber').css('visibility', 'visible');
+          $('.cartNumberOfItems').text('5');
       }, 1000);
   });
 
@@ -53,14 +53,15 @@
   });
 
 
-  $('.checkOutPage').load(function() {
+  function fireDRDialogue() {
       var $toastContent = $("<a class='waves-effect waves-light btn' onclick = \"testFunct()\">Make a request</a>");
       Materialize.toast('Want your food delivered?', 4000)
       setTimeout(function() {
-          Materialize.toast($toastContent, 55000)
+          Materialize.toast($toastContent, 5000)
 
-      }, 4000);
-  });
+      }, 3000);
+  };
+
 
   function testFunct() {
       alert("This callback function will do something.");
@@ -92,9 +93,50 @@
 
   });
 
-  $(function() {
-      $(".rslides").responsiveSlides({
-          speed: 2000, // Integer: Speed of the transition, in milliseconds
-          timeout: 6000
+
+
+
+  /*$(function() {
+     
+  });*/
+
+
+  /*Checkout Interactions*/
+  var paymentSection = $('.payementDetails');
+  var orderSection = $('.orderDetails');
+  var checkoutSect = $('.checkOutSection')
+  var progressBar = document.getElementsByClassName('progressPointer');
+  var proceedBtn = $('.proceed');
+  var checkOutPage = $('.checkOutPage');
+  var checkOutButton = $('.fin');
+
+  $(document).ready(function() {
+      orderSection.show();
+      console.log(progressBar[0]);
+
+      proceedBtn.click(function() {
+          orderSection.hide(200);
+          paymentSection.show(200);
+          progressBar[0].classList.add('completed');
+          console.log(progressBar[0]);
+
+
+
+      });
+
+      checkOutButton.click(function() {
+          paymentSection.hide(200);
+          checkoutSect.show(200);
+          console.log(progressBar[1]);
+          progressBar[1].classList.add('completed');
+          setTimeout(function() {
+              fireDRDialogue();
+          }, 1000);
+
+
+
       });
   });
+
+
+  /*end of checkout interactions*/

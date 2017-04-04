@@ -7,8 +7,26 @@
 
 .header {
     height: 10rem;
+    color: white;
     background-color: tomato;
     position: relative;
+    z-index: -9;
+    margin: 0;
+    padding: 0;
+    background-image: url(https://static.pexels.com/photos/48726/pexels-photo-48726.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.header:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 30vh;
+    background-color: rgba(0, 0, 0, 0.4);
     z-index: -9;
 }
 
@@ -107,10 +125,6 @@
     margin: 1rem auto;
 }
 
-.orderDetails {
-    display: none;
-}
-
 .billingSection nav {
     text-align: center;
     background-color: tomato;
@@ -184,10 +198,6 @@
     color: white;
 }
 
-.payementDetails {
-    display: none;
-}
-
 .checkOutSection .mainRow {
     background: aliceblue;
     min-height: 40rem;
@@ -247,3 +257,14 @@
 .viewReceiptBtn {
     background-color: tomato;
 }
+
+
+/*Default state*/
+
+.payementDetails,
+.checkOutSection {
+    display: none;
+}
+
+
+/***/
