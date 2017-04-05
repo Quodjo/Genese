@@ -75,7 +75,7 @@ border-bottom: 4.5vh;
 </div>
 
 <div class="row">
-    <div class="col s12 m7 l9" style="padding-top:8%">
+    <div class="col s12 m6 l8" style="padding-top:8%">
 
  		<div class="row" align="center" >
  		<div >
@@ -129,8 +129,8 @@ border-bottom: 4.5vh;
 <!-- 
 in kitchen and processed order column -->
     </div>
-    <div class="col s12 m5 l3" >
-
+    <div class="col s12 m6 l4" >
+<div style="padding-right: 35px">
 	    <div align="center" class="row" style=" padding-top: 15%;font-family: ‘Courier New’, Courier, monospace;" >
 
 	    	<div class="card grey darken-1" style="height:40px"><span style="color:white" class="card-title">IN KITCHEN</span>
@@ -154,6 +154,8 @@ in kitchen and processed order column -->
 		
 
     </div>
+
+</div>
 
 
 
