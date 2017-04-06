@@ -24,6 +24,22 @@ body {
     position: relative;
 }
 
+.lawngreen {
+    background-color: lawngreen;
+}
+
+.limegreen {
+    background-color: limegreen;
+}
+
+.title {
+    margin-top: 5rem;
+}
+
+.row {
+    margin: 0;
+}
+
 
 /*end of Genese specific styles*/
 
@@ -32,9 +48,50 @@ body {
 
 #homeSearch,
 #homeSerach .headerPage,
-#homeSearch .mContent {
+#homeSearch .mContent,
+.slideShowBack,
+#foodFeature {
     text-align: center;
     height: 100vh;
+}
+
+.slideShowBack {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.slideShowBack:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: '';
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+}
+
+#homeSearch .mContent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 5;
+}
+
+#homeSearch {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 5;
+}
+
+#introText {
+    color: white;
 }
 
 #searchDiv {
@@ -56,6 +113,286 @@ body {
     text-align: center;
     font-size: 2em;
     height: 10vh;
+}
+
+#menLog {
+    position: absolute;
+    top: 5rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 8rem;
+    height: 8rem;
+}
+
+.scrollAnim .container {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    font-size: 450%;
+    color: white;
+}
+
+.cartNumberOfItems {
+    max-width: 2rem;
+    max-height: 2rem;
+    border-radius: 50px;
+    background-color: orangered;
+    color: white;
+    text-align: center;
+    margin: 0 auto 0 2rem;
+}
+
+#foodFeature {
+    position: relative;
+    z-index: 10;
+    background: transparent;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    margin: 0;
+    overflow-y: auto;
+    transition: top 1s ease-in-out;
+}
+
+#foodFeature,
+.dummySpace,
+#foodFeature .contentSpace {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+#foodFeature .mealAd,
+.contentSpace #foodMenu {
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+}
+
+#foodFeature .contentSpace {
+    background-color: white;
+}
+
+.mealAd .mainRow,
+.mealAd .mainVW {
+    height: 100%;
+    margin: 0;
+}
+
+.mealAd {
+    background: #8e9eab;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #8e9eab, #eef2f3);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #8e9eab, #eef2f3);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.mealAd .conT1 {
+    width: 90% !important;
+    position: relative;
+}
+
+.mealAd .squareImg {
+    width: 35rem;
+    height: 35rem;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.mealAd .squareImg img {
+    width: 100%;
+    height: auto;
+}
+
+.mealAd .leftIndi,
+.mealAd .rightIndi,
+.mealAd .midIndi,
+.mealAd .conT1_labels {
+    height: 100vh;
+}
+
+.mealAd .conT1_labels {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.mealAd .conT1_labels .title {
+    background-color: tomato;
+    display: inline-block;
+    padding: 1%;
+    color: whitesmoke;
+}
+
+.mealAd .conT1_labels .sub {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.mealAd .conT1_labels .price {
+    background-color: rgba(0, 205, 10, 0.5);
+}
+
+.mealAd .conT1_labels .gWrapper {
+    position: relative;
+    background-color: transparent;
+}
+
+.mealAd .conT1_labels .orderPlace {
+    position: absolute;
+    height: 10rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.mealAd .conT1_labels .orderPlace .valign-wrapper {
+    height: 100%;
+    text-align: center;
+}
+
+.mealAd .conT1_labels .orderPlace .orderMealBtn {
+    margin: 0 auto !important;
+    border-radius: 50px;
+}
+
+.mealAd .conT1_labels .orderPlace .kitchen>* {
+    display: inline-block;
+}
+
+.mealAd .conT1_labels .orderPlace .kitchen {
+    margin: 1rem;
+}
+
+.contentSpace #foodMenu .gWrapper {
+    display: flex;
+}
+
+#foodMenu .gWrapper .mainSide {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+#foodMenu .gWrapper .rightSide {
+    width: 40rem;
+    height: 100%;
+    background-color: white;
+}
+
+#foodMenu .gWrapper .catSide {
+    width: 10rem;
+    height: 100%;
+    background-color: white
+}
+
+.catSide .valign-wrapper {
+    height: 100%;
+}
+
+#foodMenu .gWrapper .mainSide .itemHolder {
+    height: 80%;
+    overflow-y: auto;
+}
+
+.mainSide .itemHolder .itemCont {
+    width: 100%;
+}
+
+.rightSide {
+    position: relative;
+    display: none;
+}
+
+.rightSide .gWrapper {
+    width: 100%;
+    position: relative;
+    display: block !important;
+    background-color: whitesmoke;
+}
+
+.rightSide .cart {
+    position: fixed;
+    top: 10px;
+    margin: 0rem auto 0 auto;
+    right: 1.5rem;
+    width: 25%;
+    padding: 0;
+}
+
+.rightSide .cart nav {
+    height: 2.5rem;
+    width: 100%;
+    background-color: tomato;
+}
+
+.rightSide .cart .orderBtn {
+    display: block;
+}
+
+.rightSide .cart .orderItems {
+    min-height: 5rem;
+}
+
+.deet {
+    text-align: left;
+}
+
+.deetRes {
+    text-align: right;
+}
+
+.itemBar {
+    height: 7rem;
+}
+
+.item {
+    height: 100%;
+}
+
+.item .card-panel {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+.itemImage {
+    height: 100%;
+}
+
+.itemImage img {
+    height: 100%;
+    width: auto;
+}
+
+.priceCol,
+.quantityCol,
+.totalCol,
+.deleteCol,
+.quantityCol .valign-wrapper,
+.priceCol .valign-wrapper,
+.totalCol .valign-wrapper,
+.deleteCol .valign-wrapper {
+    height: 100%;
+    text-align: center;
+}
+
+.itemDesc {
+    padding-left: 2rem !important;
+}
+
+.itemHold {
+    box-shadow: none;
+}
+
+.foodRow {
+    padding-left: 5rem;
+    padding-right: 5rem;
 }
 
 
