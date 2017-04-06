@@ -173,6 +173,15 @@ body {
     background-color: white;
 }
 
+#foodMenu .gWrapper {
+    background: #c0392b;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #c0392b, #8e44ad);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #c0392b, #8e44ad);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
 #foodFeature .contentSpace {
     background-color: white;
 }
@@ -276,19 +285,16 @@ body {
 #foodMenu .gWrapper .mainSide {
     width: 100%;
     height: 100%;
-    background-color: white;
 }
 
 #foodMenu .gWrapper .rightSide {
     width: 40rem;
     height: 100%;
-    background-color: white;
 }
 
 #foodMenu .gWrapper .catSide {
     width: 10rem;
     height: 100%;
-    background-color: white
 }
 
 .catSide .valign-wrapper {
@@ -323,6 +329,14 @@ body {
     right: 1.5rem;
     width: 25%;
     padding: 0;
+}
+
+.cart .gWrapper {
+    background: white !important;
+}
+
+.catSide label {
+    color: white;
 }
 
 .rightSide .cart nav {
