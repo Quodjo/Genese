@@ -1,4 +1,4 @@
-<?
+<?php
 /*
 *Database connection class
 */
@@ -77,4 +77,5 @@ class dbconnection
   }
 
 }
-var_dump()fetch);
+
+?>
