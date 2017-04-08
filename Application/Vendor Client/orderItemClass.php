@@ -32,16 +32,53 @@ function foodDetails(){
     $sql="SELECT food_name FROM food_menu WHERE food_id = $foodId";
     $dbexec = $dbcon->query($sql);
 
+    if($dbexec){
+      $row = $dbcon->fetch();
+      echo ($row);
+    }
+
+}
+/*
+Functions
+@author: Akosua Adobea Adin-Darko
+*/
+
+function drinkDetails(){
+      $sql="SELECT drink_name FROM drink_menu WHERE drink_id = $drinkId";
+      $dbexec = $dbcon->query($sql);
+
+      if($dbexec){
+        $row = $dbcon->fetch();
+        echo ($row);
+      }
+
 }
 
-function drinkDetails(){}
+function staffDetails(){
+  $sql="SELECT * FROM staff_table WHERE staff_id = $staffId";
+  $dbexec = $dbcon->query($sql);
 
-function staffDetails(){}
+  if($dbexec){
+    $row = $dbcon->fetch();
+    echo ($row['firstname']);
+    echo ($row['lastname']);
+  }
+}
 
-function userDetails(){}
+function userDetails(){
+  $sql="SELECT * FROM user WHERE user_id = $userId";
+  $dbexec = $dbcon->query($sql);
+
+  if($dbexec){
+    $row = $dbcon->fetch();
+    echo ($row['firstname']);
+    echo ($row['lastname']);
+  }
+}
 
 function exportOrder(){}
 
+foodDetails();
 
 
 

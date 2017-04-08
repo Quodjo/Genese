@@ -1,5 +1,5 @@
 <?php
-require_once('../database/dbconnectionclass.php');
+require_once($_SERVER['DOCUMENT_ROOT']."/classproject2017/database/dbconnectionclass.php");
 $sqlquery= "SELECT * FROM menu_order_table";
 
 //create a new instance of the database class
@@ -15,5 +15,3 @@ if($dbexec){
   }
 
 ?>
-
-
