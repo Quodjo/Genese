@@ -1,6 +1,8 @@
 <?php
-require_once($_SERVER['DOCUMENT_ROOT']."/classproject2017/database/dbconnectionclass.php");
-$sqlquery= "SELECT * FROM menu_order_table";
+
+require_once('../database/dbconnectionclass.php');
+$sqlquery= "SELECT total_amount FROM menu_order_table where menu_order_id='34'";
+
 
 //create a new instance of the database class
 $verdb = new dbconnection;
@@ -15,3 +17,4 @@ if($dbexec){
   }
 
 ?>
+    
