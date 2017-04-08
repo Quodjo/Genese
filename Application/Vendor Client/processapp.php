@@ -1,11 +1,17 @@
 <?php
-$sqlquery= "SELECT * FROM menu_order_table WHERE total_amount = 20.00"
+require_once($_SERVER['DOCUMENT_ROOT']."/classproject2017/database/dbconnectionclass.php");
+$sqlquery= "SELECT * FROM menu_order_table";
 
 //create a new instance of the database class
 $verdb = new dbconnection;
-$dbexec =   $verdb->query($sqlsquery);
+$dbexec =   $verdb->query($sqlquery);
 
 if($dbexec){
   $row = $verdb->fetch();
-  echo "SUCCESS!"
+  echo ($row['total_amount']);
+}
+  else{
+    echo "Fail";
+  }
+
 ?>
