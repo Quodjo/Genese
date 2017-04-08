@@ -77,3 +77,4 @@ class dbconnection
   }
 
 }
+var_dump()fetch);
