@@ -49,7 +49,7 @@ function drinkDetails(){
 
       if($dbexec){
         $row = $dbcon->fetch();
-        echo ($row);
+        echo ($row['drink_name']);
       }
 
 }
@@ -78,7 +78,7 @@ function userDetails(){
 
 function exportOrder(){}
 
-foodDetails();
+
 
 
 
