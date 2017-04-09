@@ -6,17 +6,13 @@ Order item class
 require_once('../database/dbconnectionclass.php');
 
 class orderItem{
-public $orderNum;
-public $userId;
-public $foodId;
-public $drinkID;
-public $staffID;
-public $dbcon;
+public $orderNum; public $userId;
+public $foodId; public $drinkID;
+public $staffID; public $dbcon;
 
-// public $userName;
-// public $foodName;
-// public $drinkName;
-// public $staffOnDuty;
+public $userFname; public $userLname;
+public $foodName; public $drinkName;
+public $staffFname; public $staffLname;
 
 
 function __construct($order,$user,$food,$drink,$staff){
@@ -28,13 +24,15 @@ $this->staffId=$staff;
 $this->dbcon=new dbconnection;
 }
 
+
+
 function foodDetails(){
     $sql="SELECT food_name FROM food_menu WHERE food_id = $this->foodId";
     $dbexec = $this->dbcon->query($sql);
 
     if($dbexec){
       $row = $this->dbcon->fetch();
-      echo ($row['food_name']);
+      $this->foodName=$row['food_name'];
     }
 
 }
@@ -49,7 +47,7 @@ function drinkDetails(){
 
       if($dbexec){
         $row = $this->dbcon->fetch();
-        echo ($row['drink_name']);
+        $this->drinkName=$row['drink_name']; 
       }
 
 }
@@ -60,8 +58,8 @@ function staffDetails(){
 
   if($dbexec){
     $row = $this->dbcon->fetch();
-    echo ($row['firstname']);
-    echo ($row['lastname']);
+  $this->staffFname=$row['firstname'];
+     $this->staffLname=$row['lastname'];
   }
 }
 
@@ -71,26 +69,53 @@ function userDetails(){
 
   if($dbexec){
     $row = $this->dbcon->fetch();
-    echo ($row['firstname']);
-    echo ($row['lastname']);
+    $this->userFname=$row['firstname'];
+    $this->userLname=$row['lastname'];
   }
 }
 
-function exportOrder(){}
+/*
+@author: Benedict export
+This function runs all other methods to obtain order details from database
+then creates a new fullOrder object and exports it as a json object*/
+function exportOrder(){
 
+  //run sql query methods of order object
+ $this-> foodDetails();  $this-> drinkDetails(); $this->  userDetails();  $this-> staffDetails();
 
+ $fullorder=new fullOrder($this->orderNum,$this->userFname,$this->userLname,$this->foodName,
+ $this->drinkName,$this->staffFname,$this->staffLname);  //create new fullOrder object from retrieved info
 
+ $myJSON = json_encode($fullorder);  //encode fullorder object in json format
 
+  return $myJSON;  //return json object
+ 
+
+  }
 
 }
 
+/*
+Nested class to package full order drinkDetails for json parsing
+@author:Benedict Quartey*/
+class fullOrder{
+public $staffFname; public $staffLname;
+public $userFname; public $userLname;
+public $foodname; public $drinkname;
 
 
+function __construct($order,$userF,$userL,$food,$drink,$staffF,$staffL){
+$this->orderNum=$order;
+$this->userFname=$userF;
+$this->userLname=$userL;
+$this->foodname=$food;
+$this->drinkname=$drink;
+$this->staffFname=$staffF;
+$this->staffLname=$staffL;
+}
 
-
-
-
-
-
+}
 
 ?>
+
+
