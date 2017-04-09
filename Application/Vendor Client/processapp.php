@@ -22,6 +22,8 @@ require_once('../Vendor Client/orderItemClass.php');
 
 $order = new orderItem("3","4","5","6","7");
 $order->foodDetails();
-
+$order->staffDetails();
+$order->userDetails();
+$order->drinkDetails();
 
 ?>
