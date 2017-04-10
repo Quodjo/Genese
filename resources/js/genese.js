@@ -2,9 +2,10 @@ $(document).ready(function() {
 
     startSlide();
 
+    $('#foodFeature').fullpage();
 
 
-    /* $(".nano").nanoScroller();*/
+    $(".nano").nanoScroller();
 
     $('.cartBtn').click(function() {
         showCheckout();
@@ -27,6 +28,7 @@ $(document).ready(function() {
             $('#foodFeature').animate({ scrollTop: winHeight });
         } else if (event.deltaY == 1) {
             $('#foodFeature').css('top', '100%');
+            $('#foodFeature').scrollTop(0);
         }
         console.log(event.deltaY);
 
@@ -35,10 +37,26 @@ $(document).ready(function() {
 
 
 
+    $('.itemHolder').mousewheel(function(event) {
+        if (event.deltaY == -1) {
+            var page = $('#foodMenu').outerHeight();
+            $('#foodMenu').scrollTop(page * 2);
+            // $('#foodFeature').scrollTop(0);
+
+        }
+
+
+    });
 
 
 
 });
+
+
+
+
+
+
 
 
 /*Slider function*/

@@ -22,6 +22,8 @@ body {
     height: inherit;
     background-color: bisque;
     position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .lawngreen {
@@ -50,9 +52,11 @@ body {
 #homeSerach .headerPage,
 #homeSearch .mContent,
 .slideShowBack,
-#foodFeature {
+#foodFeature,
+#mealMenu {
     text-align: center;
     height: 100vh;
+    width: 100vw;
 }
 
 .slideShowBack {
@@ -82,13 +86,7 @@ body {
     z-index: 5;
 }
 
-#homeSearch {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    z-index: 5;
-}
+#homeSearch {}
 
 #introText {
     color: white;
@@ -221,7 +219,8 @@ body {
 .mealAd .leftIndi,
 .mealAd .rightIndi,
 .mealAd .midIndi,
-.mealAd .conT1_labels {
+.mealAd .conT1_labels,
+{
     height: 100vh;
 }
 
@@ -295,6 +294,10 @@ body {
 #foodMenu .gWrapper .catSide {
     width: 10rem;
     height: 100%;
+}
+
+#mealMenu {
+    background-color: white;
 }
 
 .catSide .valign-wrapper {
@@ -407,6 +410,10 @@ body {
 .foodRow {
     padding-left: 5rem;
     padding-right: 5rem;
+}
+
+.menuWrap {
+    display: flex;
 }
 
 
