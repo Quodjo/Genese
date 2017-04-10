@@ -2,10 +2,10 @@ $(document).ready(function() {
 
     startSlide();
 
-    $('#foodFeature').fullpage();
 
 
-    $(".nano").nanoScroller();
+
+
 
     $('.cartBtn').click(function() {
         showCheckout();
