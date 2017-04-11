@@ -3,7 +3,19 @@
 require_once('../Vendor Client/orderItemClass.php');
 require_once('../database/dbconnectionclass.php');
 $orderArray=array();
-initialize();
+
+//$result=json_decode(export());
+$result=json_decode(export());
+//echo $result;
+
+
+
+foreach($result as $order){
+    echo($order=new orderItem);
+    echo"<br>";
+    }
+
+
 function initialize(){
     $orderNum;
     $userId;
@@ -31,16 +43,26 @@ $dbexec = $dbcon->query($sql);
 
     }
 
-    foreach($GLOBALS['orderArray'] as $order){
-    echo($order->exportOrder());
-    echo"<br>";
-    }
-    
+   // foreach($GLOBALS['orderArray'] as $order){
+   // echo($order->exportOrder());
+  //  echo"<br>";
+  //  }
+   
 }
 
  
-function createButtons(){
+function export(){
+    initialize();
+$JSONArray = json_encode($GLOBALS['orderArray']);
+//return $JSONArray;
 
+return ($JSONArray);
+
+/*
+ foreach($GLOBALS['orderArray'] as $order){
+    echo($order->exportOrder());
+    echo"<br>";
+    }*/
 
 }
 

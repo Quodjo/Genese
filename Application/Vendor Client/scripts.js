@@ -49,11 +49,11 @@ $(".button-collapse").sideNav();
 
 
   function createButtons() {
+    
    
   	var container=document.getElementById('orderContainer');
     var btn = document.createElement("button");
     btn.className="btn waves-effect waves-light";
-
 
         btn.style.width = "160px";
         btn.style.height = "120px";
