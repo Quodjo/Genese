@@ -5,7 +5,7 @@ $(document).ready(function() {
 
 
 
-
+    $('#extrasModal').modal();
 
     $('.cartBtn').click(function() {
         showCheckout();

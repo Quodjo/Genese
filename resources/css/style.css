@@ -487,4 +487,156 @@ body {
 }
 
 
+/*Modals*/
+
+#extrasModal {
+    top: 0 !important;
+    width: 98vw;
+    max-height: 98vh !important;
+    height: 98vh !important;
+    overflow: none !important;
+}
+
+#extrasModal .modal-content {
+    height: inherit;
+}
+
+#extrasModal .mainVA {
+    height: 100%;
+}
+
+#extrasModal .foodRow {
+    min-height: 50vh;
+    width: 50vw !important;
+    margin: 0 auto;
+    display: flex;
+}
+
+#extrasModal .foodRow .foodDesSide,
+#extrasModal .foodRow .extraSide {
+    height: inherit;
+}
+
+#extrasModal .foodRow .foodDesSide {
+    background: salmon;
+    display: flex;
+}
+
+.des {
+    width: 100%;
+    background: tomato;
+    transform: scale(1.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 4px;
+}
+
+.des img {
+    width: 100%;
+    height: 100%;
+}
+
+.des:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+}
+
+#extrasModal .foodRow .extraSide {
+    position: relative;
+}
+
+#extrasModal .extraMenu {
+    height: 5rem;
+    position: relative;
+}
+
+#extrasModal .extraMenu .wrapper {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    /* text-align: center; */
+    left: 0;
+    right: 0;
+    position: absolute;
+    top: 4rem;
+}
+
+#extrasModal .extraMenu .wrapper .ex_menu {
+    width: 5rem;
+    height: 5rem;
+    background: cadetblue;
+    margin: 0 1rem;
+}
+
+.extraSide {
+    display: flex;
+}
+
+.extraSide .mlist {
+    width: 100%;
+    padding: 2rem 0.2rem 0.2rem 2rem;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+}
+
+.extraSide .micons {
+    width: 4rem;
+    overflow-y: auto;
+}
+
+.extraSide .micons .micon {
+    width: 3rem;
+    height: 3rem;
+    background-color: tomato;
+    color: white;
+    margin: 0.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+    border-radius: 50%;
+}
+
+.extraSide .micons .micon:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+
+/*end of modals*/
+
+
 /*end of custom styles*/
+
+
+/*Hides the scroll bar*/
+
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    border-radius: 50px;
+    /* remove scrollbar space */
+    background: transparent;
+    /* optional: just make scrollbar invisible */
+}
+
+
+/* optional: show position indicator in red */
+
+::-webkit-scrollbar-thumb {
+    background: tomato;
+}
+
+
+/*end*/
