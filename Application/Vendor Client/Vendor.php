@@ -74,7 +74,7 @@ border-bottom: 4.5vh;
     </div>
 </div>
 
-<div class="row">
+<div class="row" >
     <div class="col s12 m6 l8" style="padding-top:8%">
 
  		<div class="row" align="center" >
@@ -86,9 +86,7 @@ border-bottom: 4.5vh;
 				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);" data-target="modal1">Order #4</button>
 				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);" data-target="modal1">Order #5</button>
 
-				</div>
-
-				<div style="padding-top: 0.5%">
+				
  			<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);" data-target="modal1" >Order #1</button>
 
 				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);" data-target="modal1">Order #6</button>
@@ -96,13 +94,8 @@ border-bottom: 4.5vh;
 				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);" data-target="modal1">Order #8</button>
 				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);" data-target="modal1">Order #9</button>
 
-				</div>
-			
 				
-
- 		</div>
- 		<div align="center" class="row">
- 			<div >
+		
  			<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);" data-target="modal1" >Order #1</button>
 
 				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);" data-target="modal1">Order #10</button>
@@ -110,9 +103,7 @@ border-bottom: 4.5vh;
 				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);" data-target="modal1">Order #12</button>
 				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);" data-target="modal1">Order #13</button>
 
-				</div>
-
-				<div style="padding-top: 0.5%">
+				
  			<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);" data-target="modal1" >Order #14</button>
 
 				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);" data-target="modal1">Order #15</button>
@@ -120,8 +111,8 @@ border-bottom: 4.5vh;
 				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);" data-target="modal1">Order #17</button>
 				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);" data-target="modal1">Order #18</button>
 
-				</div>
- 			
+				
+ 			</div>
  		</div>
      
 
@@ -137,21 +128,18 @@ in kitchen and processed order column -->
 
 				</div>
 
-			<div class="card blue-grey darken-1" style="height:550px">
+			<div class="card blue-grey darken-1" > <!-- optimal card height:550px-->
 				            <div class="card-content white-text">
 				              <span class="card-title"></span>
 				              <p>Processed orders go here<br><br>
 				              </p>
-
+	
 				            </div>
-
 
 			 </div>
 
 
 	    </div>
-
-		
 
     </div>
 
@@ -160,6 +148,13 @@ in kitchen and processed order column -->
 
 
   </div> 
+
+
+
+  <!-- row for footer -->
+  <div align=center class="row" style="padding-top: 2.8%">
+  
+  </div>
 
 <!--modal to create the pop ups-->
 				<div align=center id="modal1" class="modal">
@@ -194,68 +189,9 @@ in kitchen and processed order column -->
 
 
 
-
-
-
-
-
-
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 	<script type="text/javascript" src="../js/materialize.min.js"></script>
-	<script>
-// Initialize collapse button
-$(".button-collapse").sideNav();
-  // Initialize collapsible (uncomment the line below if you use the dropdown variation)
-  // $('.collapsible').collapsible();
-  $('.button-collapse').sideNav({
-      menuWidth: 90, // Default is 300
-      edge: 'left', // Choose the horizontal origin
-     closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
-      draggable: true // Choose whether you can drag to open on touch screens
-  }
-  );
-
-
-// Initialize collapse button
-$(".button-collapse").sideNav();
-  // Initialize collapsible (uncomment the line below if you use the dropdown variation)
-  // $('.collapsible').collapsible();
-  $('.button-collapse').sideNav({
-      menuWidth: 290, // Default is 300
-      edge: 'left', // Choose the horizontal origin
-     closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
-      draggable: true // Choose whether you can drag to open on touch screens
-  }
-  );
-
-
-  $(document).ready(function() {
-  	$("#order2, #order1").on('click', function() {
-  		$(this).removeClass("waves-effect waves-light submit").addClass('disabled');
-  	});
-  });
-
-
-  $('.modal').modal({
-      dismissible: true, // Modal can be dismissed by clicking outside of the modal
-      opacity: .5, // Opacity of modal background
-      inDuration: 300, // Transition in duration
-      outDuration: 200, // Transition out duration
-      startingTop: '4%', // Starting top style attribute
-      endingTop: '10%', // Ending top style attribute
-      	ready: function(modal, trigger) { // Callback for Modal open. Modal and trigger parameters available.
-      	//alert("MOVES TO KITCHEN");
-      	//console.log(modal, trigger);
-      },
-      complete: function() { alert('ORDER MOVES TO KITCHEN'); } // Callback for Modal close
-  }
-  );
-
-
-
-
-</script>
-
+<script type="text/javascript" src="scripts.js"></script>
 
 
 

@@ -1,22 +1,39 @@
 <?php
 
 require_once('../Vendor Client/orderItemClass.php');
-// $sqlquery= "SELECT total_amount FROM menu_order_table where menu_order_id='34'";
-//
-//
-// //create a new instance of the database class
-// $verdb = new dbconnection;
-// $dbexec =   $verdb->query($sqlquery);
-//
-// if($dbexec){
-//   $row = $verdb->fetch();
-//   echo ($row['total_amount']);
-// }
-//   else{
-//     echo "Fail";
-//   }
+require_once('../database/dbconnectionclass.php');
+initialize();
+function initialize(){
+    $orderNum;
+    $userId;
+    $foodId;  
+    $drinkID;
+    $staffID; 
+    $orderArray = array();
 
 
-$order = new orderItem(3,4,5,6,7);
-echo($order->exportOrder());
+$dbcon = new dbconnection;
+$sql="SELECT * FROM menu_order_table";
+$dbexec = $dbcon->query($sql);
+
+ if($dbexec){
+     while($row=mysqli_fetch_array($dbcon->dboutcomes)){
+        $orderNum= $row['menu_order_id'];
+        $userId= $row['user_id'];
+        $foodId=$row['food_id'];
+        $drinkId=$row['drink_id'];
+        $staffId=$row['staff_id'];
+
+        $order = new orderItem($orderNum,$userId,$foodId,$drinkId,$staffId);
+        array_push($orderArray,$order);
+     }
+
+    }
+
+    foreach($orderArray as $order){
+    echo($order->exportOrder());
+    echo"<br>";
+    }
+
+}
 ?>
