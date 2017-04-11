@@ -53,7 +53,7 @@
                         <div class="r_wrap  r_tile r_title">
                             <h1>User Application Page</h1>
                         </div>
-                        <a href="Application/application.php">
+                        <a href="Application/">
                             <img src="assets/images/Fod-02.png">
                         </a>
 
