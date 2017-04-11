@@ -48,4 +48,33 @@ $(".button-collapse").sideNav();
   );
 
 
+  function createButtons() {
+   
+  	var container=document.getElementById('orderContainer');
+    var btn = document.createElement("button");
+    btn.className="btn waves-effect waves-light";
+
+
+        btn.style.width = "160px";
+        btn.style.height = "120px";
+        btn.style.background = "rgba(110,0,0,0.7)";
+        btn.style.color = "white";
+        btn.innerHTML = "Order new";
+
+
+    container.appendChild(btn);
+  /*    
+ var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      var json_result=this.responseText;      //Response received in JSON format
+      var result =JSON.parse(json_result);     //passed into javascript variable
+     document.getElementById("myMessage").innerHTML = result;
+    }    
+  };
+  xhttp.open('GET', 'processapp.php?', true);
+  xhttp.send();*/
+    }
+
+
 

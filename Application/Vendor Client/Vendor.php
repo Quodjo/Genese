@@ -19,7 +19,7 @@
 
 
 </head>
-<body style="background-image:url(../images/background_Head.jpg); background-repeat: no-repeat;overflow-y: scroll;
+<body onmouseover=createButtons() style="background-image:url(../images/background_Head.jpg); background-repeat: no-repeat;overflow-y: scroll;
 border-bottom: 4.5vh;
 	border-style: solid;
 	border-bottom-color: #be1e2d;
@@ -77,9 +77,9 @@ border-bottom: 4.5vh;
 <div class="row" >
     <div class="col s12 m6 l8" style="padding-top:8%">
 
- 		<div class="row" align="center" >
- 		<div >
- 			<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);" data-target="modal1" >Order #1</button>
+ 		<div  class="row" align="center" style="border:1px solid red;">
+ 		<div id="orderContainer">
+ 		<!--	<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);" data-target="modal1" >Order #1</button>
 
 				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);" data-target="modal1">Order #2</button>
 				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);" data-target="modal1">Order #3</button>
@@ -111,15 +111,14 @@ border-bottom: 4.5vh;
 				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);" data-target="modal1">Order #17</button>
 				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);" data-target="modal1">Order #18</button>
 
-				
+				-->
  			</div>
  		</div>
      
 
-
-<!-- 
-in kitchen and processed order column -->
     </div>
+	<!-- 
+in kitchen and processed order column -->
     <div class="col s12 m6 l4" >
 <div style="padding-right: 35px">
 	    <div align="center" class="row" style=" padding-top: 15%;font-family: ‘Courier New’, Courier, monospace;" >

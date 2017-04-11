@@ -2,6 +2,7 @@
 
 require_once('../Vendor Client/orderItemClass.php');
 require_once('../database/dbconnectionclass.php');
+$orderArray=array();
 initialize();
 function initialize(){
     $orderNum;
@@ -9,7 +10,7 @@ function initialize(){
     $foodId;  
     $drinkID;
     $staffID; 
-    $orderArray = array();
+    //$orderArray = array();
 
 
 $dbcon = new dbconnection;
@@ -25,15 +26,26 @@ $dbexec = $dbcon->query($sql);
         $staffId=$row['staff_id'];
 
         $order = new orderItem($orderNum,$userId,$foodId,$drinkId,$staffId);
-        array_push($orderArray,$order);
+        array_push($GLOBALS['orderArray'],$order);
      }
 
     }
 
-    foreach($orderArray as $order){
+    foreach($GLOBALS['orderArray'] as $order){
     echo($order->exportOrder());
     echo"<br>";
     }
+    
+}
+
+ 
+function createButtons(){
+
 
 }
+
+
+
+
+
 ?>
