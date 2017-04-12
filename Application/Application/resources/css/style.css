@@ -1,95 +1,309 @@
-/*Genese specific*/
-
 * {
-    padding: 0;
-    margin: 0;
     box-sizing: border-box;
 }
 
-html,
-body {
+#container {
+    width: 100vw;
     height: 100vh;
-}
-
-.gJumbotron {
-    width: 100%;
-    height: 100%;
     overflow: hidden;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    border-bottom: 2.5vh;
+    border-style: solid;
+    border-bottom-color: #be1e2d;
 }
 
-.gWrapper {
-    width: inherit;
-    height: inherit;
-    background-color: bisque;
+#spAdminContainer {
+    float: right;
+    width: 80%;
+    height: 100vh;
+    overflow: hidden;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    border-bottom: 1vh;
+    border-style: solid;
+    border-bottom-color: #be1e2d;
+}
+
+#loginCard {
+    position: absolute;
+    top: 50%;
+    right: 2.5%;
+    padding: 20px;
+    transform: translateY(-50%);
+    resize: vertical;
+}
+
+#indexCard {
     position: relative;
-    overflow-y: auto;
-    overflow-x: hidden;
+    top: 50%;
+    left: 5%;
+    padding: 20px;
+    transform: translateY(-220%);
+    resize: vertical;
+    background-color: #be1e2d;
+    border-radius: 15px;
 }
 
-.lawngreen {
-    background-color: lawngreen;
+#transCard {
+    position: relative;
+    left: 30%;
+    margin: 0 auto;
+    padding: 20px;
+    transform: translateY(-135%);
+    resize: vertical;
+    background-color: #be1e2d;
+    border-radius: 15px;
 }
 
-.limegreen {
-    background-color: limegreen;
+#transCard h4,
+h5 {
+    color: #ffffff;
 }
 
-.title {
-    margin-top: 5rem;
+#transCard h5 {
+    color: #ffffff;
 }
 
-.row {
+#hbtn {
+    background-color: #00ff00;
+}
+
+#transCard button {
+    background-color: #00ff00;
+    border-radius: 5em;
+}
+
+#transCard a {
+    background-color: #00ff00;
+    border-radius: 5em;
+}
+
+#menuBtn {
+    position: fixed;
+    top: 6%;
+    right: 2%;
+    padding: 20px;
+    transform: translateY(-50%);
+    resize: vertical;
+    color: #000000;
+}
+
+#backBtn {
+    position: fixed;
+    top: 1%;
+    left: 2%;
+    padding: 20px;
+    transform: translateY(-50%);
+    resize: vertical;
+    color: #ffffff;
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
+
+#nameDisplay {
+    position: fixed;
+    top: 5%;
+    left: 5%;
+    transform: translateY(-50%);
+    font-size: 1.5em;
+}
+
+#menLog {
     margin: 0;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+#pageTitle {
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 130%);
+}
+
+#checkImage {
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 60%);
+}
+
+#checkCard {
+    position: relative;
+    left: 30%;
+    margin: 0 auto;
+    padding: 20px;
+    transform: translateY(-155%);
+    resize: vertical;
+    background-color: #be1e2d;
+    border-radius: 15px;
+}
+
+#checkCard h2,
+h4 {
+    display: inline;
+    color: #000000;
+}
+
+#checkCard h3,
+h4,
+h5 {
+    color: #000000;
+}
+
+#loginBTN {
+    width: 35%;
 }
 
 
-/*end of Genese specific styles*/
+/* label focus color */
+
+.input-field input[type=text]:focus+label {
+    color: #be1e2d;
+}
 
 
-/*Custom styles*/
+/* label underline focus color */
 
-#homeSearch,
-#homeSerach .headerPage,
-#homeSearch .mContent,
-.slideShowBack,
-#foodFeature,
-#mealMenu {
+.input-field input[type=text]:focus {
+    border-bottom: 1px solid #be1e2d;
+    box-shadow: 0 1px 0 0 #be1e2d;
+}
+
+
+/* valid color */
+
+.input-field input[type=text].valid {
+    border-bottom: 1px solid #9d1e2d;
+    box-shadow: 0 1px 0 0 #9d1e2d;
+}
+
+
+/* label focus color */
+
+.input-field input[type=password]:focus+label {
+    color: #be1e2d;
+}
+
+
+/* label underline focus color */
+
+.input-field input[type=password]:focus {
+    border-bottom: 1px solid #be1e2d;
+    box-shadow: 0 1px 0 0 #be1e2d;
+}
+
+
+/* valid color */
+
+.input-field input[type=password].valid {
+    border-bottom: 1px solid #9d1e2d;
+    box-shadow: 0 1px 0 0 #9d1e2d;
+}
+
+
+/* label focus color */
+
+.input-field input[type=email]:focus+label {
+    color: #be1e2d;
+}
+
+
+/* label underline focus color */
+
+.input-field input[type=email]:focus {
+    border-bottom: 1px solid #be1e2d;
+    box-shadow: 0 1px 0 0 #be1e2d;
+}
+
+
+/* valid color */
+
+.input-field input[type=email].valid {
+    border-bottom: 1px solid #9d1e2d;
+    box-shadow: 0 1px 0 0 #9d1e2d;
+}
+
+#forgotPasswordModal h4 {
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+    color: #ffffff;
     text-align: center;
+    background-color: #9d1e2d;
+}
+
+#id_numberIndex {
+    background-color: #ffffff;
+    border-radius: 2.5em;
+    text-align: center;
+    font-size: 2em;
+    height: 10vh;
+}
+
+#id_transAmt {
+    background-color: #ffffff;
+    border-radius: 0.5em;
+    text-align: center;
+    font-size: 2em;
+    height: 12vh;
+}
+
+#numberIndexSend {
+    position: absolute;
+    background-color: #00ff00;
+    transform: translateY(25%);
+    right: 5%;
+}
+
+#logOut {
+    position: fixed;
+    bottom: 8%;
+}
+
+.parallax-container {
     height: 100vh;
-    width: 100vw;
 }
 
-.slideShowBack {
+#searchPage #menuPage {
+    position: relative;
+}
+
+#Layer_1 {
     position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0;
-    overflow: hidden;
+    bottom: -40%;
 }
 
-.slideShowBack:after {
+#headerPain {
     position: absolute;
-    left: 0;
-    top: 0;
-    content: '';
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1;
-    width: 100vw;
-    height: 100vh;
+    top: -10%;
 }
 
-#homeSearch .mContent {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    z-index: 5;
+#menuPage {
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    border-bottom: 2.5vh;
+    border-style: solid;
+    border-bottom-color: #be1e2d;
 }
 
-#homeSearch {}
-
-#introText {
-    color: white;
+#idSearch {
+    background-color: #ffffff;
+    border-radius: 0.5em;
+    border-style: solid;
+    border-width: 0.1em;
+    border-color: #be1e2d;
+    text-align: center;
+    font-size: 2em;
+    height: 10vh;
 }
 
 #searchDiv {
@@ -99,544 +313,405 @@ body {
     top: 30%;
     width: 60%;
     transform: translate(-50%, 50%);
-    z-index: 90;
 }
 
-#idSearch {
-    background-color: #ffffff;
-    border-radius: 50px;
-    border-style: solid;
-    border-width: 0.1em;
-    border-color: tomato;
-    text-align: center;
-    font-size: 2em;
-    height: 10vh;
+header,
+main,
+footer {
+    padding-left: 300px;
 }
 
-#menLog {
-    position: absolute;
-    top: 5rem;
-    left: 0;
-    right: 0;
+@media only screen and (max-width: 992px) {
+    header,
+    main,
+    footer {
+        padding-left: 0;
+    }
+}
+
+nav {
+    width: 80%;
+}
+
+.side-nav {
+    width: 20%;
+    float: left;
+}
+
+#logBTN {
+    padding-top: 42.75vh;
+}
+
+round-button {
+    width: 25%;
+}
+
+.fcontainer {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+}
+
+.wrapper {
+    display: table;
+}
+
+.foodMenu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.foodSect {
+    width: 40%;
+    height: 50%;
+    background-color: transparent;
+}
+
+.fmenu {
+    width: 100%;
+    display: block;
+    height: 40vh;
+    background-color: transparent;
+}
+
+.fmenutop {
+    width: 100%;
+    height: 100%;
+    display: flex;
     margin: 0 auto;
-    width: 8rem;
-    height: 8rem;
 }
 
-.scrollAnim .container {
+.fleft,
+.fright {
+    width: 100%;
+    height: 100%;
+    background-color: #f0f0f0;
+    border-radius: 5%;
+}
+
+.fright {
+    overflow-y: scroll;
+}
+
+.fleft {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.fDesc {
+    width: 120%;
+    height: 100%;
+    background-color: #f0f0f0;
+    background-image: url(../images/foodimage.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 1%;
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+    color: white !important;
+}
+
+.fDesc .details {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.fDesc .details div {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    padding-left: 5%;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.fDesc .details div h4 {
+    color: white !important;
+}
+
+.flist {
+    padding-left: 25%;
+}
+
+.fCat {
+    width: 100%;
+    height: 20%;
+    position: relative;
+}
+
+.fCatB {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    top: 10px;
+}
+
+.fItem {
+    width: 80px;
+    height: 80px;
+    background-color: white;
+    border-radius: 20%;
+    background-size: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.fItem:hover {
+    transform: scale(1.1);
+}
+
+#water {
+    background-image: url(../images/water.png);
+}
+
+#soda {
+    background-image: url(../images/Soda.png);
+}
+
+#pastry {
+    background-image: url(../images/Pastry.png);
+}
+
+#protein {
+    background-image: url(../images/Protein.png);
+}
+
+.fCls {
+    color: white;
+    position: absolute;
+    right: 300px;
+    top: 150px;
+    font-size: 120%;
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.fCls:hover {
+    transform: scale(1.1);
+}
+
+.pagebtn {
+    display: table;
+    margin: 0 auto;
+}
+
+.white .row {
+    margin: 0 5%;
+}
+
+.itemBtn,
+.itemBtn:hover {
+    background: none;
+    box-shadow: none;
+}
+
+.checkoutBtn {
+    position: absolute;
+    right: 0;
+    bottom: 2px;
+}
+
+.lawngreen {
+    background-color: lawngreen;
+}
+
+#checkout_slide-out {
+    overflow: hidden;
+}
+
+.chekNav {
+    height: inherit;
+    background-color: lightslategray;
+    padding: 2%;
+    overflow-y: scroll;
+}
+
+#userProf {
+    background-image: url(../images/kunfu.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.idc {
+    text-align: center;
+    position: relative;
+    height: 80vh;
+}
+
+.idc .container {
     position: absolute;
     bottom: 50px;
     left: 0;
     right: 0;
     margin: 0 auto;
     font-size: 450%;
-    color: white;
+    color: black;
 }
 
-.cartNumberOfItems {
-    max-width: 2rem;
-    max-height: 2rem;
-    border-radius: 50px;
-    background-color: orangered;
-    color: white;
-    text-align: center;
-    margin: 0 auto 0 2rem;
-}
-
-#foodFeature {
-    position: relative;
-    z-index: 10;
-    background: transparent;
-    top: 100%;
-    left: 0;
-    right: 0;
-    width: 100vw;
-    margin: 0;
-    overflow-y: auto;
-    transition: top 1s ease-in-out;
-}
-
-#foodFeature,
-#foodFeature .contentSpace {
-    height: 100vh;
-    width: 100vw;
-    position: relative;
-}
-
-#foodFeature .mealAd,
-.contentSpace #foodMenu {
-    height: 100vh;
-    width: 100vw;
-    background-color: white;
-}
-
-#foodMenu .gWrapper {
-    background: #c0392b;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #c0392b, #8e44ad);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #c0392b, #8e44ad);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
-#foodFeature .contentSpace {
-    background-color: white;
-}
-
-.mealAd .mainRow,
-.mealAd .mainVW {
-    height: 100%;
-    margin: 0;
-}
-
-.mealAd {
-    background: #8e9eab;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #8e9eab, #eef2f3);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #8e9eab, #eef2f3);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    transition: top 1s ease-in-out;
-}
-
-.mealAd .conT1 {
-    width: 90% !important;
-    position: relative;
-}
-
-.mealAd .squareImg {
-    width: 35rem;
-    height: 35rem;
-    margin: 0 auto;
-    overflow: hidden;
-}
-
-.mealAd .squareImg img {
-    width: 100%;
-    height: auto;
-}
-
-.mealAd .leftIndi,
-.mealAd .rightIndi,
-.mealAd .midIndi,
-.mealAd .conT1_labels,
-{
-    height: 100vh;
-}
-
-.mealAd .conT1_labels {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-}
-
-.mealAd .conT1_labels .title {
-    background-color: tomato;
-    display: inline-block;
-    padding: 1%;
-    color: whitesmoke;
-}
-
-.mealAd .conT1_labels .sub {
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-.mealAd .conT1_labels .price {
-    background-color: rgba(0, 205, 10, 0.5);
-}
-
-.mealAd .conT1_labels .gWrapper {
-    position: relative;
-    background-color: transparent;
-}
-
-.mealAd .conT1_labels .orderPlace {
-    position: absolute;
-    height: 10rem;
-    bottom: 0;
-    left: 0;
-    right: 0;
-}
-
-.mealAd .conT1_labels .orderPlace .valign-wrapper {
-    height: 100%;
-    text-align: center;
-}
-
-.mealAd .conT1_labels .orderPlace .orderMealBtn {
-    margin: 0 auto !important;
-    border-radius: 50px;
-}
-
-.mealAd .conT1_labels .orderPlace .kitchen>* {
-    display: inline-block;
-}
-
-.mealAd .conT1_labels .orderPlace .kitchen {
-    margin: 1rem;
-}
-
-.contentSpace #foodMenu .gWrapper {
-    display: flex;
-}
-
-#foodMenu .gWrapper .mainSide {
-    width: 100%;
-    height: 100%;
-}
-
-.catSide {
-    width: 10rem;
-    height: 100%;
-}
 
-#mealMenu {
-    background-color: white;
-}
-
-.catSide .valign-wrapper {
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    width: inherit;
-}
+/* Smartphones (portrait and landscape) ----------- */
 
-#foodMenu .gWrapper .mainSide .itemHolder {
-    height: 80%;
-    overflow-y: auto;
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    /* Styles */
 }
 
-.mainSide .itemHolder .itemCont {
-    width: 100%;
-}
 
-.rightSide {
-    position: relative;
-    width: 35rem;
-    height: 100%;
-    display: none;
-}
+/* Smartphones (landscape) ----------- */
 
-.rightSide .gWrapper {
-    width: 100%;
-    position: relative;
-    display: block !important;
-    background-color: whitesmoke;
+@media only screen and (min-width: 321px) {
+    /* Styles */
 }
 
-.rightSide .cart {
-    position: fixed;
-    top: 10px;
-    margin: 0rem auto 0 auto;
-    right: 1.5rem;
-    width: 25%;
-    padding: 0;
-}
 
-.cart .gWrapper {
-    background: white !important;
-}
+/* Smartphones (portrait) ----------- */
 
-.catSide label {
-    color: white;
+@media only screen and (max-width: 320px) {
+    /* Styles */
 }
 
-.rightSide .cart nav {
-    height: 2.5rem;
-    width: 100%;
-    background-color: tomato;
-}
 
-.rightSide .cart .orderBtn {
-    display: block;
-}
+/* iPads (portrait and landscape) ----------- */
 
-.rightSide .cart .orderItems {
-    min-height: 5rem;
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    /* Styles */
 }
 
-.deet {
-    text-align: left;
-}
 
-.deetRes {
-    text-align: right;
-}
+/* iPads (landscape) ----------- */
 
-.itemBar {
-    height: 7rem;
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+    /* Styles */
 }
 
-.item {
-    height: 100%;
-}
 
-.item .card-panel {
-    padding: 0;
-    margin: 0;
-    height: 100%;
-}
+/* iPads (portrait) ----------- */
 
-.itemImage {
-    height: 100%;
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    /* Styles */
 }
 
-.itemImage img {
-    height: 100%;
-    width: auto;
-}
 
-.priceCol,
-.quantityCol,
-.totalCol,
-.deleteCol,
-.quantityCol .valign-wrapper,
-.priceCol .valign-wrapper,
-.totalCol .valign-wrapper,
-.deleteCol .valign-wrapper {
-    height: 100%;
-    text-align: center;
-}
+/**********
+iPad 3
+**********/
 
-.itemDesc {
-    padding-left: 2rem !important;
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+    /* Styles */
 }
 
-.itemHold {
-    box-shadow: none;
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+    /* Styles */
 }
 
-.foodRow {}
-
-.menuCaption {
-    height: 10rem;
-}
 
-.menuWrap {
-    display: flex;
-    height: 100vh;
-    background: #000000;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #434343, #000000);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #434343, #000000);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
+/* Desktops and laptops ----------- */
 
-.menuGrid {
-    width: 100%;
-    overflow-y: auto;
-    overflow-x: hidden;
+@media only screen and (min-width: 1224px) {
+    /* Styles */
 }
 
-.menuGrid .valign-wrapper {
-    height: 100vh;
-}
 
-.menuGrid .container {
-    width: 90%;
-    height: 95%;
-}
+/* Large screens ----------- */
 
-.mealCard {
-    padding-top: 2rem !important;
-    position: relative;
-    height: 24rem !important;
-    border-top: 2px solid tomato;
-    transition: transform 0.2s ease-in-out;
-    border-radius: 0.5rem;
+@media only screen and (min-width: 1824px) {
+    /* Styles */
 }
 
-.mealCard .card-content {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    text-align: left;
-    z-index: 2;
-    color: tomato !important;
-}
 
-.mealCard .card-image {
-    max-height: 80% !important;
-}
+/* iPhone 4 ----------- */
 
-.mealCard:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 50%;
-    z-index: 0;
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,ed8a00+100&0+0,0.65+100 */
-    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
-    /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
-    /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
-    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6ed8a00', GradientType=0);
-    /* IE6-9 */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+    /* Styles */
 }
 
-.mealCard:hover {
-    transform: scale(1.05);
-    cursor: pointer;
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+    /* Styles */
 }
 
 
-/*Modals*/
+/* iPhone 5 ----------- */
 
-#extrasModal {
-    top: 0 !important;
-    width: 98vw;
-    max-height: 98vh !important;
-    height: 98vh !important;
-    overflow: none !important;
+@media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+    /* Styles */
 }
 
-#extrasModal .modal-content {
-    height: inherit;
+@media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+    /* Styles */
 }
 
-#extrasModal .mainVA {
-    height: 100%;
-}
 
-#extrasModal .foodRow {
-    min-height: 50vh;
-    width: 50vw !important;
-    margin: 0 auto;
-    display: flex;
-}
+/* iPhone 6 ----------- */
 
-#extrasModal .foodRow .foodDesSide,
-#extrasModal .foodRow .extraSide {
-    height: inherit;
+@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+    /* Styles */
+    /*	body {
+		width: 100%;
+		height: 100%;
+		background-image: url('../images/bk1rt.jpg');
+		background-repeat: no-repeat;
+		background-size: contain;
+	}*/
 }
 
-#extrasModal .foodRow .foodDesSide {
-    background: salmon;
-    display: flex;
+@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+    /* Styles */
 }
 
-.des {
-    width: 100%;
-    background: tomato;
-    transform: scale(1.2);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    border-radius: 4px;
-}
 
-.des img {
-    width: 100%;
-    height: 100%;
-}
+/* iPhone 6+ ----------- */
 
-.des:after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    content: '';
+@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+    /* Styles */
 }
 
-#extrasModal .foodRow .extraSide {
-    position: relative;
+@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+    /* Styles */
 }
 
-#extrasModal .extraMenu {
-    height: 5rem;
-    position: relative;
-}
 
-#extrasModal .extraMenu .wrapper {
-    width: auto;
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
-    /* text-align: center; */
-    left: 0;
-    right: 0;
-    position: absolute;
-    top: 4rem;
-}
+/* Samsung Galaxy S3 ----------- */
 
-#extrasModal .extraMenu .wrapper .ex_menu {
-    width: 5rem;
-    height: 5rem;
-    background: cadetblue;
-    margin: 0 1rem;
+@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+    /* Styles */
 }
 
-.extraSide {
-    display: flex;
+@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+    /* Styles */
 }
 
-.extraSide .mlist {
-    width: 100%;
-    padding: 2rem 0.2rem 0.2rem 2rem;
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
-}
 
-.extraSide .micons {
-    width: 4rem;
-    overflow-y: auto;
-}
+/* Samsung Galaxy S4 ----------- */
 
-.extraSide .micons .micon {
-    width: 3rem;
-    height: 3rem;
-    background-color: tomato;
-    color: white;
-    margin: 0.2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s ease-in-out;
-    border-radius: 50%;
+@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+    /* Styles */
 }
 
-.extraSide .micons .micon:hover {
-    transform: scale(1.05);
-    cursor: pointer;
+@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+    /* Styles */
 }
-
-
-/*end of modals*/
-
-
-/*end of custom styles*/
 
 
-/*Hides the scroll bar*/
+/* Samsung Galaxy S5 ----------- */
 
-html {
-    overflow: scroll;
-    overflow-x: hidden;
+@media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+    /* Styles */
 }
 
-::-webkit-scrollbar {
-    width: 0px;
-    border-radius: 50px;
-    /* remove scrollbar space */
-    background: transparent;
-    /* optional: just make scrollbar invisible */
+@media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+    /* Styles */
 }
-
-
-/* optional: show position indicator in red */
-
-::-webkit-scrollbar-thumb {
-    background: tomato;
-}
-
-
-/*end*/
