@@ -407,8 +407,6 @@ body {
     box-shadow: none;
 }
 
-.foodRow {}
-
 .menuCaption {
     height: 10rem;
 }
@@ -515,11 +513,51 @@ body {
 #extrasModal .foodRow .foodDesSide,
 #extrasModal .foodRow .extraSide {
     height: inherit;
+    position: relative;
 }
 
 #extrasModal .foodRow .foodDesSide {
     background: salmon;
     display: flex;
+    position: relative;
+}
+
+.info_Overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.info_Overlay .wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.info_Overlay .itemPrice,
+.info_Overlay .itemName {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    color: white;
+    text-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+}
+
+.itemPrice {
+    top: 0;
+    text-align: right !important;
+}
+
+.itemName {
+    bottom: 0;
+}
+
+.itemPrice h4 {
+    display: inline-block;
+    padding: 0.5rem;
+    background-color: black;
 }
 
 .des {
@@ -568,21 +606,32 @@ body {
     top: 4rem;
 }
 
-#extrasModal .extraMenu .wrapper .ex_menu {
+#extrasModal .extraMenu .wrapper .ex_menu,
+.subcat .ex_menu {
     width: 5rem;
     height: 5rem;
     background: cadetblue;
     margin: 0 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .extraSide {
     display: flex;
 }
 
+.extraSide .mlist,
+.doneBtn,
+.des,
+.itemPrice h4 {
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+}
+
 .extraSide .mlist {
     width: 100%;
     padding: 2rem 0.2rem 0.2rem 2rem;
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+    position: relative;
 }
 
 .extraSide .micons {
@@ -607,6 +656,57 @@ body {
 .extraSide .micons .micon:hover {
     transform: scale(1.05);
     cursor: pointer;
+}
+
+.extraMenu .selectWrapper {
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+}
+
+.selectWrapper .sw_innerWrapper {
+    width: inherit;
+    height: inherit;
+    position: relative;
+}
+
+.selectWrapper .sw_innerWrapper .selectedCat {
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: aquamarine;
+    position: absolute;
+    top: -25%;
+}
+
+.selectWrapper .sw_innerWrapper .subcat {
+    display: flex;
+    justify-content: center;
+}
+
+.extraMenu .selectWrapper,
+.extraMenu .wrapper {
+    /*Disable this*/
+    display: none !important;
+}
+
+.doneBtn {
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: goldenrod;
+    right: -2rem;
+    bottom: -1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
