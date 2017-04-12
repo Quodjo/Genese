@@ -13,40 +13,27 @@ $(document).ready(function() {
 
     $('#homeSearch').mousewheel(function(event) {
         if (event.deltaY == -1) {
-            $('#foodFeature').css('top', '0%');
-        } else if (event.deltaY == 0) {
-            console.log('Only scoll down');
-        }
-        console.log(event.deltaY);
-
-
-    });
-
-    $('.mealAd').mousewheel(function(event) {
-        if (event.deltaY == -1) {
-            var winHeight = $('.mealAd').outerHeight();
-            $('#foodFeature').animate({ scrollTop: winHeight });
+            $('html, body').animate({
+                scrollTop: ($('#foodFeature').offset().top)
+            }, 500);
         } else if (event.deltaY == 1) {
-            $('#foodFeature').css('top', '100%');
-            $('#foodFeature').scrollTop(0);
-        }
-        console.log(event.deltaY);
 
+        }
+
+
+
+    });
+
+    $('#foodFeature').mousewheel(function(event) {
+
+        console.log('ad scrolled' + $('#foodFeature').offset().top);
+        console.log('WIN HEIGHT :' + $('#foodFeature').height());
 
     });
 
 
 
-    $('.itemHolder').mousewheel(function(event) {
-        if (event.deltaY == -1) {
-            var page = $('#foodMenu').outerHeight();
-            $('#foodMenu').scrollTop(page * 2);
-            // $('#foodFeature').scrollTop(0);
 
-        }
-
-
-    });
 
 
 
