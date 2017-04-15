@@ -6,36 +6,39 @@
 	<!--Import Google Icon Font-->
 	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<!--Import materialize.css-->
-	<link type="text/css" rel="stylesheet" href="../resources/css/materialize.min.css"  media="screen,projection"/>
+	<link type="text/css" rel="stylesheet" href="../../resources/css/materialize.min.css"  media="screen,projection"/>
 
-	<link type="text/css" rel="stylesheet" href="../resources/css/style.css"/>
+	<link type="text/css" rel="stylesheet" href="../../resources/css/style.css"/>
 	<!--Let browser know website is optimized for mobile-->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<link rel="icon" href="../resources/images/logo.png" type="image/png">
+	<link rel="icon" href="../../resources/images/logo.png" type="image/png">
 </head>
 <body>
+	<?php
+		require_once('../../controller/LogIn/logInController.php');
+		?>
 
 	<div id="container">
 
-		<img class="responsive-img" src="../resources/images/bk1.jpg">
+		<img class="responsive-img" src="../../resources/images/bk1.jpg">
 
 
 		<div class="card bordered z-depth-2 " style="margin-right: 5%; width:35%; float: right;" id="loginCard" >
 
 			<div class="card-header" style=" margin: 0 auto; width: 30%; height: 30%">
 
-				<img class="responsive-img" src="../resources/images/logo.png">
+				<img class="responsive-img" src="../../resources/images/logo.png">
 			</div>
 
 			<div class="card-content ">
-				<form id = "loginFrom" method="POST" action="">
+				<form id = "loginFrom" method="POST">
 					<div class="input-field col s12">
-						<input id="id_number" type="text" class="validate" autofocus>
+						<input id="id_number" name="idNumber" type="text" class="validate" autofocus>
 						<label for="id_number">ID Number</label>
 					</div>
 					<div class="input-field col s12">
-						<input id="password" type="password" class="validate">
+						<input id="password" type="password" name="password" class="validate">
 						<label for="password">Password</label>
 					</div>
 					<div class="input-field col s12 ">
@@ -45,7 +48,7 @@
 					<div class="center">
 						<div class="input-field col s12">
 						</br>
-						<button class="waves-effect waves-light btn-large #be1e2d red darken-4" type="submit" name="action" style="width: 100%; font-size: 30px" >Log In</button>
+						<button class="waves-effect waves-light btn-large #be1e2d red darken-4" type="submit" name="login" style="width: 100%; font-size: 30px" >Log In</button>
 					</div>
 				</div>
 			</form>
@@ -75,7 +78,7 @@
 					<div class="center">
 						<div class="input-field col s12">
 						</br>
-						<button class="waves-effect waves-light btn-large #be1e2d red darken-4" type="submit" name="action" style="width: 100%; font-size: 30px" >Submit</button>
+						<button class="waves-effect waves-light btn-large #be1e2d red darken-4" type="submit" name="forgotPass" style="width: 100%; font-size: 30px" >Submit</button>
 					</div>
 				</div>
 			</form>
@@ -84,7 +87,7 @@
 </div>
 <!--Import jQuery before materialize.js-->
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script type="text/javascript" src="../resources/js/materialize.min.js"></script>
+<script type="text/javascript" src="../../resources/js/materialize.min.js"></script>
 <script>
 	$('.modal').modal({
       dismissible: true, // Modal can be dismissed by clicking outside of the modal
