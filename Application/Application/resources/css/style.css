@@ -36,6 +36,15 @@
     resize: vertical;
 }
 
+#failCard {
+    position: absolute;
+    top: 50%;
+    right: 27.5%;
+    padding: 20px;
+    transform: translateY(-50%);
+    resize: vertical;
+}
+
 #indexCard {
     position: relative;
     top: 50%;
