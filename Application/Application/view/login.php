@@ -6,26 +6,26 @@
 	<!--Import Google Icon Font-->
 	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<!--Import materialize.css-->
-	<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+	<link type="text/css" rel="stylesheet" href="../resources/css/materialize.min.css"  media="screen,projection"/>
 
-	<link type="text/css" rel="stylesheet" href="css/style.css"/>
+	<link type="text/css" rel="stylesheet" href="../resources/css/style.css"/>
 	<!--Let browser know website is optimized for mobile-->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<link rel="icon" href="images/logo.png" type="image/png">
+	<link rel="icon" href="../resources/images/logo.png" type="image/png">
 </head>
 <body>
 
 	<div id="container">
 
-		<img class="responsive-img" src="images/bk1.jpg"> 
+		<img class="responsive-img" src="../resources/images/bk1.jpg">
 
 
 		<div class="card bordered z-depth-2 " style="margin-right: 5%; width:35%; float: right;" id="loginCard" >
 
 			<div class="card-header" style=" margin: 0 auto; width: 30%; height: 30%">
 
-				<img class="responsive-img" src="images/logo.png"> 
+				<img class="responsive-img" src="../resources/images/logo.png">
 			</div>
 
 			<div class="card-content ">
@@ -84,8 +84,8 @@
 </div>
 <!--Import jQuery before materialize.js-->
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script type="text/javascript" src="js/materialize.min.js"></script>
-<script>  
+<script type="text/javascript" src="../resources/js/materialize.min.js"></script>
+<script>
 	$('.modal').modal({
       dismissible: true, // Modal can be dismissed by clicking outside of the modal
       opacity: .5, // Opacity of modal background

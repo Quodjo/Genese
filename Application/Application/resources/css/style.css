@@ -36,6 +36,15 @@
     resize: vertical;
 }
 
+#signupCard {
+    position: absolute;
+    top: 50%;
+    right: 2.5%;
+    padding: 5px;
+    transform: translateY(-50%);
+    resize: vertical;
+}
+
 #failCard {
     position: absolute;
     top: 50%;
