@@ -24,11 +24,11 @@
       <div class="card-header" style="text-align: center;">
         <h1 style="font-size: 8em;"><strong>404</strong></h1>
         <h5><strong>Hey... What Just Happend?</strong></</h5>
-        <h5><strong>There's Nothing Here</strong></</h5>
+        <h5><strong>There's Nothing Here.</strong></</h5>
       </div>
 
       <div class="card-content">
-        <button class="waves-effect waves-light btn-large #be1e2d red darken-4" type="submit" name="action" style="left: 20%; width:60%; font-size: 30px" >Go Back</button>
+        <button class="waves-effect waves-light btn-large #be1e2d red darken-4" type="submit" name="action" style="left: 10%; width:80%; font-size: 30px" >Let's Go Back</button>
       </div>
     </div>
   </div>
