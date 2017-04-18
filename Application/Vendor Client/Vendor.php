@@ -19,7 +19,7 @@
 
 
 </head>
-<body onmouseover=createButtons() style="background-image:url(../images/background_Head.jpg); background-repeat: no-repeat;overflow-y: scroll;
+<body  style="background-image:url(../images/background_Head.jpg); background-repeat: no-repeat;overflow-y: scroll;
 border-bottom: 4.5vh;
 	border-style: solid;
 	border-bottom-color: #be1e2d;
@@ -77,7 +77,7 @@ border-bottom: 4.5vh;
 <div class="row" >
     <div class="col s12 m6 l8" style="padding-top:8%">
 
- 		<div  class="row" align="center" style="border:1px solid red;">
+ 		<div  class="row" align="center" >
  		<div id="orderContainer">
  		<!--	<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);" data-target="modal1" >Order #1</button>
 
@@ -184,17 +184,119 @@ in kitchen and processed order column -->
     
   </div>
 
-
+<button onclick="createButtons()" id="demo">Click me</button> //test button
 
 
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 	<script type="text/javascript" src="../js/materialize.min.js"></script>
-<script type="text/javascript" src="scripts.js"></script>
+
+
+<script>
+//to test parsing data values as json
+function checked(){
+
+
+
+}
 
 
 
 
+// Initialize collapse button
+$(".button-collapse").sideNav();
+  // Initialize collapsible (uncomment the line below if you use the dropdown variation)
+  // $('.collapsible').collapsible();
+  $('.button-collapse').sideNav({
+      menuWidth: 90, // Default is 300
+      edge: 'left', // Choose the horizontal origin
+     closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+      draggable: true // Choose whether you can drag to open on touch screens
+  }
+  );
+
+
+// Initialize collapse button
+$(".button-collapse").sideNav();
+  // Initialize collapsible (uncomment the line below if you use the dropdown variation)
+  // $('.collapsible').collapsible();
+  $('.button-collapse').sideNav({
+      menuWidth: 290, // Default is 300
+      edge: 'left', // Choose the horizontal origin
+     closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+      draggable: true // Choose whether you can drag to open on touch screens
+  }
+  );
+
+
+  $(document).ready(function() {
+  	$("#order2, #order1").on('click', function() {
+  		$(this).removeClass("waves-effect waves-light submit").addClass('disabled');
+  	});
+  });
+
+
+  $('.modal').modal({
+      dismissible: true, // Modal can be dismissed by clicking outside of the modal
+      opacity: .5, // Opacity of modal background
+      inDuration: 300, // Transition in duration
+      outDuration: 200, // Transition out duration
+      startingTop: '4%', // Starting top style attribute
+      endingTop: '10%', // Ending top style attribute
+      	ready: function(modal, trigger) { // Callback for Modal open. Modal and trigger parameters available.
+      	//alert("MOVES TO KITCHEN");
+      	//console.log(modal, trigger);
+      },
+      complete: function() { alert('ORDER MOVES TO KITCHEN'); } // Callback for Modal close
+  }
+  );
+
+
+
+  function createButtons() {
+
+   var xmlhttp = new XMLHttpRequest();
+	xmlhttp.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+			myObj = JSON.parse(this.responseText);
+
+			//foreach chunk that converts each item in the response array into json object
+			//and creates buttons that hold their details
+			myObj.forEach(function(currentValue, index, arr){
+				jsonOrder = JSON.parse(myObj[index]);
+
+
+				var container=document.getElementById('orderContainer');
+				var btn = document.createElement("button");
+				btn.className="btn waves-effect waves-light";
+				//btn.data-target="modal1";
+
+					btn.style.width = "160px";
+					btn.style.height = "120px";
+					btn.style.background = "rgba(110,0,0,0.7)";
+					btn.style.color = "white";
+					ordercount =index+1;
+					btn.innerHTML = "Order 0"+ordercount;
+
+
+				container.appendChild(btn);
+
+
+
+			//	alert(jsonOrder.staffFname);
+			})
+		// document.getElementById("demo").innerHTML = myObj[1].staffFname;
+
+
+			//document.getElementById("demo").innerHTML = this.responseText;
+		}
+	};
+	xmlhttp.open("POST", "processapp.php", true);
+
+	xmlhttp.send();
+    }
+
+</script>
 
 
 </body>

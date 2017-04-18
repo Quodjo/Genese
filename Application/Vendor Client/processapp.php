@@ -1,20 +1,21 @@
 <?php
+/*
+Order item class
+@author: Benedict Quartey
+*/
 
 require_once('../Vendor Client/orderItemClass.php');
 require_once('../database/dbconnectionclass.php');
+
+//Array to hold collective order objects created from data in database
 $orderArray=array();
 
-//$result=json_decode(export());
-$result=json_decode(export());
-//echo $result;
-
-
-
-foreach($result as $order){
-    echo($order=new orderItem);
-    echo"<br>";
-    }
-
+export();
+//    initialize();
+//  foreach($GLOBALS['orderArray'] as $order){
+//     echo $order;
+//     echo"<br>";
+//     }
 
 function initialize(){
     $orderNum;
@@ -38,15 +39,12 @@ $dbexec = $dbcon->query($sql);
         $staffId=$row['staff_id'];
 
         $order = new orderItem($orderNum,$userId,$foodId,$drinkId,$staffId);
-        array_push($GLOBALS['orderArray'],$order);
+        array_push($GLOBALS['orderArray'],$order->exportOrder());
      }
 
     }
 
-   // foreach($GLOBALS['orderArray'] as $order){
-   // echo($order->exportOrder());
-  //  echo"<br>";
-  //  }
+   
    
 }
 
@@ -54,16 +52,16 @@ $dbexec = $dbcon->query($sql);
 function export(){
     initialize();
 $JSONArray = json_encode($GLOBALS['orderArray']);
-//return $JSONArray;
+//echo $GLOBALS['orderArray'][0];
 
-return ($JSONArray);
+echo $JSONArray;
+ //foreach($GLOBALS['orderArray'] as $order){
+ //    echo $order;
+//    }
 
-/*
- foreach($GLOBALS['orderArray'] as $order){
-    echo($order->exportOrder());
-    echo"<br>";
-    }*/
 
+//echo ($JSONArray);
+//echo '{ "name":"John", "age":30, "city":"New York"}';
 }
 
 
