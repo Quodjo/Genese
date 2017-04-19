@@ -6,4 +6,20 @@
 **/
 
 
+require_once(dirname(__FILE__).'/../database/dbconnection.php');
+
+class VoucherReseller extends dbconnection {
+
+  function getUserDetails(){
+
+  }
+
+  function updateAmount(){
+
+  }
+
+  function getTransactions(){
+
+  }
+}
 ?>
