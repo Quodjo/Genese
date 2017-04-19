@@ -59,7 +59,7 @@
        </div>
        <div class="center">
         <div class="input-field col s12">
-          <button class="waves-effect waves-light btn-large #be1e2d red darken-4" type="submit" name="register" style="width: 100%; font-size: 30px" >Sign Up</button>
+          <button class="waves-effect waves-light btn-large #be1e2d red darken-4" type="submit" name="signup" style="width: 100%; font-size: 30px" >Sign Up</button>
         </div>
       </div>
     </form>
