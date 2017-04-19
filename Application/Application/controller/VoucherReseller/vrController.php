@@ -8,9 +8,7 @@
 require_once(dirname(__FILE__).'/../../model/VoucherReseller/vrModel.php');
 
 if(isset($_POST['idEnter'])){
-  echo "<script type=\"text/javascript\">";
-  echo "alert(\"Ako\")";
-  echo "</script>";
+
 }
 
 ?>
