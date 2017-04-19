@@ -11,4 +11,17 @@ if(isset($_POST['idEnter'])){
 
 }
 
+
+function proceedTransAmt(){
+	$Outcome=array('$idNumber');
+
+	$sql = "SELECT * user(firstname, lastname) VALUES(?,?)";
+
+// create instance of databse class
+	$registerUser = new databaseConnect;
+
+// execute query
+	$dbexec= $registerUser->Prepstatement($sql, $Outcome);
+}
+
 ?>
