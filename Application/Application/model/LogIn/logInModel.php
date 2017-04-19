@@ -1,5 +1,10 @@
 <?php
-require_once('../database/dbconnection.php');
+/**
+*@author Kojo Nyamekye Anyinam-Boateng
+*@version 0.0.0.1
+**/
+
+require_once(dirname(__FILE__).'/../database/dbconnection.php');
 
 class LogIn extends dbconnection {
   //function for login
