@@ -6,22 +6,22 @@
   <!--Import Google Icon Font-->
   <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!--Import materialize.css-->
-  <link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
+  <link type="text/css" rel="stylesheet" href="../../resources/css/materialize.min.css"  media="screen,projection"/>
 
-  <link type="text/css" rel="stylesheet" href="../css/style.css"/>
+  <link type="text/css" rel="stylesheet" href="../../resources/css/style.css"/>
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <link rel="icon" href="../images/logo.png" type="image/png">
+  <link rel="icon" href="../../resources/images/logo.png" type="image/png">
 </head>
 <body>
   <div id="container">
     <div class="card-header" id ="menLog" style=" margin: 0 auto; width: 15%; height: 15%">
 
-      <img class="responsive-img" src="../images/logo.png"> 
+      <img class="responsive-img" src="../../resources/images/logo.png">
     </div>
 
-    <img class="responsive-img" src="../images/trans.jpg"> 
+    <img class="responsive-img" src="../../resources/images/trans.jpg">
 
     <div class="card bordered z-depth-2 " style="margin-right: 5%; width:40%; float: left;" id="transCard" >
 
@@ -55,13 +55,13 @@
   <a href="#slide-out" data-activates="slide-out" class="button-collapse show-on-large" ><i class="material-icons" style="font-size: 3rem;" id ="menuBtn">menu</i></a>
 
   <div class="row valign-wrapper" id="nameDisplay" style="top:6%;">
-    <p style="padding-right: 1em ;">Admin Name</p><img class="circle responsive-img" src="../images/admin.jpg" style="width:8%; height: 8%; border:0.25rem solid #be1e2d;">
+    <p style="padding-right: 1em ;">Admin Name</p><img class="circle responsive-img" src="../../resources/images/admin.jpg" style="width:8%; height: 8%; border:0.25rem solid #be1e2d;">
   </div>
 
 
   <!--Import jQuery before materialize.js-->
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script type="text/javascript" src="../js/materialize.min.js"></script>
+  <script type="text/javascript" src="../../resources/js/materialize.min.js"></script>
   <script>
 // Initialize collapse button
 $(".button-collapse").sideNav();
