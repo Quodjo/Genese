@@ -11,7 +11,7 @@ require_once(dirname(__FILE__).'/../database/dbconnection.php');
 class VoucherReseller extends dbconnection {
 
 	function getUserDetails($sql, $Parameterarray){	
-		if(!$this->dbconnect())
+		if(!$this->connect())
 		{
 			return false;
 		}
@@ -28,12 +28,14 @@ class VoucherReseller extends dbconnection {
 					$dataTypes .= "i";
 				}
 			}
-			$prepared = $this->databaseconnector->prepare($sql);
+			$prepared = $this->dbconnect->prepare($sql);
 			$prepared->bind_param($dataTypes, ...$Parameterarray);
 			if($prepared->execute()){
-				return true;
+				if($this->query($prepared)){
+					$data = $this->fetch();
+					return $data;
+				}
 			}
-
 		}
 	}
 

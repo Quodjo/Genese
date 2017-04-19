@@ -8,20 +8,20 @@
 require_once(dirname(__FILE__).'/../../model/VoucherReseller/vrModel.php');
 
 if(isset($_POST['idEnter'])){
-
+	proceedTransAmt();
 }
 
 
 function proceedTransAmt(){
 	$Outcome=array('$idNumber');
-
 	$sql = "SELECT * user(firstname, lastname) VALUES(?,?)";
 
-// create instance of databse class
-	$registerUser = new databaseConnect;
+	// create instance of databse class
+	$proceedTransAmt = new VoucherReseller;
 
-// execute query
-	$dbexec= $registerUser->Prepstatement($sql, $Outcome);
+	// execute query
+	$dbexec= $proceedTransAmt->getUserDetails($sql, $Outcome);
+	var_dump($dbexec);
 }
 
 ?>
