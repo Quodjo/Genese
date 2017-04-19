@@ -15,9 +15,10 @@
   <link rel="icon" href="../../resources/images/logo.png" type="image/png">
 </head>
 <body>
+  <?php
+  require_once('../../controller/VoucherReseller/vrController.php');
+  ?>
   <div id="container">
-
-
     <div class="card-header" id ="menLog" style=" margin: 0 auto; width: 15%; height: 15%">
       <img class="responsive-img" src="../../resources/images/logo.png">
     </div>
