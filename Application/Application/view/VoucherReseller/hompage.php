@@ -33,7 +33,7 @@
         <form id ="indexPage" method="POST">
           <div class="row">
             <div class="input-field col s12">
-              <input id="id_numberIndex" type="text" class="validate" placeholder="ID Number" >
+              <input id="id_numberIndex" name="idNumber" type="text" class="validate" placeholder="ID Number" >
             </div>
           </div>
           <button class="btn-floating btn-large waves-effect waves-light #00ff00 " name = "idEnter" id = "numberIndexSend"><i class="material-icons right" style="font-size:2.5rem">send</i></button>

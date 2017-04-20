@@ -10,8 +10,15 @@ require_once(dirname(__FILE__).'/../database/dbconnection.php');
 
 class VoucherReseller extends dbconnection {
 
-  function getUserDetails(){
-
+  function getUserDetails($sql, $paramTypes, $params){
+    $exec = $this->preparedSqlStatement($sql, $paramTypes, $params);
+    $res = $this->dboutcomes;
+    if($exec){
+      return $res;
+    }
+    else{
+      return $res;
+    }
   }
 
   function updateAmount(){
