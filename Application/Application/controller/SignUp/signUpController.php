@@ -7,10 +7,10 @@
 require_once(dirname(__FILE__).'/../../model/SignUp/signUpModel.php');
 
 if(isset($_POST['signup'])){
-  validlogin();
+  validRegister();
 }
 
-function validregister() {
+function validRegister() {
   //code for validation
   //if validation is successful run the function to check if username already exist
   $alertString = "";
@@ -61,7 +61,7 @@ function validregister() {
 }
 
 
-function registernewuser(){
+function registerNewUser(){
   $idNumber = $_POST['idNumber'];
   $password = $_POST['password'];
   $firstname = $_POST['firstname'];
@@ -85,8 +85,8 @@ function registernewuser(){
 
   $signUpMod = new signUpModel;
   $params = array($firstname, $lastname, $idNumber, $email, $password);
-  //execute the query
-  $exec = $signUpMod->signUpUser($sql,"sssss", $params);
+
+  $exec = $signUpMod->signUpUser($sql, "sssss", $params);
 
   if($exec){
     echo '<p>User Added.</p>';

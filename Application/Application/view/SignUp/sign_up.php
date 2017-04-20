@@ -15,10 +15,11 @@
   <link rel="icon" href="../../resources/images/logo.png" type="image/png">
 </head>
 <body>
-
+  <?php
+  require_once('../../controller/SignUp/signUpController.php');
+  ?>
   <div id="container">
     <img class="responsive-img" src="../../resources/images/bk1.jpg">
-
 
     <div class="card bordered z-depth-2 " style="margin-right: 5%; width:35%; float: right;" id="signupCard" >
 
