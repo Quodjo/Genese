@@ -15,31 +15,20 @@ function validregister() {
   //if validation is successful run the function to check if username already exist
   $alertString = "";
 
-  $username = $_POST['username'];
+  $idNumber = $_POST['idNumber'];
   $password = $_POST['password'];
   $cfpassword = $_POST['cfpassword'];
   $firstname = $_POST['firstname'];
   $lastname = $_POST['lastname'];
-
-  if(isset($_POST['gender'])){
-    $gender = $_POST['gender'];
-  };
-
   $email = $_POST['email'];
 
-  if(isset($_POST['major'])){
-    $major = $_POST['major'];
-  } else{
-    $major = 0;
-  };
-
-
+  $regexNum = '/^\d{8}+$/';
   $regexJustAlpha = '/^[a-zA-Z]+$/';
   $regexPassword = '/^(?=.*\d+)(?=.*[a-zA-Z])[0-9a-zA-Z!@#$%]{6,}$/';
   $regexEmail = '/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/';
 
-  if(empty($username) && !preg_match($regexJustAlpha, $username)){
-    $alertString .= "Invalid Username, ";
+  if(empty($idNumber) && !preg_match($regexNum, $username)){
+    $alertString .= "Invalid Id Number, ";
   }
 
   if(empty($password) && !preg_match($regexPassword, $password)){
@@ -56,18 +45,13 @@ function validregister() {
   if(empty($lastname) && !preg_match($regexJustAlpha, $lastname)){
     $alertString .= "Invalid Lastname, ";
   }
-  if(empty($gender)){
-    $alertString .= "Kindly Select Gender, ";
-  }
   if(empty($email) && !preg_match($regexEmail, $email)){
     $alertString .= "Invalid Email, ";
   }
-  if($major == 0){
-    $alertString .= "Select A Major, ";
-  }
+
 
   if(empty($alertString)){
-    checkusername();
+    registerNewUser();
   } else {
     echo "<script type=\"text/javascript\">";
     echo "alert(\"".$alertString."\")";
@@ -77,32 +61,12 @@ function validregister() {
 }
 
 
-//function to check if username already taken
-function checkusername() {
-  $username = $_POST['username'];
-  //code to check if username already exist
-  //if username does not exist run the register function
-  $dbconnInstance = new dbconnection;
-
-  $sql = "SELECT * FROM useraccount WHERE username = '$username'";
-  $querySql = $dbconnInstance->query($sql);
-
-  if($querySql){
-    registernewuser();
-  }
-}
-
-
 function registernewuser(){
-  $username = $_POST['username'];
+  $idNumber = $_POST['idNumber'];
   $password = $_POST['password'];
   $firstname = $_POST['firstname'];
   $lastname = $_POST['lastname'];
-  $gender = $_POST['gender'];
   $email = $_POST['email'];
-  $major = $_POST['major'];
-
-  $register = new dbconnection;
 
   $password = password_hash($password, PASSWORD_DEFAULT);
   // $sql = "INSERT INTO useraccount(username, pwd, fname, lname, email, gender, major_id, userstatus, per_id) VALUES('$username','$password','$firstname','$lastname','$email','$gender','$major','ACTIVE','1')";
@@ -114,6 +78,11 @@ function registernewuser(){
   // else{
   //
   // }
+
+  $sql = "INSERT INTO users(firstname, lastname, idNumber, email, password, status, role_id)".
+        "VALUES(?, ?, ?, ?, ?,'active','6', now())";
+
+
 
   $realEscape = $register->preparedStatementRegister($username, $password, $firstname, $lastname, $email, $gender, $major);
   if($realEscape){
