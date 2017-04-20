@@ -94,7 +94,7 @@ class dbconnection
     if ($exec == false) {
       return false;
     } else {
-      $this->dboutcomes = $stm->get_result();
+      $this->dboutcomes = $stm->fetch();
       return true;
     }
   }

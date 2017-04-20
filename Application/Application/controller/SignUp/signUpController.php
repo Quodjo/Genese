@@ -69,15 +69,6 @@ function registerNewUser(){
   $email = $_POST['email'];
 
   $password = password_hash($password, PASSWORD_DEFAULT);
-  // $sql = "INSERT INTO useraccount(username, pwd, fname, lname, email, gender, major_id, userstatus, per_id) VALUES('$username','$password','$firstname','$lastname','$email','$gender','$major','ACTIVE','1')";
-  //
-  // $querySql = $register->query($sql);
-  // if($querySql){
-  //
-  // }
-  // else{
-  //
-  // }
 
   $sql = "INSERT INTO users(firstname, lastname, idNumber, email, password, status, role_id)".
   "VALUES(?, ?, ?, ?, ?,'active','6')";
