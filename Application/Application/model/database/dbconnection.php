@@ -76,8 +76,7 @@ class dbconnection
     return mysqli_fetch_assoc($this->dboutcomes);
   }
 
-  function preparedSqlStatement($sql, $paramTypes, $params)
-  {
+  function preparedSqlStatement($sql, $paramTypes, $params){
     $conn = mysqli_connect(SERVER,USERNAME,PASSWORD,DBNAME);
     $stm = $conn->prepare($sql);
     $refIndex = array();

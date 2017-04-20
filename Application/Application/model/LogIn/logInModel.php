@@ -19,12 +19,7 @@ class LogIn extends dbconnection {
     $data = $login->fetch();
 
     if($querySql && password_verify($password, $data["pwd"])){
-      session_start();
-      $_SESSION['userID'] = $data['userid'];
-      $_SESSION['username'] = $data['username'];
-      $_SESSION['perID'] = $data['per_id'];
 
-      header('Location: ../index.php');
     }
     else{
 

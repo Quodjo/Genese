@@ -34,6 +34,33 @@ function validlogin() {
     echo "alert(\"".$alertString."\")";
     echo "</script>";
   }
+}
 
+function login(){
+  $idNumber = $_POST['idNumber'];
+  $password = $_POST['password'];
+
+  $password = password_hash($password, PASSWORD_DEFAULT);
+
+  $sql = "SELECT * FROM user".
+        "WHERE(idNumber = '?')";
+
+  $logInModel = new LogIn;
+  $params = array($idNumber);
+
+  $exec = $logInModel->verifylogin($sql, "i", $params);
+
+  if($exec){
+    session_start();
+    $_SESSION['userID'] = $data['userid'];
+    $_SESSION['username'] = $data['username'];
+    $_SESSION['perID'] = $data['per_id'];
+
+    header('Location: ../index.php');
+    echo '<p>login</p>';
+  }
+  else{
+    echo '<p>Not Login</p>';
+  }
 }
 ?>
