@@ -80,14 +80,18 @@ function registernewuser(){
   // }
 
   $sql = "INSERT INTO users(firstname, lastname, idNumber, email, password, status, role_id)".
-        "VALUES(?, ?, ?, ?, ?,'active','6', now())";
+  "VALUES(?, ?, ?, ?, ?,'active','6', now())";
 
 
+  $signUpMod = new signUpModel;
+  $params = array($firstname, $lastname, $idNumber, $email, $password);
+  //execute the query
+  $exec = $signUpMod->signUpUser($sql,"sssss", $params);
 
-  $realEscape = $register->preparedStatementRegister($username, $password, $firstname, $lastname, $email, $gender, $major);
-  if($realEscape){
+  if($exec){
     echo '<p>User Added.</p>';
-  } else {
+  }
+  else{
     echo '<p>User Not Added.</p>';
   }
 }
