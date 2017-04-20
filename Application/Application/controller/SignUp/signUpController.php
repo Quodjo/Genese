@@ -70,14 +70,13 @@ function registerNewUser(){
 
   $password = password_hash($password, PASSWORD_DEFAULT);
 
-  $sql = "INSERT INTO users(firstname, lastname, idNumber, email, password, status, role_id)".
-  "VALUES(?, ?, ?, ?, ?,'active','6')";
-
+  $sql = "INSERT INTO user(firstname, lastname, idNumber, email, password, status, role_id)".
+        "VALUES(?, ?, ?, ?, ?,'active','6')";
 
   $signUpModel = new SignUp;
   $params = array($firstname, $lastname, $idNumber, $email, $password);
 
-  $exec = $signUpModel->signUpUser($sql, "sssss", $params);
+  $exec = $signUpModel->signUpUser($sql, "ssiss", $params);
 
   if($exec){
     echo '<p>User Added.</p>';
