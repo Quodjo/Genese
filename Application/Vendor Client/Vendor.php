@@ -156,14 +156,11 @@ in kitchen and processed order column -->
   </div>
 
 <!--modal to create the pop ups-->
-				<div align=center id="modal1" class="modal">
+				<!--<div align=center id="modal1" class="modal" style="width:500px">
 					<div class="modal-content">
 						<h4 style="font-size:350%;"><  #BB-ORDER NO.</h4><br>
             <div class="divider red darken-4" style="height:10px"></div>
 						<p1 style ="font-size:170%">20202018:John Doe </p1><br>
-            <div class="divider"></div>
-
-            <div class="divider"></div>
             <div class="grey">
             <p2 style ="font-size:180%">Jollof + Fish  1/2P</p2><br><br>
           </div>
@@ -178,14 +175,15 @@ in kitchen and processed order column -->
 						<a href="#!" class=" modal-action modal-close orange waves-effect waves- btn-flat ">Add to Kitchen</a>
 
 					</div>
-				</div>
+				</div>-->
 
   <div align=center class="row" style="padding-top: 5%">
+ 
     
   </div>
 
 <button onclick="createButtons()" id="demo">Click me</button> //test button
-
+<button data-target="modal1">Modal test</button> //test button
 
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -229,12 +227,6 @@ $(".button-collapse").sideNav();
   );
 
 
-  $(document).ready(function() {
-  	$("#order2, #order1").on('click', function() {
-  		$(this).removeClass("waves-effect waves-light submit").addClass('disabled');
-  	});
-  });
-
 
   $('.modal').modal({
       dismissible: true, // Modal can be dismissed by clicking outside of the modal
@@ -253,6 +245,7 @@ $(".button-collapse").sideNav();
 
 
 
+
   function createButtons() {
 
    var xmlhttp = new XMLHttpRequest();
@@ -266,38 +259,124 @@ $(".button-collapse").sideNav();
 				jsonOrder = JSON.parse(myObj[index]);
 
 
+
 				var container=document.getElementById('orderContainer');
 				var btn = document.createElement("button");
 				btn.className="btn waves-effect waves-light";
-				//btn.data-target="modal1";
-
+				btn.id=jsonOrder.orderNum;
 					btn.style.width = "160px";
 					btn.style.height = "120px";
 					btn.style.background = "rgba(110,0,0,0.7)";
 					btn.style.color = "white";
 					ordercount =index+1;
 					btn.innerHTML = "Order 0"+ordercount;
+					
+				btn.onclick= function(){
+				$(this).removeClass("waves-effect waves-light submit").addClass('disabled');
+			alert ("worked"+index);
 
+//create and append modal details
+			var modal = document.createElement("div");
+			modal.id="modal1";                                //create modal parent div
+			modal.className="modal";
+			modal.style.width="500px";
+
+			var case0 =document.createElement("div");
+			case0.className="modal-content";             //    create div to hold modal content
+
+			var header = document.createElement("h4");
+			header.style.font="350%";                                  //header for order number
+			header.innerHTML="#BB-ORDER NO."+jsonOrder.orderNum;
+
+			case0.appendChild(header);//add a space after             //append to modal content div
+			
+			var divider1 = document.createElement("div");
+			divider1.className="divider red darken-4"                  //create divider
+			divider1.style.height="10px";
+
+			var username = document.createElement("p1");
+			username.innerHTML='jsonOrder.userFname+jsonOrder.userLname';
+
+			case0.appendChild(divider1);//add a space after        //append to modal content div
+
+			var case1 = document.createElement("div");
+			case1.className="grey";
+
+			var foodname = document.createElement("pre")
+			foodname.style.font="180%";
+			foodname.innerHTML= jsonOrder.foodname;
+
+			
+
+
+
+
+}; //end of button onclick anonymous function
 
 				container.appendChild(btn);
 
 
 
-			//	alert(jsonOrder.staffFname);
-			})
-		// document.getElementById("demo").innerHTML = myObj[1].staffFname;
+			}); //end of for each item in json array/ or in order database
+	
+		} //end of if readystate==4 check
+	}; //end of ajax on readystatecheck anonymous funciton 
 
 
-			//document.getElementById("demo").innerHTML = this.responseText;
-		}
-	};
-	xmlhttp.open("POST", "processapp.php", true);
+	xmlhttp.open("POST", 
+	"processapp.php", true);
 
 	xmlhttp.send();
-    }
+    } //end of create button method
 
+
+function loadButton() {
+
+//how to achieve updating buttons
+/*
+everytime you click on a button it would be greyed out then write a script
+that removes the clicked order from the order table so on the next ajax
+call you recreate all the buttons but the already clicked ones wont be there
+you put them in a new table called inKitchen table */
+
+/*call this on every button, get button id which would be order item id and use that to 
+exxecute a query to populate values of a modal you create here, after remove that button 
+from the order table in the database and put in the kitchen table*/
+
+}
+
+
+
+
+
+
+	/*		
+   $(".champion-card").click(function() {
+    var champion = $(this).find(".card-title").html();
+    var champion_id = champion_id = champion.replace(/ /g,"-").replace('.', "")+'Modal';
+    $.ajax({
+        type: 'POST',
+        url: 'getdata.php',
+        data: { scripts: champion },
+        success: function(data) {
+            $("body").append('<div id="'+champion_id+'" class="modal"><div class="modal-content"><h4>Scripts - '+champion+'</h4><div class="row"><ul class="list">'+data+'</ul></div></div></div>');
+        }
+    });
+    $('#'+champion_id).modal('open');
+    $('#'+champion_id).modal({
+        complete: function() { 
+            $(this).remove();
+        }
+    });
+});
+
+//works when you use 
+$('#'+champion_id).modal();
+		*/
+	
 </script>
 
 
 </body>
 </html>
+
