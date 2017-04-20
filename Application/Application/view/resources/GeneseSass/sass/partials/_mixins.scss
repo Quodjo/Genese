@@ -1,0 +1,62 @@
+//removes all padding and margins
+@mixin remove-pad-and-marg() {
+    padding: 0;
+    margin: 0;
+}
+
+//sets the padding and margin
+@mixin default-pad-and-marg($pad:0px, $marg:0px) {
+    padding: $pad;
+    margin: $marg;
+}
+
+//Sets the background-color
+@mixin set-background-color($color) {
+    background-color: $color !important;
+}
+
+//Sets the width
+@mixin set-width($width) {
+    width: $width !important;
+}
+
+//Sets the height
+@mixin set-height($height) {
+    height: $height !important;
+}
+
+@mixin set-width-height($width, $height) {
+    @include set-width($width);
+    @include set-height($height);
+}
+
+//sets the absolute width and height
+@mixin set-absolute-width-height($width, $height) {
+    position: absolute;
+    width: $width !important;
+    height: $height !important;
+}
+
+//GhostBtn
+@mixin set-ghost-btn($color:black) {
+    color: $color;
+    background: none !important;
+    border: 2px solid $color;
+}
+
+@mixin set-background-fit($url) {
+    background-image: url($url);
+    background-size: cover;
+    background-position: center;
+    background-color: white;
+}
+
+//Gradient
+@mixin gradient-background($color1, $color2) {
+    background: $color1;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, $color1, $color2);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, $color1, $color2);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}

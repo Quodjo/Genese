@@ -1,0 +1,439 @@
+/* line 1, ../sass/partials/_base.scss */
+* {
+  padding: 0px;
+  margin: 0px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* line 9, ../sass/partials/_base.scss */
+body {
+  background-color: lightgray !important;
+}
+
+/* line 22, ../sass/partials/_base.scss */
+.oDeets, .pDeets {
+  background: #e43a15;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #e65245, #e43a15);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #e65245, #e43a15);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+/* line 31, ../sass/partials/_base.scss */
+.orderDetails .itemBarHold .increaseQty, .orderDetails .itemBarHold .decreaseQty, .orderDetails .itemBarHold .deleteItem {
+  cursor: pointer;
+  transition: transform 0.4s ease-in-out;
+}
+/* line 34, ../sass/partials/_base.scss */
+.orderDetails .itemBarHold .increaseQty:hover, .orderDetails .itemBarHold .decreaseQty:hover, .orderDetails .itemBarHold .deleteItem:hover {
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  color: tomato;
+}
+
+/* line 40, ../sass/partials/_base.scss */
+.checkContent .mainWrap .checkImg, #receipt .logoHolder {
+  display: block;
+  margin: 0 auto;
+}
+
+/* line 46, ../sass/partials/_base.scss */
+.payPlan a, .wrap a {
+  display: inline-block;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  background-color: lawngreen !important;
+}
+/* line 50, ../sass/partials/_base.scss */
+.payPlan a:hover, .wrap a:hover {
+  color: lawngreen;
+  background: none !important;
+  border: 2px solid lawngreen;
+}
+/* line 54, ../sass/partials/_base.scss */
+.payPlan .backToShop, .wrap .backToShop {
+  background-color: tomato !important;
+}
+/* line 56, ../sass/partials/_base.scss */
+.payPlan .backToShop:hover, .wrap .backToShop:hover {
+  color: tomato;
+  background: none !important;
+  border: 2px solid tomato;
+}
+/* line 60, ../sass/partials/_base.scss */
+.payPlan .payBtns, .wrap .payBtns, .payPlan .checkBtns, .wrap .checkBtns {
+  display: inline-block;
+}
+
+/* line 8, ../sass/styles.scss */
+.fullpage, .leftInfoSect, .rightFunctionSect {
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  background-color: lightgray !important;
+}
+
+/* line 16, ../sass/styles.scss */
+.doneCheck {
+  background-image: url("https://static.pexels.com/photos/83802/tomato-83802.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-color: white;
+}
+
+/* line 20, ../sass/styles.scss */
+.gNav {
+  color: dimgray;
+  padding: 0 2rem;
+  background-color: transparent !important;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+/* line 24, ../sass/styles.scss */
+.gNav .brand-logo {
+  width: 10vh !important;
+  height: 10vh !important;
+}
+/* line 26, ../sass/styles.scss */
+.gNav .brand-logo img {
+  width: auto !important;
+  height: inherit !important;
+}
+/* line 32, ../sass/styles.scss */
+.gNav #searchKey {
+  border-bottom: 1px solid dimgray;
+}
+/* line 35, ../sass/styles.scss */
+.gNav a {
+  color: dimgray;
+}
+/* line 39, ../sass/styles.scss */
+.gNav .foodNav li {
+  margin: 0 1rem;
+}
+
+/* line 47, ../sass/styles.scss */
+.oDeets a, .pDeets a {
+  color: white;
+}
+
+/* line 57, ../sass/styles.scss */
+.leftInfoSect, .rightFunctionSect {
+  width: 33.33333% !important;
+  background-color: white !important;
+  float: left;
+  -moz-box-shadow: -4px 0px 12px 0px rgba(50, 50, 50, 0.27);
+  -webkit-box-shadow: -4px 0px 12px 0px rgba(50, 50, 50, 0.27);
+  box-shadow: -4px 0px 12px 0px rgba(50, 50, 50, 0.27);
+}
+
+/* line 65, ../sass/styles.scss */
+.rightFunctionSect {
+  width: 66.66667% !important;
+  background-image: url("https://static.pexels.com/photos/269252/pexels-photo-269252.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-color: white;
+}
+
+/* line 72, ../sass/styles.scss */
+.center, .vcenter, .orderDetails .itemBar, .info .buttons {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+/* line 78, ../sass/styles.scss */
+.vcenter, .orderDetails .itemBar {
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+/* line 83, ../sass/styles.scss */
+nav {
+  position: absolute;
+  width: 100% !important;
+  height: 10vh !important;
+  background-color: black !important;
+  z-index: 1;
+}
+
+/* line 91, ../sass/styles.scss */
+.info {
+  width: 80% !important;
+  height: 90% !important;
+  padding-top: 6rem;
+}
+/* line 96, ../sass/styles.scss */
+.info .text {
+  width: 100%;
+  height: 80%;
+}
+/* line 101, ../sass/styles.scss */
+.info .buttons {
+  height: 18%;
+}
+/* line 106, ../sass/styles.scss */
+.info .checkBtns {
+  width: 100% !important;
+}
+/* line 108, ../sass/styles.scss */
+.info .checkBtns a {
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+}
+/* line 111, ../sass/styles.scss */
+.info .checkBtns .proceed {
+  background-color: lawngreen !important;
+}
+/* line 113, ../sass/styles.scss */
+.info .checkBtns .proceed:hover {
+  color: lawngreen;
+  background: none !important;
+  border: 2px solid lawngreen;
+}
+/* line 117, ../sass/styles.scss */
+.info .checkBtns .backToShop {
+  background-color: tomato !important;
+}
+/* line 119, ../sass/styles.scss */
+.info .checkBtns .backToShop:hover {
+  color: tomato;
+  background: none !important;
+  border: 2px solid tomato;
+}
+
+/* line 126, ../sass/styles.scss */
+.function {
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* line 135, ../sass/styles.scss */
+.progressBar {
+  position: absolute;
+  width: 100% !important;
+  height: 10vh !important;
+  background-color: black !important;
+  z-index: 1;
+  top: 10vh;
+  left: 0;
+  color: white;
+}
+/* line 142, ../sass/styles.scss */
+.progressBar .complete {
+  color: limegreen;
+}
+/* line 145, ../sass/styles.scss */
+.progressBar .incomplete {
+  color: lightgray;
+}
+
+/* line 150, ../sass/styles.scss */
+.orderDetails {
+  text-align: center;
+  padding: 0 2rem;
+}
+/* line 153, ../sass/styles.scss */
+.orderDetails .container {
+  width: 100% !important;
+}
+/* line 156, ../sass/styles.scss */
+.orderDetails nav {
+  margin-top: 10vh;
+  position: fixed;
+  left: 0;
+  background-color: white !important;
+  color: tomato;
+  width: 66.66667% !important;
+  text-align: center !important;
+}
+/* line 164, ../sass/styles.scss */
+.orderDetails nav .complete {
+  color: limegreen;
+}
+/* line 167, ../sass/styles.scss */
+.orderDetails nav .incomplete {
+  color: lightgray;
+}
+/* line 171, ../sass/styles.scss */
+.orderDetails .itemQ {
+  margin-top: 2rem;
+}
+/* line 174, ../sass/styles.scss */
+.orderDetails .itemBarHold {
+  padding-top: 7rem;
+}
+/* line 176, ../sass/styles.scss */
+.orderDetails .itemBarHold .totalCol {
+  text-align: right;
+}
+/* line 187, ../sass/styles.scss */
+.orderDetails .itemBarHold .deleteItem:hover {
+  color: red;
+}
+/* line 193, ../sass/styles.scss */
+.orderDetails .itemBar {
+  height: 20vh !important;
+}
+/* line 196, ../sass/styles.scss */
+.orderDetails .itemBar .item {
+  height: 100%;
+}
+/* line 200, ../sass/styles.scss */
+.orderDetails .itemHold .itemImage, .orderDetails .itemHold .itemDesc {
+  float: left;
+}
+/* line 203, ../sass/styles.scss */
+.orderDetails .itemHold {
+  height: 20vh !important;
+  padding: 0px;
+  margin: 0px;
+}
+/* line 206, ../sass/styles.scss */
+.orderDetails .itemHold .itemImage {
+  height: inherit;
+  width: 20vh !important;
+}
+/* line 210, ../sass/styles.scss */
+.orderDetails .itemHold .itemImage img {
+  width: inherit;
+  height: inherit;
+}
+/* line 215, ../sass/styles.scss */
+.orderDetails .itemHold .itemDesc {
+  margin-left: 2rem;
+}
+/* line 221, ../sass/styles.scss */
+.orderDetails .checkNav a {
+  color: gray;
+}
+
+/* line 227, ../sass/styles.scss */
+.billingDeets, .billingText, .paymentMethod {
+  position: absolute;
+  position: absolute;
+  width: 50% !important;
+  height: 80vh !important;
+  right: -2rem;
+}
+
+/* line 234, ../sass/styles.scss */
+.billingText, .paymentMethod {
+  right: 0;
+  left: 0;
+  top: 40vh;
+  background-color: white !important;
+  height: auto !important;
+}
+/* line 242, ../sass/styles.scss */
+.billingText i, .paymentMethod i {
+  font-size: 200%;
+  color: #e02200;
+  transition: font-size 0.2s ease-in-out;
+}
+/* line 246, ../sass/styles.scss */
+.billingText i:hover, .paymentMethod i:hover {
+  font-size: 300%;
+  cursor: pointer;
+}
+
+/* line 253, ../sass/styles.scss */
+.paymentMethod {
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
+  width: 100% !important;
+  height: auto !important;
+}
+/* line 260, ../sass/styles.scss */
+.paymentMethod .options {
+  position: absolute;
+  width: 100% !important;
+  height: auto !important;
+}
+
+/* line 265, ../sass/styles.scss */
+#paymentModal {
+  width: 25% !important;
+}
+
+/* line 269, ../sass/styles.scss */
+.payPlan {
+  width: 100% !important;
+  margin: 0 auto !important;
+  padding-top: 4rem !important;
+}
+
+/* line 276, ../sass/styles.scss */
+.checkContent {
+  width: 100% !important;
+  height: 100vh !important;
+}
+/* line 279, ../sass/styles.scss */
+.checkContent .mainWrap {
+  width: 100% !important;
+  height: 100% !important;
+}
+/* line 281, ../sass/styles.scss */
+.checkContent .mainWrap .checkImg {
+  width: 10rem !important;
+  height: auto !important;
+}
+
+/* line 289, ../sass/styles.scss */
+.checkImg .icon {
+  font-size: 10rem;
+  color: lawngreen;
+}
+
+/* line 297, ../sass/styles.scss */
+.wrap .payBtns, .wrap .checkBtns {
+  width: 100vw !important;
+}
+
+/* line 302, ../sass/styles.scss */
+#receipt {
+  height: 100vh !important;
+  width: 33.33333% !important;
+  text-align: left;
+}
+/* line 306, ../sass/styles.scss */
+#receipt .logoHolder {
+  width: 5rem !important;
+  height: 5rem !important;
+}
+/* line 310, ../sass/styles.scss */
+#receipt .container {
+  width: 100% !important;
+}
+/* line 313, ../sass/styles.scss */
+#receipt .headers {
+  color: tomato;
+  font-weight: bold;
+  margin: 0 !important;
+}
+/* line 318, ../sass/styles.scss */
+#receipt .price, #receipt .date {
+  text-align: right;
+}
+/* line 321, ../sass/styles.scss */
+#receipt .quant {
+  text-align: center;
+}
