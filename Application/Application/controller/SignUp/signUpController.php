@@ -80,7 +80,7 @@ function registernewuser(){
   // }
 
   $sql = "INSERT INTO users(firstname, lastname, idNumber, email, password, status, role_id)".
-  "VALUES(?, ?, ?, ?, ?,'active','6', now())";
+  "VALUES(?, ?, ?, ?, ?,'active','6')";
 
 
   $signUpMod = new signUpModel;
