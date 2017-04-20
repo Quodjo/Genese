@@ -27,7 +27,7 @@ function validRegister() {
   $regexPassword = '/^(?=.*\d+)(?=.*[a-zA-Z])[0-9a-zA-Z!@#$%]{6,}$/';
   $regexEmail = '/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/';
 
-  if(empty($idNumber) && !preg_match($regexNum, $username)){
+  if(empty($idNumber) && !preg_match($regexNum, $idNumber)){
     $alertString .= "Invalid Id Number, ";
   }
 
@@ -83,10 +83,10 @@ function registerNewUser(){
   "VALUES(?, ?, ?, ?, ?,'active','6')";
 
 
-  $signUpMod = new signUpModel;
+  $signUpModel = new SignUp;
   $params = array($firstname, $lastname, $idNumber, $email, $password);
 
-  $exec = $signUpMod->signUpUser($sql, "sssss", $params);
+  $exec = $signUpModel->signUpUser($sql, "sssss", $params);
 
   if($exec){
     echo '<p>User Added.</p>';

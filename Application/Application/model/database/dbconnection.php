@@ -78,16 +78,14 @@ class dbconnection
 
   function preparedSqlStatement($sql, $paramTypes, $params)
   {
-    if ($this->dbconnection == null) {
-      $this->getInstance();
-    }
-    $stm = $this->dbconnection->prepare($sql);
+    $conn = mysqli_connect(SERVER,USERNAME,PASSWORD,DBNAME);
+    $stm = $conn->prepare($sql);
     $refIndex = array();
     foreach($params as $key => $value) {
       $refIndex[$key] = &$params[$key];
     }
-    $value = array_merge(array($paramTypes), $refIndex);
-    call_user_func_array(array($stm, "bind_param"), $value);
+    $val = array_merge(array($paramTypes), $refIndex);
+    call_user_func_array(array($stm, 'bind_param'), $val);
 
     if($stm == false){
       return false;

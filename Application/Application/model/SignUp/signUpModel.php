@@ -10,7 +10,7 @@ class SignUp extends dbconnection {
   //function for login
   function signUpUser($sql, $paramTypes, $params) {
 
-    $exec = preparedSqlStatement($sql, $paramTypes, $params)
+    $exec = $this->preparedSqlStatement($sql, $paramTypes, $params);
 
     if($exec){
       return true;

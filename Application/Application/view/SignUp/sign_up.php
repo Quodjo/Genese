@@ -40,11 +40,11 @@
             <label for="last_name">Last Name</label>
           </div>
           <div class="input-field col s12">
-            <input id="id_number" id="idNumber" type="text" class="validate" >
+            <input id="id_number" name="idNumber" type="text" class="validate" >
             <label for="id_number">ID Number</label>
           </div>
           <div class="input-field col s12">
-            <input id="email" type="email" name"email" class="validate">
+            <input id="email" type="email" name="email" class="validate">
             <label for="email">Email</label>
           </div>
         </div>
