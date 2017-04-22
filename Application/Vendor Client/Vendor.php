@@ -123,12 +123,13 @@ in kitchen and processed order column -->
   
   </div>
 
+<div id="modalcontainer"></div>
 <!--modal to create the pop ups-->
-				<!--<div align=center id="modal1" class="modal" style="width:500px">
+				<div align=center id="modal1" class="modal" style="width:500px">
 					<div class="modal-content">
 						<h4 style="font-size:350%;"><  #BB-ORDER NO.</h4><br>
             <div class="divider red darken-4" style="height:10px"></div>
-						<p1 style ="font-size:170%">20202018:John Doe </p1><br>
+						<p1 id="username"style ="font-size:170%">20202018:John Doe </p1><br>
             <div class="grey">
             <p2 style ="font-size:180%">Jollof + Fish  1/2P</p2><br><br>
           </div>
@@ -143,7 +144,7 @@ in kitchen and processed order column -->
 						<a href="#!" class=" modal-action modal-close orange waves-effect waves- btn-flat ">Add to Kitchen</a>
 
 					</div>
-				</div>-->
+				</div>
 
   <div align=center class="row" style="padding-top: 5%">
  
@@ -151,8 +152,8 @@ in kitchen and processed order column -->
   </div>
 
 <button onclick="createButtons()" id="demo">Click me</button> //test button
-<button data-target="modal1">Modal test</button> //test button
-
+<button onclick="loadButton()">Modal test</button> //test button
+<button data-target="modal1">Modal testerrr</button> //test button
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 	<script type="text/javascript" src="../js/materialize.min.js"></script>
@@ -240,52 +241,11 @@ $(".button-collapse").sideNav();
 					btn.innerHTML = "Order 0"+ordercount;
 					
 				btn.onclick= function(){
-				
-
-//create and append modal details
-			var modal = document.createElement("div");
-			modal.id="modal1";                                //create modal parent div
-			modal.className="modal";
-			modal.style.width="500px";
-
-			var case0 =document.createElement("div");
-			case0.className="modal-content";             //    create div to hold modal content
-
-			var header = document.createElement("h4");
-			header.style.font="350%";                                  //header for order number
-			header.innerHTML="#BB-ORDER NO."+jsonOrder.orderNum;
-
-			case0.appendChild(header);//add a space after             //append to modal content div
-			
-			var divider1 = document.createElement("div");
-			divider1.className="divider red darken-4"                  //create divider
-			divider1.style.height="10px";
-
-			
-			case0.appendChild(divider1);//add a space after        //append to modal content div
 
 
+					var ts=document.getElementById('username');
+					ts.innerHTML="Benedict Quartey";
 
-			var username = document.createElement("p1");
-			username.font="170%";                                 //create username field also holds user id
-			username.innerHTML='jsonOrder.userFname+jsonOrder.userLname';
-			
-			case0.appendChild(username);//add a space after        //append to modal content div
-
-
-
-			var case1 = document.createElement("div");
-			case1.className="grey";                            //create grey div
-
-			var foodname = document.createElement("pre")
-			foodname.style.font="180%";                         //create food field
-			foodname.innerHTML= jsonOrder.foodname;
-
-			case1.appendChild(foodname);                      //append to grey div case
-
-			case0.appendChild(case1);//add a space after        //append entire case1 to modal content div
-
-			
 
 
 
@@ -315,16 +275,31 @@ $(this).removeClass("waves-effect waves-light submit").addClass('disabled');
 
 function loadButton() {
 
-//how to achieve updating buttons
-/*
-everytime you click on a button it would be greyed out then write a script
-that removes the clicked order from the order table so on the next ajax
-call you recreate all the buttons but the already clicked ones wont be there
-you put them in a new table called inKitchen table */
 
-/*call this on every button, get button id which would be order item id and use that to 
-exxecute a query to populate values of a modal you create here, after remove that button 
-from the order table in the database and put in the kitchen table*/
+				var container=document.getElementById('orderContainer');
+				var btn = document.createElement("button");
+				
+				btn.className="btn waves-effect waves-light";
+				
+					btn.style.width = "160px";
+					btn.style.height = "120px";
+					btn.style.background = "rgba(110,0,0,0.7)";
+					btn.style.color = "white";
+					
+					btn.innerHTML = "test"
+					
+				btn.onclick= function(){
+
+$(this).removeClass("waves-effect waves-light submit").addClass('disabled');
+			alert ("worked"+index);
+
+}; //end of button onclick anonymous function
+
+
+				
+
+
+
 
 }
 
