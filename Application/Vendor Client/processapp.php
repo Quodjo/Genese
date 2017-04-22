@@ -17,6 +17,21 @@ export();
 //     echo"<br>";
 //     }
 
+if(isset($_POST['action']) && function_exists($_POST['action'])) {
+  echo (addToKitchen());
+}
+
+function addToKitchen(){
+    $dbcon = new dbconnection;
+    $sql="INSERT INTO in_kitchen(orderNum,username,foodname,drinkname) VALUES (\"$username\",\"$gender\",\"$color\")" ;  //sql query for insertion
+	$dbexec = $dbcon->query($sql);
+	if($dbexec){return "success";}
+	else{return "failed";}
+	
+}
+
+
+
 function initialize(){
     $orderNum;
     $userId;
@@ -69,3 +84,13 @@ echo $JSONArray;
 
 
 ?>
+
+
+
+
+
+
+
+
+
+

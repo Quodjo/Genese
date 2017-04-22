@@ -15,6 +15,8 @@
 
   <link rel="icon" href="../images/logo.png" type="image/png">
 
+  
+
 
 
 
@@ -125,23 +127,30 @@ in kitchen and processed order column -->
 
 <div id="modalcontainer"></div>
 <!--modal to create the pop ups-->
-				<div align=center id="modal1" class="modal" style="width:500px">
+				<div align=center id="modal1" class="modal" style="width:480px">
 					<div class="modal-content">
-						<h4 style="font-size:350%;"><  #BB-ORDER NO.</h4><br>
-            <div class="divider red darken-4" style="height:10px"></div>
-						<p1 id="username"style ="font-size:170%">20202018:John Doe </p1><br>
+					<div style="border:solid grey 3px">
+						<h4 id="ordernum" style="font-size:350%;"><  #BB-ORDER NO.</h4><br>
+         <div class="divider red darken-4" style="height:5px"></div>
+						<p1 id="username"style ="font-size:170%;color:red">20202018:John Doe </p1><br>
+						</div>
+
+
+		  <div><p1 id="username"style ="font-size:170%">Food</p1></div>
             <div class="grey">
-            <p2 style ="font-size:180%">Jollof + Fish  1/2P</p2><br><br>
+            <p2 style ="font-size:180%" id="foodid">Jollof + Fish  1/2P</p2><br><br>
           </div>
+		  <p1 id="username"style ="font-size:170%">Drinks</p1>
+		  <div class="divider red darken-4" style="height:5px"></div>
               <div class="divider grey lighten-5" style="height:8px" ></div>
-            <div class="grey">
-            <p3>Khebab Sausage style  2</p3><br>
-            <p4>Vita Milk  2</p4><br>
-            <p5>Bottled Water  2</p5><br>
+            <div class="grey" >
+            <pre id="drinkid" style ="font-size:150%">Khebab Sausage style  2
+            Vita Milk  2
+            Bottled Water  2</pre>
             </div>
 					</div>
-					<div class="modal-footer">
-						<a href="#!" class=" modal-action modal-close orange waves-effect waves- btn-flat ">Add to Kitchen</a>
+					<div id="btnholder" class="modal-footer">
+						
 
 					</div>
 				</div>
@@ -152,8 +161,7 @@ in kitchen and processed order column -->
   </div>
 
 <button onclick="createButtons()" id="demo">Click me</button> //test button
-<button onclick="loadButton()">Modal test</button> //test button
-<button data-target="modal1">Modal testerrr</button> //test button
+
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 	<script type="text/javascript" src="../js/materialize.min.js"></script>
@@ -161,11 +169,56 @@ in kitchen and processed order column -->
 
 <script>
 //to test parsing data values as json
-function checked(){
+
+var myObj; // js variable that holds array of json orders
+
+/*before each refresh make sure to remove clicked buttons from order table to kitchen table to ensure t
+they arent reloaded*/
+
+//setInterval(createButtons, 5000 ); // make creation of buttons automatic
 
 
+//generate a unique modal containing details of button that calls it. Called in create button method
+function modalGen(index){
+	jsonOrder = JSON.parse(myObj[index]);
 
+
+var username=document.getElementById('username');
+					username.innerHTML="Username : " +jsonOrder.userFname+" "+jsonOrder.userLname;
+
+var orderid=document.getElementById('ordernum');
+orderid.innerHTML="#BB-ORDER NO. "+jsonOrder.orderNum;
+
+var foodid=document.getElementById('foodid');
+foodid.innerHTML=jsonOrder.foodname;
+
+var drinkid=document.getElementById('drinkid');
+drinkid.innerHTML=jsonOrder.drinkname;
+
+var btnHolder = document.getElementById("btnholder" );
+var kitchenBtn = document.createElement("button");
+kitchenBtn.className="modal-action modal-close orange waves-effect waves- btn-flat ";
+kitchenBtn.innerHTML="Add to kitchen";
+kitchenBtn.id=index;
+
+btnHolder.appendChild(kitchenBtn);
+
+ $('#modal1').modal('open');
+        
+ 
 }
+
+// function moveKitchen(){
+// 	alert("sucess");
+// $dbcon = new dbconnection;
+// $sql="INSERT INTO in_kitchen(orderNum,username,foodname,drinkname) VALUES() ";
+//  $sql="INSERT INTO webtechtable(username,gender,color) VALUES (\"$username\",\"$gender\",\"$color\")" ; 
+
+// $dbexec = $dbcon->query($sql);
+
+
+
+// }
 
 
 
@@ -208,7 +261,26 @@ $(".button-collapse").sideNav();
       	//alert("MOVES TO KITCHEN");
       	//console.log(modal, trigger);
       },
-      complete: function() { alert('ORDER MOVES TO KITCHEN'); } // Callback for Modal close
+      complete: function() { 
+
+		   var xmlhttp = new XMLHttpRequest();
+	xmlhttp.onreadystatechange = function() {
+
+		if (this.readyState == 4 && this.status == 200) {
+				alert(this.responstText);
+
+		}
+		xmlhttp.open("POST", "processapp.php?action=addToKitchen", true);
+
+	xmlhttp.send();
+    } //end of create button method
+
+
+ 
+	$( '#btnholder' ).empty();
+	
+	} // Callback for Modal close
+	//var btnHolder = document.getElementById("btnholder" );
   }
   );
 
@@ -216,7 +288,9 @@ $(".button-collapse").sideNav();
 
 
   function createButtons() {
+	  $( '#orderContainer' ).empty(); //clear space to avoid duplication of buttons
 
+	
    var xmlhttp = new XMLHttpRequest();
 	xmlhttp.onreadystatechange = function() {
 		if (this.readyState == 4 && this.status == 200) {
@@ -225,6 +299,7 @@ $(".button-collapse").sideNav();
 			//foreach chunk that converts each item in the response array into json object
 			//and creates buttons that hold their details
 			myObj.forEach(function(currentValue, index, arr){
+				if(myObj[index])
 				jsonOrder = JSON.parse(myObj[index]);
 
 
@@ -241,18 +316,8 @@ $(".button-collapse").sideNav();
 					btn.innerHTML = "Order 0"+ordercount;
 					
 				btn.onclick= function(){
-
-
-					var ts=document.getElementById('username');
-					ts.innerHTML="Benedict Quartey";
-
-
-
-
-
-
-$(this).removeClass("waves-effect waves-light submit").addClass('disabled');
-			alert ("worked"+index);
+					modalGen(index);
+					$(this).removeClass("waves-effect waves-light submit").addClass('disabled');
 
 }; //end of button onclick anonymous function
 
@@ -276,62 +341,11 @@ $(this).removeClass("waves-effect waves-light submit").addClass('disabled');
 function loadButton() {
 
 
-				var container=document.getElementById('orderContainer');
-				var btn = document.createElement("button");
-				
-				btn.className="btn waves-effect waves-light";
-				
-					btn.style.width = "160px";
-					btn.style.height = "120px";
-					btn.style.background = "rgba(110,0,0,0.7)";
-					btn.style.color = "white";
-					
-					btn.innerHTML = "test"
-					
-				btn.onclick= function(){
-
-$(this).removeClass("waves-effect waves-light submit").addClass('disabled');
-			alert ("worked"+index);
-
-}; //end of button onclick anonymous function
-
-
-				
-
-
-
 
 }
 
 
 
-
-
-
-	/*		
-   $(".champion-card").click(function() {
-    var champion = $(this).find(".card-title").html();
-    var champion_id = champion_id = champion.replace(/ /g,"-").replace('.', "")+'Modal';
-    $.ajax({
-        type: 'POST',
-        url: 'getdata.php',
-        data: { scripts: champion },
-        success: function(data) {
-            $("body").append('<div id="'+champion_id+'" class="modal"><div class="modal-content"><h4>Scripts - '+champion+'</h4><div class="row"><ul class="list">'+data+'</ul></div></div></div>');
-        }
-    });
-    $('#'+champion_id).modal('open');
-    $('#'+champion_id).modal({
-        complete: function() { 
-            $(this).remove();
-        }
-    });
-});
-
-//works when you use 
-$('#'+champion_id).modal();
-		*/
-	
 </script>
 
 
