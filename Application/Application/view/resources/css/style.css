@@ -342,6 +342,7 @@ body {
     right: 1.5rem;
     width: 25%;
     padding: 0;
+    z-index: 99;
 }
 
 .cart .gWrapper {
@@ -364,6 +365,7 @@ body {
 
 .rightSide .cart .orderItems {
     min-height: 5rem;
+    margin-top: 5rem;
 }
 
 .deet {

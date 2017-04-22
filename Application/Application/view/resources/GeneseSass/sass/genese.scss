@@ -18,7 +18,7 @@
         }
         
         .gNav {
-            $tColor: dimgray;
+            $tColor: white;
             color: $tColor;
             padding: 0 2rem;
             .brand-logo {
@@ -323,5 +323,14 @@
             }
             .date {
                 @extend .price;
+            }
+        }
+        
+        #orderDetailsOverview {
+            .gNav {
+                @include gradient-background(#f85032, #e73827, left);
+                a {
+                    color: white;
+                }
             }
         }
