@@ -79,39 +79,7 @@ border-bottom: 4.5vh;
 
  		<div  class="row" align="center" >
  		<div id="orderContainer">
- 		<!--	<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);" data-target="modal1" >Order #1</button>
-
-				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);" data-target="modal1">Order #2</button>
-				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);" data-target="modal1">Order #3</button>
-				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);" data-target="modal1">Order #4</button>
-				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);" data-target="modal1">Order #5</button>
-
-				
- 			<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);" data-target="modal1" >Order #1</button>
-
-				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);" data-target="modal1">Order #6</button>
-				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);" data-target="modal1">Order #7</button>
-				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);" data-target="modal1">Order #8</button>
-				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);" data-target="modal1">Order #9</button>
-
-				
-		
- 			<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);" data-target="modal1" >Order #1</button>
-
-				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);" data-target="modal1">Order #10</button>
-				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);" data-target="modal1">Order #11</button>
-				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);" data-target="modal1">Order #12</button>
-				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);" data-target="modal1">Order #13</button>
-
-				
- 			<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);" data-target="modal1" >Order #14</button>
-
-				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);" data-target="modal1">Order #15</button>
-				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);" data-target="modal1">Order #16</button>
-				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);" data-target="modal1">Order #17</button>
-				<button id='order1' class="btn waves-effect waves-light " type="button" name="action" style="height:120px;width:160px;background-color:rgba(110,0,0,0.7);" data-target="modal1">Order #18</button>
-
-				-->
+ 		
  			</div>
  		</div>
      
@@ -272,8 +240,7 @@ $(".button-collapse").sideNav();
 					btn.innerHTML = "Order 0"+ordercount;
 					
 				btn.onclick= function(){
-				$(this).removeClass("waves-effect waves-light submit").addClass('disabled');
-			alert ("worked"+index);
+				
 
 //create and append modal details
 			var modal = document.createElement("div");
@@ -294,22 +261,38 @@ $(".button-collapse").sideNav();
 			divider1.className="divider red darken-4"                  //create divider
 			divider1.style.height="10px";
 
-			var username = document.createElement("p1");
-			username.innerHTML='jsonOrder.userFname+jsonOrder.userLname';
-
+			
 			case0.appendChild(divider1);//add a space after        //append to modal content div
 
+
+
+			var username = document.createElement("p1");
+			username.font="170%";                                 //create username field also holds user id
+			username.innerHTML='jsonOrder.userFname+jsonOrder.userLname';
+			
+			case0.appendChild(username);//add a space after        //append to modal content div
+
+
+
 			var case1 = document.createElement("div");
-			case1.className="grey";
+			case1.className="grey";                            //create grey div
 
 			var foodname = document.createElement("pre")
-			foodname.style.font="180%";
+			foodname.style.font="180%";                         //create food field
 			foodname.innerHTML= jsonOrder.foodname;
+
+			case1.appendChild(foodname);                      //append to grey div case
+
+			case0.appendChild(case1);//add a space after        //append entire case1 to modal content div
 
 			
 
 
 
+
+
+$(this).removeClass("waves-effect waves-light submit").addClass('disabled');
+			alert ("worked"+index);
 
 }; //end of button onclick anonymous function
 
