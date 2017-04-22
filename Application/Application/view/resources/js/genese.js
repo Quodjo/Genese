@@ -2,7 +2,9 @@ $(document).ready(function() {
 
     startSlide();
 
+    $('#paymentModal').modal();
 
+    $('.modal').modal();
 
 
     $('#extrasModal').modal();

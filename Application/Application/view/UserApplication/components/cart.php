@@ -68,7 +68,7 @@
 
                                     <!--order button-->
                                     <div class="row">
-                                        <a id="orderBtn" class="waves-effect waves-light btn addCartBtn" href = 'orderOverview.php'>
+                                        <a id="orderBtn" class="waves-effect waves-light btn addCartBtn" href = 'orderOverviewPage.php'>
                                             <i class="fa fa-cart-plus" aria-hidden="true"></i>
                                             <span>Order</span>
                                         </a>

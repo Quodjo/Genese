@@ -72,7 +72,7 @@ body {
   display: inline-block;
 }
 
-/* line 8, ../GeneseSass/sass/genese.scss */
+/* line 9, ../GeneseSass/sass/genese.scss */
 .fullpage, .leftInfoSect, .rightFunctionSect {
   overflow: hidden;
   width: 100%;
@@ -80,7 +80,7 @@ body {
   background-color: lightgray !important;
 }
 
-/* line 16, ../GeneseSass/sass/genese.scss */
+/* line 17, ../GeneseSass/sass/genese.scss */
 .doneCheck {
   background-image: url("https://static.pexels.com/photos/83802/tomato-83802.jpeg");
   background-size: cover;
@@ -88,7 +88,7 @@ body {
   background-color: white;
 }
 
-/* line 20, ../GeneseSass/sass/genese.scss */
+/* line 21, ../GeneseSass/sass/genese.scss */
 .gNav {
   color: white;
   padding: 0 2rem;
@@ -97,35 +97,35 @@ body {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-/* line 24, ../GeneseSass/sass/genese.scss */
+/* line 25, ../GeneseSass/sass/genese.scss */
 .gNav .brand-logo {
   width: 10vh !important;
   height: 10vh !important;
 }
-/* line 26, ../GeneseSass/sass/genese.scss */
+/* line 27, ../GeneseSass/sass/genese.scss */
 .gNav .brand-logo img {
   width: auto !important;
   height: inherit !important;
 }
-/* line 32, ../GeneseSass/sass/genese.scss */
+/* line 33, ../GeneseSass/sass/genese.scss */
 .gNav #searchKey {
   border-bottom: 1px solid white;
 }
-/* line 35, ../GeneseSass/sass/genese.scss */
+/* line 36, ../GeneseSass/sass/genese.scss */
 .gNav a {
   color: white;
 }
-/* line 39, ../GeneseSass/sass/genese.scss */
+/* line 40, ../GeneseSass/sass/genese.scss */
 .gNav .foodNav li {
   margin: 0 1rem;
 }
 
-/* line 47, ../GeneseSass/sass/genese.scss */
+/* line 48, ../GeneseSass/sass/genese.scss */
 .oDeets a, .pDeets a {
   color: white;
 }
 
-/* line 57, ../GeneseSass/sass/genese.scss */
+/* line 58, ../GeneseSass/sass/genese.scss */
 .leftInfoSect, .rightFunctionSect {
   width: 33.33333% !important;
   background-color: white !important;
@@ -135,7 +135,7 @@ body {
   box-shadow: -4px 0px 12px 0px rgba(50, 50, 50, 0.27);
 }
 
-/* line 65, ../GeneseSass/sass/genese.scss */
+/* line 66, ../GeneseSass/sass/genese.scss */
 .rightFunctionSect {
   width: 66.66667% !important;
   background-image: url("https://static.pexels.com/photos/269252/pexels-photo-269252.jpeg");
@@ -144,7 +144,7 @@ body {
   background-color: white;
 }
 
-/* line 72, ../GeneseSass/sass/genese.scss */
+/* line 73, ../GeneseSass/sass/genese.scss */
 .center, .vcenter, .orderDetails .itemBar, .info .buttons {
   display: -webkit-flex;
   display: flex;
@@ -154,13 +154,13 @@ body {
   align-items: center;
 }
 
-/* line 78, ../GeneseSass/sass/genese.scss */
+/* line 79, ../GeneseSass/sass/genese.scss */
 .vcenter, .orderDetails .itemBar {
   -webkit-justify-content: space-between;
   justify-content: space-between;
 }
 
-/* line 83, ../GeneseSass/sass/genese.scss */
+/* line 84, ../GeneseSass/sass/genese.scss */
 nav {
   position: absolute;
   width: 100% !important;
@@ -169,53 +169,53 @@ nav {
   z-index: 1;
 }
 
-/* line 91, ../GeneseSass/sass/genese.scss */
+/* line 92, ../GeneseSass/sass/genese.scss */
 .info {
   width: 80% !important;
   height: 90% !important;
   padding-top: 6rem;
 }
-/* line 96, ../GeneseSass/sass/genese.scss */
+/* line 97, ../GeneseSass/sass/genese.scss */
 .info .text {
   width: 100%;
   height: 80%;
 }
-/* line 101, ../GeneseSass/sass/genese.scss */
+/* line 102, ../GeneseSass/sass/genese.scss */
 .info .buttons {
   height: 18%;
 }
-/* line 106, ../GeneseSass/sass/genese.scss */
+/* line 107, ../GeneseSass/sass/genese.scss */
 .info .checkBtns {
   width: 100% !important;
 }
-/* line 108, ../GeneseSass/sass/genese.scss */
+/* line 109, ../GeneseSass/sass/genese.scss */
 .info .checkBtns a {
   -moz-border-radius: 50px;
   -webkit-border-radius: 50px;
   border-radius: 50px;
 }
-/* line 111, ../GeneseSass/sass/genese.scss */
+/* line 112, ../GeneseSass/sass/genese.scss */
 .info .checkBtns .proceed {
   background-color: lawngreen !important;
 }
-/* line 113, ../GeneseSass/sass/genese.scss */
+/* line 114, ../GeneseSass/sass/genese.scss */
 .info .checkBtns .proceed:hover {
   color: lawngreen;
   background: none !important;
   border: 2px solid lawngreen;
 }
-/* line 117, ../GeneseSass/sass/genese.scss */
+/* line 118, ../GeneseSass/sass/genese.scss */
 .info .checkBtns .backToShop {
   background-color: tomato !important;
 }
-/* line 119, ../GeneseSass/sass/genese.scss */
+/* line 120, ../GeneseSass/sass/genese.scss */
 .info .checkBtns .backToShop:hover {
   color: tomato;
   background: none !important;
   border: 2px solid tomato;
 }
 
-/* line 126, ../GeneseSass/sass/genese.scss */
+/* line 127, ../GeneseSass/sass/genese.scss */
 .function {
   width: 100% !important;
   height: 100% !important;
@@ -224,7 +224,7 @@ nav {
   overflow-y: auto;
 }
 
-/* line 135, ../GeneseSass/sass/genese.scss */
+/* line 136, ../GeneseSass/sass/genese.scss */
 .progressBar {
   position: absolute;
   width: 100% !important;
@@ -235,25 +235,25 @@ nav {
   left: 0;
   color: white;
 }
-/* line 142, ../GeneseSass/sass/genese.scss */
+/* line 143, ../GeneseSass/sass/genese.scss */
 .progressBar .complete {
   color: limegreen;
 }
-/* line 145, ../GeneseSass/sass/genese.scss */
+/* line 146, ../GeneseSass/sass/genese.scss */
 .progressBar .incomplete {
   color: lightgray;
 }
 
-/* line 150, ../GeneseSass/sass/genese.scss */
+/* line 151, ../GeneseSass/sass/genese.scss */
 .orderDetails {
   text-align: center;
   padding: 0 2rem;
 }
-/* line 153, ../GeneseSass/sass/genese.scss */
+/* line 154, ../GeneseSass/sass/genese.scss */
 .orderDetails .container {
   width: 100% !important;
 }
-/* line 156, ../GeneseSass/sass/genese.scss */
+/* line 157, ../GeneseSass/sass/genese.scss */
 .orderDetails nav {
   margin-top: 10vh;
   position: fixed;
@@ -263,68 +263,68 @@ nav {
   width: 66.66667% !important;
   text-align: center !important;
 }
-/* line 164, ../GeneseSass/sass/genese.scss */
+/* line 165, ../GeneseSass/sass/genese.scss */
 .orderDetails nav .complete {
   color: limegreen;
 }
-/* line 167, ../GeneseSass/sass/genese.scss */
+/* line 168, ../GeneseSass/sass/genese.scss */
 .orderDetails nav .incomplete {
   color: lightgray;
 }
-/* line 171, ../GeneseSass/sass/genese.scss */
+/* line 172, ../GeneseSass/sass/genese.scss */
 .orderDetails .itemQ {
   margin-top: 2rem;
 }
-/* line 174, ../GeneseSass/sass/genese.scss */
+/* line 175, ../GeneseSass/sass/genese.scss */
 .orderDetails .itemBarHold {
   padding-top: 7rem;
 }
-/* line 176, ../GeneseSass/sass/genese.scss */
+/* line 177, ../GeneseSass/sass/genese.scss */
 .orderDetails .itemBarHold .totalCol {
   text-align: right;
 }
-/* line 187, ../GeneseSass/sass/genese.scss */
+/* line 188, ../GeneseSass/sass/genese.scss */
 .orderDetails .itemBarHold .deleteItem:hover {
   color: red;
 }
-/* line 193, ../GeneseSass/sass/genese.scss */
+/* line 194, ../GeneseSass/sass/genese.scss */
 .orderDetails .itemBar {
   height: 20vh !important;
 }
-/* line 196, ../GeneseSass/sass/genese.scss */
+/* line 197, ../GeneseSass/sass/genese.scss */
 .orderDetails .itemBar .item {
   height: 100%;
 }
-/* line 200, ../GeneseSass/sass/genese.scss */
+/* line 201, ../GeneseSass/sass/genese.scss */
 .orderDetails .itemHold .itemImage, .orderDetails .itemHold .itemDesc {
   float: left;
 }
-/* line 203, ../GeneseSass/sass/genese.scss */
+/* line 204, ../GeneseSass/sass/genese.scss */
 .orderDetails .itemHold {
   height: 20vh !important;
   padding: 0px;
   margin: 0px;
 }
-/* line 206, ../GeneseSass/sass/genese.scss */
+/* line 207, ../GeneseSass/sass/genese.scss */
 .orderDetails .itemHold .itemImage {
   height: inherit;
   width: 20vh !important;
 }
-/* line 210, ../GeneseSass/sass/genese.scss */
+/* line 211, ../GeneseSass/sass/genese.scss */
 .orderDetails .itemHold .itemImage img {
   width: inherit;
   height: inherit;
 }
-/* line 215, ../GeneseSass/sass/genese.scss */
+/* line 216, ../GeneseSass/sass/genese.scss */
 .orderDetails .itemHold .itemDesc {
   margin-left: 2rem;
 }
-/* line 221, ../GeneseSass/sass/genese.scss */
+/* line 222, ../GeneseSass/sass/genese.scss */
 .orderDetails .checkNav a {
   color: gray;
 }
 
-/* line 227, ../GeneseSass/sass/genese.scss */
+/* line 228, ../GeneseSass/sass/genese.scss */
 .billingDeets, .billingText, .paymentMethod {
   position: absolute;
   position: absolute;
@@ -333,7 +333,7 @@ nav {
   right: -2rem;
 }
 
-/* line 234, ../GeneseSass/sass/genese.scss */
+/* line 235, ../GeneseSass/sass/genese.scss */
 .billingText, .paymentMethod {
   right: 0;
   left: 0;
@@ -341,19 +341,22 @@ nav {
   background-color: white !important;
   height: auto !important;
 }
-/* line 242, ../GeneseSass/sass/genese.scss */
+/* line 243, ../GeneseSass/sass/genese.scss */
 .billingText i, .paymentMethod i {
   font-size: 200%;
   color: #e02200;
-  transition: font-size 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
 }
-/* line 246, ../GeneseSass/sass/genese.scss */
+/* line 247, ../GeneseSass/sass/genese.scss */
 .billingText i:hover, .paymentMethod i:hover {
-  font-size: 300%;
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
   cursor: pointer;
 }
 
-/* line 253, ../GeneseSass/sass/genese.scss */
+/* line 255, ../GeneseSass/sass/genese.scss */
 .paymentMethod {
   position: relative;
   top: auto;
@@ -362,84 +365,92 @@ nav {
   width: 100% !important;
   height: auto !important;
 }
-/* line 260, ../GeneseSass/sass/genese.scss */
+/* line 262, ../GeneseSass/sass/genese.scss */
 .paymentMethod .options {
   position: absolute;
   width: 100% !important;
   height: auto !important;
 }
-
 /* line 265, ../GeneseSass/sass/genese.scss */
+.paymentMethod i {
+  color: gray;
+}
+/* line 267, ../GeneseSass/sass/genese.scss */
+.paymentMethod i:hover {
+  color: #e02200;
+}
+
+/* line 273, ../GeneseSass/sass/genese.scss */
 #paymentModal {
   width: 25% !important;
 }
 
-/* line 269, ../GeneseSass/sass/genese.scss */
+/* line 277, ../GeneseSass/sass/genese.scss */
 .payPlan {
   width: 100% !important;
   margin: 0 auto !important;
   padding-top: 4rem !important;
 }
 
-/* line 276, ../GeneseSass/sass/genese.scss */
+/* line 284, ../GeneseSass/sass/genese.scss */
 .checkContent {
   width: 100% !important;
   height: 100vh !important;
 }
-/* line 279, ../GeneseSass/sass/genese.scss */
+/* line 287, ../GeneseSass/sass/genese.scss */
 .checkContent .mainWrap {
   width: 100% !important;
   height: 100% !important;
 }
-/* line 281, ../GeneseSass/sass/genese.scss */
+/* line 289, ../GeneseSass/sass/genese.scss */
 .checkContent .mainWrap .checkImg {
   width: 10rem !important;
   height: auto !important;
 }
 
-/* line 289, ../GeneseSass/sass/genese.scss */
+/* line 297, ../GeneseSass/sass/genese.scss */
 .checkImg .icon {
   font-size: 10rem;
   color: lawngreen;
 }
 
-/* line 297, ../GeneseSass/sass/genese.scss */
+/* line 305, ../GeneseSass/sass/genese.scss */
 .wrap .payBtns, .wrap .checkBtns {
   width: 100vw !important;
 }
 
-/* line 302, ../GeneseSass/sass/genese.scss */
+/* line 310, ../GeneseSass/sass/genese.scss */
 #receipt {
   height: 100vh !important;
   width: 33.33333% !important;
   text-align: left;
 }
-/* line 306, ../GeneseSass/sass/genese.scss */
+/* line 314, ../GeneseSass/sass/genese.scss */
 #receipt .logoHolder {
   width: 5rem !important;
   height: 5rem !important;
 }
-/* line 310, ../GeneseSass/sass/genese.scss */
+/* line 318, ../GeneseSass/sass/genese.scss */
 #receipt .container {
   width: 100% !important;
 }
-/* line 313, ../GeneseSass/sass/genese.scss */
+/* line 321, ../GeneseSass/sass/genese.scss */
 #receipt .headers {
   color: tomato;
   font-weight: bold;
   margin: 0 !important;
 }
-/* line 318, ../GeneseSass/sass/genese.scss */
+/* line 326, ../GeneseSass/sass/genese.scss */
 #receipt .price, #receipt .date {
   text-align: right;
 }
-/* line 321, ../GeneseSass/sass/genese.scss */
+/* line 329, ../GeneseSass/sass/genese.scss */
 #receipt .quant {
   text-align: center;
 }
 
-/* line 330, ../GeneseSass/sass/genese.scss */
-#orderDetailsOverview .gNav {
+/* line 338, ../GeneseSass/sass/genese.scss */
+#orderDetailsOverview .gNav, #paymentPage .gNav {
   background: #f85032;
   /* fallback for old browsers */
   background: -webkit-linear-gradient(to left, #f85032, #e73827);
@@ -447,7 +458,12 @@ nav {
   background: linear-gradient(to left, #f85032, #e73827);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
-/* line 332, ../GeneseSass/sass/genese.scss */
-#orderDetailsOverview .gNav a {
+/* line 340, ../GeneseSass/sass/genese.scss */
+#orderDetailsOverview .gNav a, #paymentPage .gNav a {
   color: white;
+}
+
+/* line 349, ../GeneseSass/sass/genese.scss */
+#paymentPage .billingDeets .deetsExpand, #paymentPage .billingText .deetsExpand, #paymentPage .paymentMethod .deetsExpand {
+  margin-top: 5rem;
 }

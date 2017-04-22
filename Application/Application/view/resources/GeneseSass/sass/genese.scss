@@ -5,6 +5,7 @@
         @import "partials/layout";
         @import "partials/base";
         @import "compass/css3";
+        @import "compass/css3/transform";
         .fullpage {
             overflow: hidden;
             width: $full-width;
@@ -242,9 +243,10 @@
             i {
                 font-size: $iconSize;
                 color: darken($tomato, 20);
-                transition: font-size 0.2s ease-in-out;
+                transition: transform 0.2s ease-in-out;
                 &:hover {
-                    font-size: $iconSize + $iconSize/2;
+                    //font-size: $iconSize + $iconSize/2;
+                    @include transform(scale(1.2));
                     cursor: pointer;
                 }
             }
@@ -259,6 +261,12 @@
             @include set-width-height($full-width, auto);
             .options {
                 @include set-absolute-width-height($full-width, auto);
+            }
+            i {
+                color: gray;
+                &:hover {
+                    color: darken($tomato, 20);
+                }
             }
         }
         
@@ -331,6 +339,15 @@
                 @include gradient-background(#f85032, #e73827, left);
                 a {
                     color: white;
+                }
+            }
+        }
+        
+        #paymentPage {
+            @extend #orderDetailsOverview;
+            .billingDeets {
+                .deetsExpand {
+                    margin-top: 5rem;
                 }
             }
         }
