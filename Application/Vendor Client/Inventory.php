@@ -15,11 +15,24 @@
 
   <link rel="icon" href="../images/logo.png" type="image/png">
 
+  <!--style to make footer stick to the bottom-->
+<style>
+ body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+
+</style>
 
 
 
 </head>
-<body style="background-image:url(../images/background_Head.jpg); background-repeat: no-repeat;overflow-y: scroll;
+<body style="background-image:url(../images/background_Head.jpg); background-repeat: repeat;overflow-y: scroll;
 border-bottom: 2.5vh;
 	border-style: solid;               /*footer red color*/
 	border-bottom-color: #be1e2d;
