@@ -127,7 +127,7 @@ border-bottom: 2.5vh;
 
           <!-- 
           food availiability cards for tab1-->
-	<button onclick = "foodCardsTab1()"> Press ME</button>
+	<button onclick = "doall()"> Press ME</button>
       <div id="tab1">
           
  
@@ -141,60 +141,7 @@ border-bottom: 2.5vh;
           food availiability cards for tab2-->
       <div id="tab2"> 
 
-          <div class="col s12 m4 disable">
-
-            <div class="card horizontal">
-              <div class="card-image">
-                <img src="../../resources/images/jollof.jpg" style="width:100%">
-              </div>
-              <div class="card-stacked">
-                <div class="card-content">
-                  <h5>Jollof</h5>
-                </div>
-                <div onclick="textChange2()" id="backColor2" class="card-action waves-effect waves-green" style="background-color:rgba(0,110,0,0.7);">
-                  <a id="avail" href="#" style="color:white">Available</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-
-          <div class="col s12 m4 disable">
-
-            <div class="card horizontal">
-              <div class="card-image">
-                <img src="../../resources/images/jollof.jpg" style="width:100%">
-              </div>
-              <div class="card-stacked">
-                <div class="card-content">
-                  <h5>Jollof</h5>
-                </div>
-                <div onclick="textChange2()" id="backColor2" class="card-action waves-effect waves-green" style="background-color:rgba(0,110,0,0.7);">
-                  <a id="avail" href="#" style="color:white">Available</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="col s12 m4 disable">
-
-            <div class="card horizontal">
-              <div class="card-image">
-                <img src="../../resources/images/jollof.jpg" style="width:100%">
-              </div>
-              <div class="card-stacked">
-                <div class="card-content">
-                  <h5>Jollof</h5>
-                </div>
-                <div onclick="textChange2()" id="backColor2" class="card-action waves-effect waves-green" style="background-color:rgba(0,110,0,0.7);">
-                  <a id="avail" href="#" style="color:white">Available</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
+          
 
 
           
@@ -209,58 +156,6 @@ border-bottom: 2.5vh;
           food availiability cards for tab3-->
       <div id="tab3"> 
 
-          <div class="col s12 m4">
-
-            <div class="card horizontal">
-              <div class="card-image">
-                <img src="../../resources/images/jollof.jpg">
-              </div>
-              <div class="card-stacked">
-                <div align=center class="card-content">
-                  <p>Jollof</p>
-                </div>
-                <div onclick="textChange()" class=" card-action waves-effect waves-red" id ="backColor" style="background-color:rgba(110,0,0,0.7);">
-                  <a href="#" id="unavail" style="color:white">Unavailable</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="col s12 m4">
-
-            <div class="card horizontal">
-              <div class="card-image">
-                <img src="../../resources/images/jollof.jpg">
-              </div>
-              <div class="card-stacked">
-                <div align=center class="card-content">
-                  <p>Jollof</p>
-                </div>
-                <div onclick="textChange()" class=" card-action waves-effect waves-red" id ="backColor" style="background-color:rgba(110,0,0,0.7);">
-                  <a href="#" id="unavail" style="color:white">Unavailable</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="col s12 m4">
-
-            <div class="card horizontal">
-              <div class="card-image">
-                <img src="../../resources/images/jollof.jpg">
-              </div>
-              <div class="card-stacked">
-                <div align=center class="card-content">
-                  <p>Jollof</p>
-                </div>
-                <div onclick="textChange()" class=" card-action waves-effect waves-red" id ="backColor" style="background-color:rgba(110,0,0,0.7);">
-                  <a href="#" id="unavail" style="color:white">Unavailable</a>
-                </div>
-              </div>
-            </div>
-          </div>
 
 
 
@@ -345,7 +240,7 @@ $(".button-collapse").sideNav();
 *Creating food cards for all foods(available and unavailable)
 */
 function foodCardsTab1(){
-
+ $( '#tab1' ).empty(); //clear space to avoid duplication of buttons
   	$.post("../../controller/vendorClient/processInventory.php", //Required URL of the page on server
 { // Data Sending With Request To Server
 action: 'tab1Cards'
@@ -403,82 +298,67 @@ var myObj = JSON.parse(response);
 
 		//creating a div with a class name card-action waves-effect waves-green
 		var case6 = document.createElement("div");
-		case6.className = "card-action waves-effect waves-green";
-		 case6.id = "backColor2";
-		 case6.style.background = "rgba(0,110,0,0.7)";
+	case6.className = "card-action waves-effect"
+		 case6.id = "statusCol";
+		 //case6.style.background = "rgba(0,110,0,0.7)";
+     case6.style.color="white";
+     case6.style.fontSize="20px";
+     case6.innerHTML=myObj[index].status
 
-		 var link = document.createElement("a");
-		 link.id = "avail";
-		 link.style.color = "white";
-		 link.innerHTML = "Available";
+     if(myObj[index].status=="Available"){
+  $('#statusCol').addClass('waves-green');
+  case6.style.background = "rgba(0,110,0,0.7)";
+     }
 
-		 case6.appendChild(link);
+     if(myObj[index].status=="Unavailable"){
+        $('#statusCol').addClass('waves-red');
+        case6.style.background = "rgba(110,0,0,0.7";
+     }
+
+ //change availability status 
+     case6.onclick= function(){  
+
+       //process status change ajax here
+
+$.post("../../controller/vendorClient/processInventory.php", //Required URL of the page on server
+{ // Data Sending With Request To Server
+action: 'changeStatus',
+status: myObj[index].status,
+cardid: myObj[index].id,
+type: myObj[index].type,
+},
+function(response,status){ // Required Callback Function
+
+});
+
+         if(myObj[index].status=="Available"){
+  $('#statusCol').addClass('waves-green');
+   case6.style.background = "rgba(110,0,0,0.7";
+  case6.innerHTML="Unavailable"
+     }
+
+     if(myObj[index].status=="Unavailable"){
+
+
+        $('#statusCol').addClass('waves-red');
+        case6.style.background = "rgba(0,110,0,0.7)";
+        case6.innerHTML="Available"
+
+     }
+
+     } 
+
+
+		
 		 case4.appendChild(case5);
 		 case4.appendChild(case6);
 		 case2.appendChild(case3);
 		 case2.appendChild(case4);
 		 case1.appendChild(case2);
 		 container_available.appendChild(case1);
-		//  alert(" ");
+	
 
-				 /*
-				 *Creating food cards for Unavailable foods
-				 */
-		 var container_unavailable = document.getElementById("tab2");
-
-		 //create div with class name col s12 m4 disable
-	   var case_one = document.createElement("div");
-		 case_one.className = "col s12 m4 disable";
-
-		 //create div with class name card horizontal
-		 var case_two = document.createElement("div");
-		 case_two.className = "card horizontal";
-
-
-	  //create div with class name card-image
-		 var case_thr = document.createElement("div");
-		 case_thr.className = "card-image";
-
-		 //creating an image element with width 100%
-		 var image2 = document.createElement("img");
-		 image2.style.width = "100%";
-		 image2.src= "../images/jollof.jpg";
-
-			//appending the image to the div with class name card-image
-		 case_thr.appendChild(image2);
-
-			//create div with class name card-stacked
-			var case_four = document.createElement("div");
-			case_four.className = "card-stacked";
-
-			//create div with class name card-content
-			var case_five = document.createElement("div");
-			case_five.className = "card-content";
-
-			//creating a header element
-			var header = document.createElement("h5")
-	     	 header.innerHTML = "Jollof";
-			//appending the header to div with class name card-content
-			case_five.appendChild(header);
-
-			//creating a div with a class name card-action waves-effect waves-green
-			var case_six = document.createElement("div");
-			case_six.className = "card-action waves-effect waves-red";
-			 case_six.id = "backColor2";
-			 case_six.style.background = "rgba(0,110,0,0.7)";
-
-			 var link = document.createElement("a");
-			 link.id = "avail";
-			 link.style.color = "white";
-			 link.innerHTML = "Unavailable";
-
-			 case_six.appendChild(link);
-			 case_four.appendChild(case_five);
-			 case_four.appendChild(case_six);
-			 case_two.appendChild(case_thr);
-			 case_two.appendChild(case_four);
-			 case_one.appendChild(case_two);
-			 container_unavailable.appendChild(case_one);
+			
 
 
 
@@ -495,6 +375,269 @@ var myObj = JSON.parse(response);
 
 
 }
+
+
+function foodCardsTab2(){
+ $( '#tab2' ).empty(); //clear space to avoid duplication of buttons
+ 
+  		$.post("../../controller/vendorClient/processInventory.php", //Required URL of the page on server
+{ // Data Sending With Request To Server
+action: 'tab2Cards'
+},
+function(response,status){ // Required Callback Function
+var myObj = JSON.parse(response);
+
+			//foreach chunk that converts each item in the response array into json object
+			//and creates buttons that hold their details
+			myObj.forEach(function(currentValue, index, arr){
+			
+		myObj[index];
+
+	/*
+		*Creating food cards for Available foods
+		*/
+	//getting the element from the html file
+	 var container_available = document.getElementById("tab2");
+
+
+	 //create div with class name col s12 m4 disable
+   var case1 = document.createElement("div");
+	 case1.className = "col s12 m4 disable";
+
+	 //create div with class name card horizontal
+	 var case2 = document.createElement("div");
+	 case2.className = "card horizontal";
+
+
+  //create div with class name card-image
+	 var case3 = document.createElement("div");
+	 case3.className = "card-image";
+
+	 //creating an image element with width 100%
+	 var image = document.createElement("img");
+	 image.style.width = "100%";
+	 image.src= "../../resources/images/"+myObj[index].icon;
+
+		//appending the image to the div with class name card-image
+	 case3.appendChild(image);
+
+		//create div with class name card-stacked
+		var case4 = document.createElement("div");
+		case4.className = "card-stacked";
+
+		//create div with class name card-content
+		var case5 = document.createElement("div");
+		case5.className = "card-content";
+
+		//creating a header element
+		var header = document.createElement("h5")
+     	 header.innerHTML = myObj[index].name;
+		//appending the header to div with class name card-content
+		case5.appendChild(header);
+
+		//creating a div with a class name card-action waves-effect waves-green
+		var case6 = document.createElement("div");
+	case6.className = "card-action waves-effect"
+		 case6.id = "statusCol";
+		 //case6.style.background = "rgba(0,110,0,0.7)";
+     case6.style.color="white";
+     case6.style.fontSize="20px";
+     case6.innerHTML=myObj[index].status
+
+     if(myObj[index].status=="Available"){
+  $('#statusCol').addClass('waves-green');
+  case6.style.background = "rgba(0,110,0,0.7)";
+     }
+
+     if(myObj[index].status=="Unavailable"){
+        $('#statusCol').addClass('waves-red');
+        case6.style.background = "rgba(110,0,0,0.7";
+     }
+
+ //change availability status 
+     case6.onclick= function(){  
+
+       //process status change ajax here
+
+$.post("../../controller/vendorClient/processInventory.php", //Required URL of the page on server
+{ // Data Sending With Request To Server
+action: 'changeStatus',
+status: myObj[index].status,
+cardid: myObj[index].id,
+type: myObj[index].type,
+},
+function(response,status){ // Required Callback Function
+
+});
+
+         if(myObj[index].status=="Available"){
+  $('#statusCol').addClass('waves-green');
+   case6.style.background = "rgba(110,0,0,0.7";
+  case6.innerHTML="Unavailable"
+     }
+
+     if(myObj[index].status=="Unavailable"){
+
+
+        $('#statusCol').addClass('waves-red');
+        case6.style.background = "rgba(0,110,0,0.7)";
+        case6.innerHTML="Available"
+
+     }
+
+     } 
+
+
+		
+		 case4.appendChild(case5);
+		 case4.appendChild(case6);
+		 case2.appendChild(case3);
+		 case2.appendChild(case4);
+		 case1.appendChild(case2);
+		 container_available.appendChild(case1);
+
+
+			}); //end of for each item in json array/ or in order database
+//alert("*----Received Data----*\n\nResponse : " + response+"\n\nStatus : " + status);//"response" receives - whatever written in echo of above PHP script.
+
+});
+
+
+ }
+
+ function foodCardsTab3(){
+ $( '#tab3' ).empty(); //clear space to avoid duplication of buttons
+ 	 
+  		$.post("../../controller/vendorClient/processInventory.php", //Required URL of the page on server
+{ // Data Sending With Request To Server
+action: 'tab3Cards'
+},
+function(response,status){ // Required Callback Function
+var myObj = JSON.parse(response);
+
+			//foreach chunk that converts each item in the response array into json object
+			//and creates buttons that hold their details
+			myObj.forEach(function(currentValue, index, arr){
+			
+		myObj[index];
+
+	/*
+		*Creating food cards for Available foods
+		*/
+	//getting the element from the html file
+	 var container_available = document.getElementById("tab3");
+
+
+	 //create div with class name col s12 m4 disable
+   var case1 = document.createElement("div");
+	 case1.className = "col s12 m4 disable";
+
+	 //create div with class name card horizontal
+	 var case2 = document.createElement("div");
+	 case2.className = "card horizontal";
+
+
+  //create div with class name card-image
+	 var case3 = document.createElement("div");
+	 case3.className = "card-image";
+
+	 //creating an image element with width 100%
+	 var image = document.createElement("img");
+	 image.style.width = "100%";
+	 image.src= "../../resources/images/"+myObj[index].icon;
+
+		//appending the image to the div with class name card-image
+	 case3.appendChild(image);
+
+		//create div with class name card-stacked
+		var case4 = document.createElement("div");
+		case4.className = "card-stacked";
+
+		//create div with class name card-content
+		var case5 = document.createElement("div");
+		case5.className = "card-content";
+
+		//creating a header element
+		var header = document.createElement("h5")
+     	 header.innerHTML = myObj[index].name;
+		//appending the header to div with class name card-content
+		case5.appendChild(header);
+
+		//creating a div with a class name card-action waves-effect waves-green
+		var case6 = document.createElement("div");
+	case6.className = "card-action waves-effect"
+		 case6.id = "statusCol";
+		 //case6.style.background = "rgba(0,110,0,0.7)";
+     case6.style.color="white";
+     case6.style.fontSize="20px";
+     case6.innerHTML=myObj[index].status
+
+     if(myObj[index].status=="Available"){
+  $('#statusCol').addClass('waves-green');
+  case6.style.background = "rgba(0,110,0,0.7)";
+     }
+
+     if(myObj[index].status=="Unavailable"){
+        $('#statusCol').addClass('waves-red');
+        case6.style.background = "rgba(110,0,0,0.7";
+     }
+
+ //change availability status 
+     case6.onclick= function(){  
+
+       //process status change ajax here
+
+$.post("../../controller/vendorClient/processInventory.php", //Required URL of the page on server
+{ // Data Sending With Request To Server
+action: 'changeStatus',
+status: myObj[index].status,
+cardid: myObj[index].id,
+type: myObj[index].type,
+},
+function(response,status){ // Required Callback Function
+
+});
+
+         if(myObj[index].status=="Available"){
+  $('#statusCol').addClass('waves-green');
+   case6.style.background = "rgba(110,0,0,0.7";
+  case6.innerHTML="Unavailable"
+     }
+
+     if(myObj[index].status=="Unavailable"){
+
+
+        $('#statusCol').addClass('waves-red');
+        case6.style.background = "rgba(0,110,0,0.7)";
+        case6.innerHTML="Available"
+
+     }
+
+     } 
+
+
+		
+		 case4.appendChild(case5);
+		 case4.appendChild(case6);
+		 case2.appendChild(case3);
+		 case2.appendChild(case4);
+		 case1.appendChild(case2);
+		 container_available.appendChild(case1);
+
+
+			}); //end of for each item in json array/ or in order database
+//alert("*----Received Data----*\n\nResponse : " + response+"\n\nStatus : " + status);//"response" receives - whatever written in echo of above PHP script.
+
+});
+
+ }
+
+ function doall(){
+foodCardsTab1();
+foodCardsTab2();
+foodCardsTab3();
+
+ }
 
 
 </script>
