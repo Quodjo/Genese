@@ -13,7 +13,7 @@ class SignUp extends dbconnection {
     $exec = $this->preparedSqlStatement($sql, $paramTypes, $params);
 
     if($exec){
-      return $exec;
+      return true;
     }
     else{
       return false;

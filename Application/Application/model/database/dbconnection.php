@@ -98,6 +98,28 @@ class dbconnection
     }
   }
 
+  function preparedSqlStatementFetch($sql, $paramTypes, $params){
+    $conn = mysqli_connect(SERVER,USERNAME,PASSWORD,DBNAME);
+    $stm = $conn->prepare($sql);
+    $refIndex = array();
+    foreach($params as $key => $value) {
+      $refIndex[$key] = &$params[$key];
+    }
+    $val = array_merge(array($paramTypes), $refIndex);
+    call_user_func_array(array($stm, 'bind_param'), $val);
+
+    if($stm == false){
+      return false;
+    }
+    $exec = $stm->execute();
+    if ($exec == false) {
+      return false;
+    } else {
+      $res = $stm->get_result();
+      $data = $res->fetch_all();
+      return $data;
+    }
+  }
 }
 
 ?>

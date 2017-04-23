@@ -8,21 +8,14 @@ require_once(dirname(__FILE__).'/../database/dbconnection.php');
 
 class LogIn extends dbconnection {
   //function for login
-  function verifylogin() {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
+  function verifylogin($sql, $paramTypes, $params) {
 
-    $login = new dbconnection;
-
-    $sql = "SELECT * FROM useraccount WHERE username = '$username' AND userstatus = 'ACTIVE'";
-    $querySql = $login->query($sql);
-    $data = $login->fetch();
-
-    if($querySql && password_verify($password, $data["pwd"])){
-
+    $exec = $this->preparedSqlStatementFetch($sql, $paramTypes, $params);
+    if(!empty($exec)){
+      return $exec;
     }
     else{
-
+      return false;
     }
 
   }

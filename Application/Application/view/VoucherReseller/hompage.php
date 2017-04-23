@@ -16,8 +16,10 @@
 </head>
 <body>
   <?php
-  require_once(dirname(__FILE__).'/../../controller/settings/sessionManagement.php');
-  verifyUserlogin();
+  // require_once(dirname(__FILE__).'/../../controller/settings/sessionManagement.php');
+  //
+  // $view = new Session;
+  // $view->verifyUserlogin();
   require_once('../../controller/VoucherReseller/vrController.php');
   ?>
 
