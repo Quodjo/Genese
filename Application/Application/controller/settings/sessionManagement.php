@@ -15,7 +15,7 @@ function verifyUserlogin(){
   } else{
 
     //No Valid
-    header('Location: ../login/view/');
+    header('Location: ../../view/login/');
   }
 }
 
@@ -28,7 +28,7 @@ function getView(){
   } else if($_SESSION['perID']=="3"){
 
   } else if($_SESSION['perID']=="4"){
-
+    require_once(dirname(__FILE__).'/../../view/VoucherReseller/hompage.php');
   } else if($_SESSION['perID']=="5"){
 
   } else if($_SESSION['perID']=="6"){
