@@ -102,7 +102,7 @@ border-bottom: 4.5vh;
 in kitchen and processed order column -->
     <div class="col s12 m6 l4" >
 <div style="padding-right: 35px">
-	    <div align="center" class="row" style=" padding-top: 15%;font-family: ‘Courier New’, Courier, monospace;" >
+	    <div align="center" class="row" style=" padding-top: 10%;font-family: ‘Courier New’, Courier, monospace;" >
 
 	    	<div class="card grey darken-1" style="height:40px"><span style="color:white" class="card-title">IN KITCHEN</span>
 
@@ -173,10 +173,6 @@ in kitchen and processed order column -->
     
   </div>
 
-  
-
-<button onclick="createButtons()" id="demo">Click me</button> //test button
-<button onclick="loadkitchen()" >kitchen</button> //test button
 
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -187,12 +183,12 @@ in kitchen and processed order column -->
 //to test parsing data values as json
 
 var myObj; // js variable that holds array of json orders
+var kitchenArray;
 
 /*before each refresh make sure to remove clicked buttons from order table to kitchen table to ensure t
 they arent reloaded*/
-
-//setInterval(createButtons, 5000 ); // make creation of buttons automatic
-
+createButtons();
+createKitchenCards();
 
 //generate a unique modal containing details of button that calls it. Called in create button method
 function modalGen(index){
@@ -232,6 +228,7 @@ kitchenBtn.onclick= function(){
 	function(response,status){ // Required Callback Function
 	alert(response);
 	});
+	createKitchenCards();
 }
 
 btnHolder.appendChild(kitchenBtn);
@@ -322,7 +319,7 @@ $(".button-collapse").sideNav();
 
 
   function createButtons() {
-	 // $( '#orderContainer' ).empty(); //clear space to avoid duplication of buttons
+	  $( '#orderContainer' ).empty(); //clear space to avoid duplication of buttons
 
 	$.post("processapp.php", //Required URL of the page on server
 { // Data Sending With Request To Server
@@ -375,6 +372,23 @@ myObj = JSON.parse(response);
 
 function loadkitchen() {
 
+}
+
+function createKitchenCards() {
+	 $( '#kitchen' ).empty(); //clear space to avoid duplication of buttons
+
+	$.post("processapp.php", //Required URL of the page on server
+{ // Data Sending With Request To Server
+action: 'createkitchenCards'
+},
+function(response,status){ // Required Callback Function
+kitchenArray = JSON.parse(response);
+
+			//foreach chunk that converts each item in the response array into json object
+			//and creates buttons that hold their details
+			kitchenArray.forEach(function(currentValue, index, arr){
+				
+		
 	var container=document.getElementById('kitchen');
 
 
@@ -399,29 +413,70 @@ function loadkitchen() {
 				case2.className="card-content";
 
 				var name =document.createElement("h5");
-				name.innerHTML="Jollof ";
+				name.innerHTML="Order No."+kitchenArray[index].orderNum+"<br> "+kitchenArray[index].foodname;
 
 				case2.appendChild(name);
 				case1.appendChild(case2);
 
-				var case3 = document.createElement("div");
-				case3.className="card-action waves-effect waves-green";
-				case3.style.background="rgba(0,110,0,0.7)";
+				var btn3 = document.createElement("div");
+				btn3.className=" waves-effect waves-green";
+				btn3.style.background="rgba(0,110,0,0.7)";
+				btn3.style.height="28px";
+				btn3.innerHTML="Deliver";
 
-				var link = document.createElement("a");
-				link.style.color="white";
-				link.innerHTML="Deliver";
-				
+				btn3.onclick= function(){
+					
+				$.post("processapp.php", //Required URL of the page on server
+	{ // Data Sending With Request To Server
+	orderNum:kitchenArray[index].orderNum,
+	action: 'deleteCard'
+	},
+	function(response,status){ // Required Callback Function
+	alert(response);
+	});
 
-				case3.appendChild(link);
-				case1.appendChild(case3);
+
+
+
+
+
+	alert("Pickup notification for ORDER NO. "+kitchenArray[index].orderNum+" sent to customer.");
+	//send email to user
+				case1.removeChild(btn3);
+
+
+				}
+
+		
+				case1.appendChild(btn3);
 
 				caseHorizontal.appendChild(case1);
 				
 				
 				container.appendChild(caseHorizontal);
-}
 
+
+
+
+
+
+
+
+
+			}); //end of for each item in json array/ or in order database
+//alert("*----Received Data----*\n\nResponse : " + response+"\n\nStatus : " + status);//"response" receives - whatever written in echo of above PHP script.
+
+});
+
+
+  
+
+
+	
+    } //end of create button method
+
+	setInterval(createButtons, 6000 ); // make creation of buttons automatic
+setInterval(createKitchenCards, 7000 ); // make creation of buttons automatic
 
 
 </script>
