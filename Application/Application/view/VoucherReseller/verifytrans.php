@@ -30,7 +30,7 @@
     <div class="card bordered z-depth-2 " style="margin-right: 5%; width:40%; float: left;" id="verifyCard" >
 
       <div class="card-content ">
-        <form id ="indexPage" method="POST" action="">
+        <form id ="indexPage" method="POST">
          <div class="row">
           <a href="transamount.php"><i class="material-icons" style="font-size: 3rem;" id ="backBtn">send</i></a>
           <div class="input-field col s12">

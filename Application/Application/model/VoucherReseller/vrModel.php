@@ -41,5 +41,15 @@ class VoucherReseller extends dbconnection {
       return $bal;
     }
   }
+
+  function insertQ($sqlFoodPay){
+    if($this->query($sqlFoodPay)){
+
+      return true;
+    }else {
+
+      return false;
+    }
+  }
 }
 ?>

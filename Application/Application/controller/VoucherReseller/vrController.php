@@ -32,10 +32,12 @@ function proceedToTrans(){
   $data = $vrModel->getUserDetails($sql, "i", $params);
 
   if(!empty($data)){
+
     session_start();
     $_SESSION['transName'] = $data[0][1].' '.$data[0][2];
     $_SESSION['transID'] = $idNumber;
     $_SESSION['userIDTrans'] = $data[0][0];
+
 
     header('Location: '.BASEURL.'view/VoucherReseller/transamount.php');
   }
@@ -71,15 +73,14 @@ function verifyTrans(){
   $vr = new VoucherReseller;
 
   $vendorID = 1;
-  $userID = $_SESSION['transID'];
-  $oldBal = "";
-
+  $userID = $_SESSION['userIDTrans'];
+  $oldBal = "0";
 
   $sqlOldBal = "SELECT balance FROM foodPay WHERE user_id = '$userID'";
   $data = $vr->getTransFetch($sqlOldBal);
-  var_dump($data);
+
   if(!empty($data)){
-    $oldBal = $data;
+    $oldBal = $data['balance'];
   }
 
   $amt = $_SESSION['transAmt'];
@@ -91,11 +92,9 @@ function verifyTrans(){
   $paramsRT = array($vendorID, $userID, $oldBal, $newBal, $amt);
   $execRT = $vr->updateAmount($sqlRT, "iiddd", $paramsRT);
 
-  $sqlFoodPay = "INSERT INTO foodPay(balance)".
-  "VALUES(?) WHERE user_id = ?";
+  $sqlFoodPay = "UPDATE foodPay SET balance = '$newBal' WHERE user_id = '$userID'";
 
-  $paramFP = array($newBal, $userID);
-  $execFP = $vr->updateAmount($sqlFoodPay, "di", $paramFP);
+  $execFP = $vr->insertQ($sqlFoodPay);
 
   if($execRT && $execFP){
     header('Location: '.BASEURL.'view/VoucherReseller/transsuccess.php');
@@ -106,13 +105,14 @@ function verifyTrans(){
 }
 
 function transSuccessDetails() {
+  session_start();
   echo  "<div class=\"input-field col s12\">";
   echo    "<div style=\"text-align: center;\">";
   echo      "<h2 style=\"font-size: 4rem; color: #be1e2d;\"><strong>GHS".$_SESSION['transAmt']."</strong><h4 style=\"padding-left: 0.15em;\">transfered to</h4></h2>";
   echo    "</div>";
   echo    "<div class=\"input-field col s12\">";
-  echo      "<h3 class = \"center\" style=\"margin-top: 0%; color: #000000;\">".$_SESSION['transName']."</h3>\"";
-  echo      "<h5 class = \"center\" style=\"margin-top: -5%; color: #000000;\">".$_SESSION['transID']."</h5>\"";
+  echo      "<h3 class = \"center\" style=\"margin-top: 0%; color: #000000;\">".$_SESSION['transName']."</h3>";
+  echo      "<h5 class = \"center\" style=\"margin-top: -5%; color: #000000;\">".$_SESSION['transID']."</h5>";
   echo    "</div>";
   echo  "</div>";
 }

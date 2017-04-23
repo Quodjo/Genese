@@ -34,7 +34,7 @@
 
     <div class="transparent" style="margin-right: 5%; width:40%; float: left;" id="checkCard" >
       <div class="card-content ">
-        <form id ="indexPage" method="POST" action="">
+        <form id ="indexPage" method="POST">
          <div class="row">
            <?php transSuccessDetails(); ?>
          </div>
