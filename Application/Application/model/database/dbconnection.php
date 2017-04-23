@@ -100,6 +100,10 @@ class dbconnection
     }
   }
 
+/**
+*
+*Prepare Sql statement
+**/
   function preparedSqlStatementFetch($sql, $paramTypes, $params){
     $conn = mysqli_connect(SERVER,USERNAME,PASSWORD,DBNAME);
     $stm = $conn->prepare($sql);

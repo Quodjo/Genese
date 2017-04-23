@@ -67,9 +67,9 @@ function registerNewUser(){
   $firstname = $_POST['firstname'];
   $lastname = $_POST['lastname'];
   $email = $_POST['email'];
-
+  //Hashing password
   $password = password_hash($password, PASSWORD_DEFAULT);
-
+  //Preparing Sql Statement
   $sql = "INSERT INTO user(firstname, lastname, idNumber, email, password, status, role_id)".
         "VALUES(?, ?, ?, ?, ?,'active','6')";
 
