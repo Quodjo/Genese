@@ -11,13 +11,12 @@ require_once(dirname(__FILE__).'/../database/dbconnection.php');
 class VoucherReseller extends dbconnection {
 
   function getUserDetails($sql, $paramTypes, $params){
-    $exec = $this->preparedSqlStatement($sql, $paramTypes, $params);
-    $res = $this->dboutcomes;
+    $exec = $this->preparedSqlStatementFetch($sql, $paramTypes, $params);
     if($exec){
-      return $res;
+      return $exec;
     }
     else{
-      return $res;
+      return false;
     }
   }
 

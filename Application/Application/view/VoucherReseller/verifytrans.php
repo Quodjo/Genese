@@ -16,8 +16,8 @@
 </head>
 <body>
   <?php
-  require_once(dirname(__FILE__).'/../../controller/settings/sessionManagement.php');
-  verifyUserlogin();
+  // require_once(dirname(__FILE__).'/../../controller/settings/sessionManagement.php');
+  // verifyUserlogin();
   require_once('../../controller/VoucherReseller/vrController.php');
   ?>
   <div id="container">

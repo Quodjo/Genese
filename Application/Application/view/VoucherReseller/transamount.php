@@ -16,8 +16,8 @@
 </head>
 <body>
   <?php
-  require_once(dirname(__FILE__).'/../../controller/settings/sessionManagement.php');
-  verifyUserlogin();
+  // require_once(dirname(__FILE__).'/../../controller/settings/sessionManagement.php');
+  // verifyUserlogin();
   require_once('../../controller/VoucherReseller/vrController.php');
   ?>
   <div id="container">
@@ -35,8 +35,7 @@
          <div class="row">
            <a href="hompage.php"><i class="material-icons" style="font-size: 3rem;" id ="backBtn">send</i></a>
            <div class="input-field col s12">
-             <h3 class="center"><strong>Full Name</strong></h3>
-             <h5 class="center" style="margin-top: -5%;">ID Number</h5>
+             <?php transDetails(); ?>
            </div>
            <div class="input-field col s12">
              <input id="id_transAmt" type="text" class="validate" placeholder="Amount" >
