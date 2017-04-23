@@ -1,1 +1,8 @@
 
+
+RewriteEngine On
+ErrorDocument 404 http://localhost/genese/application/application/view/404.php
+ErrorDocument 500 http://localhost/genese/application/application/view/404.php
+ErrorDocument 403 http://localhost/genese/application/application/view/404.php
+ErrorDocument 400 http://localhost/genese/application/application/view/404.php
+ErrorDocument 401 http://localhost/genese/application/application/view/404.php
