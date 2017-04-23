@@ -226,7 +226,7 @@ kitchenBtn.onclick= function(){
 	action: 'kitchen'
 	},
 	function(response,status){ // Required Callback Function
-	alert(response);
+	
 	});
 	createKitchenCards();
 }

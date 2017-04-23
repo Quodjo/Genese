@@ -105,7 +105,7 @@ border-bottom: 2.5vh;
      </div>
 
 <!-- search bar row -->
- <div class="row" align="center" >
+ <!--<div class="row" align="center" >
     <nav style="background-color:rgba(110,0,0,0.7);margin-left: 1.5%">
     <form>
                   <div class="input-field">
@@ -118,7 +118,7 @@ border-bottom: 2.5vh;
 
     </nav>
     
- </div>
+ </div>-->
 
 
 <!-- tab content row -->
@@ -127,7 +127,7 @@ border-bottom: 2.5vh;
 
           <!-- 
           food availiability cards for tab1-->
-	<button onclick = "doall()"> Press ME</button>
+
       <div id="tab1">
           
  
@@ -186,6 +186,8 @@ border-bottom: 2.5vh;
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 	<script type="text/javascript" src="../../resources/js/materialize.min.js"></script>
 	<script>
+   doall();
+
 // Initialize collapse button
 $(".button-collapse").sideNav();
   // Initialize collapsible (uncomment the line below if you use the dropdown variation)
@@ -631,6 +633,8 @@ function(response,status){ // Required Callback Function
 });
 
  }
+
+setInterval(doall, 4000 );
 
  function doall(){
 foodCardsTab1();
