@@ -1,32 +1,22 @@
 <?php 
+require_once('../../model/database/dbconnectionclass.php');
 
 class foodCard{
-public $foodid;
-public $foodname;
+public $id;
+public $name;
 public $price;
 public $status;
 public $icon;
 
 
-function __construct($foodid){
-
-$this->foodid=$foodid;
-$this->dbcon=new dbconnection;
-foodDetails();
+function __construct($foodid,$foodname,$price,$status,$icon){
+$this->id=$foodid;
+$this->name=$foodname;
+$this->price=$price;
+$this->status=$status;
+$this->icon=$icon;
     }
 
-  function foodDetails(){
-    $sql="SELECT * FROM food_menu WHERE food_id = $this->foodid";
-    $dbexec = $this->dbcon->query($sql);
-
-    if($dbexec){
-      $row = $this->dbcon->fetch();
-      $this->foodname=$row['food_name'];
-      $this->price=$row['price'];
-      $this->status=$row['status'];
-      $this->icon=$row['icon'];
-    }
-}
 
 
 }
