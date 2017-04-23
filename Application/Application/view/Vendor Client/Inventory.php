@@ -7,19 +7,32 @@
 	<!--Import Google Icon Font-->
   <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!--Import materialize.css-->
-  <link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
+  <link type="text/css" rel="stylesheet" href="../../resources/css/materialize.min.css"  media="screen,projection"/>
 
-  <link type="text/css" rel="stylesheet" href="../css/style.css"/>
+  <link type="text/css" rel="stylesheet" href="../../resources/css/style.css"/>
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <link rel="icon" href="../images/logo.png" type="image/png">
+  <link rel="icon" href="../../resources/images/logo.png" type="image/png">
 
+  <!--style to make footer stick to the bottom-->
+<style>
+ body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+
+</style>
 
 
 
 </head>
-<body style="background-image:url(../images/background_Head.jpg); background-repeat: no-repeat;overflow-y: scroll;
+<body style="background-image:url(../../resources/images/background_Head.jpg); background-repeat: repeat;overflow-y: scroll;
 border-bottom: 2.5vh;
 	border-style: solid;               /*footer red color*/
 	border-bottom-color: #be1e2d;
@@ -35,7 +48,7 @@ border-bottom: 2.5vh;
 		        <div class="background">
 		          <div class="card-panel" style="background: rgba(100, 0, 0, 0.7);height:100%"></div>
 		        </div>
-		        <a href="#!user"><img class="circle" src="../images/admin.jpg"></a>
+		        <a href="#!user"><img class="circle" src="../../resources/images/admin.jpg"></a>
 		        <a href="#!name"><span class="white-text name">John Doe</span></a>
 		        <a href="#!email"><span class="white-text email">john doe@gmail.com</span></a>
 		      </div></li>
@@ -51,7 +64,7 @@ border-bottom: 2.5vh;
 </span>
 		
 	<span style="padding-left:9%">
-		<img  class="responsive-img" src="../images/whiteLogo.png" style="width:55%;height: 55%">
+		<img  class="responsive-img" src="../../resources/images/whiteLogo.png" style="width:55%;height: 55%">
 	</span>
 
     </div>
@@ -69,7 +82,7 @@ border-bottom: 2.5vh;
     </div>
     <div class="col s2">
     	<div align=right style="color: white">
-    	<img class="circle responsive-img" src="../images/admin.jpg" style="width:35%;height: 35%;border: 0.25rem solid #be1e2d;">KOJO DOE
+    	<img class="circle responsive-img" src="../../resources/images/admin.jpg" style="width:35%;height: 35%;border: 0.25rem solid #be1e2d;">KOJO DOE
     	</div>
     </div>
 </div>
@@ -120,7 +133,7 @@ border-bottom: 2.5vh;
 
             <div class="card horizontal">
               <div class="card-image">
-                <img src="../images/jollof.jpg" style="width:100%">
+                <img src="../../resources/images/jollof.jpg" style="width:100%">
               </div>
               <div class="card-stacked">
                 <div class="card-content">
@@ -133,159 +146,9 @@ border-bottom: 2.5vh;
             </div>
           </div>
 
+ 
 
 
-          <div class="col s12 m4 disable">
-
-            <div class="card horizontal">
-              <div class="card-image">
-                <img src="../images/jollof.jpg" style="width:100%">
-              </div>
-              <div class="card-stacked">
-                <div class="card-content">
-                  <h5>Jollof</h5>
-                </div>
-                <div onclick="textChange2()" id="backColor2" class="card-action waves-effect waves-green" style="background-color:rgba(0,110,0,0.7);">
-                  <a id="avail" href="#" style="color:white">Available</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-
-          <div class="col s12 m4 disable">
-
-            <div class="card horizontal">
-              <div class="card-image">
-                <img src="../images/jollof.jpg" style="width:100%">
-              </div>
-              <div class="card-stacked">
-                <div class="card-content">
-                  <h5>Jollof</h5>
-                </div>
-                <div onclick="textChange2()" id="backColor2" class="card-action waves-effect waves-green" style="background-color:rgba(0,110,0,0.7);">
-                  <a id="avail" href="#" style="color:white">Available</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-
-
-          <div class="col s12 m4 disable">
-
-            <div class="card horizontal">
-              <div class="card-image">
-                <img src="../images/jollof.jpg" style="width:100%">
-              </div>
-              <div class="card-stacked">
-                <div class="card-content">
-                  <h5>Jollof</h5>
-                </div>
-                <div onclick="textChange2()" id="backColor2" class="card-action waves-effect waves-green" style="background-color:rgba(0,110,0,0.7);">
-                  <a id="avail" href="#" style="color:white">Available</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-
-          <div class="col s12 m4 disable">
-
-            <div class="card horizontal">
-              <div class="card-image">
-                <img src="../images/jollof.jpg" style="width:100%">
-              </div>
-              <div class="card-stacked">
-                <div class="card-content">
-                  <h5>Jollof</h5>
-                </div>
-                <div onclick="textChange2()" id="backColor2" class="card-action waves-effect waves-green" style="background-color:rgba(0,110,0,0.7);">
-                  <a id="avail" href="#" style="color:white">Available</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-
-          <div class="col s12 m4 disable">
-
-            <div class="card horizontal">
-              <div class="card-image">
-                <img src="../images/jollof.jpg" style="width:100%">
-              </div>
-              <div class="card-stacked">
-                <div class="card-content">
-                  <h5>Jollof</h5>
-                </div>
-                <div onclick="textChange2()" id="backColor2" class="card-action waves-effect waves-green" style="background-color:rgba(0,110,0,0.7);">
-                  <a id="avail" href="#" style="color:white">Available</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-
-          <div class="col s12 m4 disable">
-
-            <div class="card horizontal">
-              <div class="card-image">
-                <img src="../images/jollof.jpg" style="width:100%">
-              </div>
-              <div class="card-stacked">
-                <div class="card-content">
-                  <h5>Jollof</h5>
-                </div>
-                <div onclick="textChange2()" id="backColor2" class="card-action waves-effect waves-green" style="background-color:rgba(0,110,0,0.7);">
-                  <a id="avail" href="#" style="color:white">Available</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-
-          <div class="col s12 m4 disable">
-
-            <div class="card horizontal">
-              <div class="card-image">
-                <img src="../images/jollof.jpg" style="width:100%">
-              </div>
-              <div class="card-stacked">
-                <div class="card-content">
-                  <h5>Jollof</h5>
-                </div>
-                <div onclick="textChange2()" id="backColor2" class="card-action waves-effect waves-green" style="background-color:rgba(0,110,0,0.7);">
-                  <a id="avail" href="#" style="color:white">Available</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-
-
-          <div class="col s12 m4 disable">
-
-            <div class="card horizontal">
-              <div class="card-image">
-                <img src="../images/jollof.jpg" style="width:100%">
-              </div>
-              <div class="card-stacked">
-                <div class="card-content">
-                  <h5>Jollof</h5>
-                </div>
-                <div onclick="textChange2()" id="backColor2" class="card-action waves-effect waves-green" style="background-color:rgba(0,110,0,0.7);">
-                  <a id="avail" href="#" style="color:white">Available</a>
-                </div>
-              </div>
-            </div>
-          </div>
 
       </div>
 
@@ -298,7 +161,7 @@ border-bottom: 2.5vh;
 
             <div class="card horizontal">
               <div class="card-image">
-                <img src="../images/jollof.jpg" style="width:100%">
+                <img src="../../resources/images/jollof.jpg" style="width:100%">
               </div>
               <div class="card-stacked">
                 <div class="card-content">
@@ -317,7 +180,7 @@ border-bottom: 2.5vh;
 
             <div class="card horizontal">
               <div class="card-image">
-                <img src="../images/jollof.jpg" style="width:100%">
+                <img src="../../resources/images/jollof.jpg" style="width:100%">
               </div>
               <div class="card-stacked">
                 <div class="card-content">
@@ -335,7 +198,7 @@ border-bottom: 2.5vh;
 
             <div class="card horizontal">
               <div class="card-image">
-                <img src="../images/jollof.jpg" style="width:100%">
+                <img src="../../resources/images/jollof.jpg" style="width:100%">
               </div>
               <div class="card-stacked">
                 <div class="card-content">
@@ -350,113 +213,10 @@ border-bottom: 2.5vh;
 
 
 
-          <div class="col s12 m4 disable">
-
-            <div class="card horizontal">
-              <div class="card-image">
-                <img src="../images/jollof.jpg" style="width:100%">
-              </div>
-              <div class="card-stacked">
-                <div class="card-content">
-                  <h5>Jollof</h5>
-                </div>
-                <div onclick="textChange2()" id="backColor2" class="card-action waves-effect waves-green" style="background-color:rgba(0,110,0,0.7);">
-                  <a id="avail" href="#" style="color:white">Available</a>
-                </div>
-              </div>
-            </div>
-          </div>
+          
 
 
-          <div class="col s12 m4 disable">
-
-            <div class="card horizontal">
-              <div class="card-image">
-                <img src="../images/jollof.jpg" style="width:100%">
-              </div>
-              <div class="card-stacked">
-                <div class="card-content">
-                  <h5>Jollof</h5>
-                </div>
-                <div onclick="textChange2()" id="backColor2" class="card-action waves-effect waves-green" style="background-color:rgba(0,110,0,0.7);">
-                  <a id="avail" href="#" style="color:white">Available</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="col s12 m4 disable">
-
-            <div class="card horizontal">
-              <div class="card-image">
-                <img src="../images/jollof.jpg" style="width:100%">
-              </div>
-              <div class="card-stacked">
-                <div class="card-content">
-                  <h5>Jollof</h5>
-                </div>
-                <div onclick="textChange2()" id="backColor2" class="card-action waves-effect waves-green" style="background-color:rgba(0,110,0,0.7);">
-                  <a id="avail" href="#" style="color:white">Available</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="col s12 m4 disable">
-
-            <div class="card horizontal">
-              <div class="card-image">
-                <img src="../images/jollof.jpg" style="width:100%">
-              </div>
-              <div class="card-stacked">
-                <div class="card-content">
-                  <h5>Jollof</h5>
-                </div>
-                <div onclick="textChange2()" id="backColor2" class="card-action waves-effect waves-green" style="background-color:rgba(0,110,0,0.7);">
-                  <a id="avail" href="#" style="color:white">Available</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="col s12 m4 disable">
-
-            <div class="card horizontal">
-              <div class="card-image">
-                <img src="../images/jollof.jpg" style="width:100%">
-              </div>
-              <div class="card-stacked">
-                <div class="card-content">
-                  <h5>Jollof</h5>
-                </div>
-                <div onclick="textChange2()" id="backColor2" class="card-action waves-effect waves-green" style="background-color:rgba(0,110,0,0.7);">
-                  <a id="avail" href="#" style="color:white">Available</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-
-          <div class="col s12 m4 disable">
-
-            <div class="card horizontal">
-              <div class="card-image">
-                <img src="../images/jollof.jpg" style="width:100%">
-              </div>
-              <div class="card-stacked">
-                <div class="card-content">
-                  <h5>Jollof</h5>
-                </div>
-                <div onclick="textChange2()" id="backColor2" class="card-action waves-effect waves-green" style="background-color:rgba(0,110,0,0.7);">
-                  <a id="avail" href="#" style="color:white">Available</a>
-                </div>
-              </div>
-            </div>
-          </div>
+          
 
       </div>
 
@@ -469,7 +229,7 @@ border-bottom: 2.5vh;
 
             <div class="card horizontal">
               <div class="card-image">
-                <img src="../images/jollof.jpg">
+                <img src="../../resources/images/jollof.jpg">
               </div>
               <div class="card-stacked">
                 <div align=center class="card-content">
@@ -487,7 +247,7 @@ border-bottom: 2.5vh;
 
             <div class="card horizontal">
               <div class="card-image">
-                <img src="../images/jollof.jpg">
+                <img src="../../resources/images/jollof.jpg">
               </div>
               <div class="card-stacked">
                 <div align=center class="card-content">
@@ -505,7 +265,7 @@ border-bottom: 2.5vh;
 
             <div class="card horizontal">
               <div class="card-image">
-                <img src="../images/jollof.jpg">
+                <img src="../../resources/images/jollof.jpg">
               </div>
               <div class="card-stacked">
                 <div align=center class="card-content">
@@ -518,116 +278,6 @@ border-bottom: 2.5vh;
             </div>
           </div>
 
-
-          <div class="col s12 m4">
-
-            <div class="card horizontal">
-              <div class="card-image">
-                <img src="../images/jollof.jpg">
-              </div>
-              <div class="card-stacked">
-                <div align=center class="card-content">
-                  <p>Jollof</p>
-                </div>
-                <div onclick="textChange()" class=" card-action waves-effect waves-red" id ="backColor" style="background-color:rgba(110,0,0,0.7);">
-                  <a href="#" id="unavail" style="color:white">Unavailable</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-
-          <div class="col s12 m4">
-
-            <div class="card horizontal">
-              <div class="card-image">
-                <img src="../images/jollof.jpg">
-              </div>
-              <div class="card-stacked">
-                <div align=center class="card-content">
-                  <p>Jollof</p>
-                </div>
-                <div onclick="textChange()" class=" card-action waves-effect waves-red" id ="backColor" style="background-color:rgba(110,0,0,0.7);">
-                  <a href="#" id="unavail" style="color:white">Unavailable</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-
-          <div class="col s12 m4">
-
-            <div class="card horizontal">
-              <div class="card-image">
-                <img src="../images/jollof.jpg">
-              </div>
-              <div class="card-stacked">
-                <div align=center class="card-content">
-                  <p>Jollof</p>
-                </div>
-                <div onclick="textChange()" class=" card-action waves-effect waves-red" id ="backColor" style="background-color:rgba(110,0,0,0.7);">
-                  <a href="#" id="unavail" style="color:white">Unavailable</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-
-          <div class="col s12 m4">
-
-            <div class="card horizontal">
-              <div class="card-image">
-                <img src="../images/jollof.jpg">
-              </div>
-              <div class="card-stacked">
-                <div align=center class="card-content">
-                  <p>Jollof</p>
-                </div>
-                <div onclick="textChange()" class=" card-action waves-effect waves-red" id ="backColor" style="background-color:rgba(110,0,0,0.7);">
-                  <a href="#" id="unavail" style="color:white">Unavailable</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="col s12 m4">
-
-            <div class="card horizontal">
-              <div class="card-image">
-                <img src="../images/jollof.jpg">
-              </div>
-              <div class="card-stacked">
-                <div align=center class="card-content">
-                  <p>Jollof</p>
-                </div>
-                <div onclick="textChange()" class=" card-action waves-effect waves-red" id ="backColor" style="background-color:rgba(110,0,0,0.7);">
-                  <a href="#" id="unavail" style="color:white">Unavailable</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="col s12 m4">
-
-            <div class="card horizontal">
-              <div class="card-image">
-                <img src="../images/jollof.jpg">
-              </div>
-              <div class="card-stacked">
-                <div align=center class="card-content">
-                  <p>Jollof</p>
-                </div>
-                <div onclick="textChange()" class=" card-action waves-effect waves-red" id ="backColor" style="background-color:rgba(110,0,0,0.7);">
-                  <a href="#" id="unavail" style="color:white">Unavailable</a>
-                </div>
-              </div>
-            </div>
-          </div>
 
 
       </div> <!-- end of tab 3 contents -->
@@ -655,7 +305,7 @@ border-bottom: 2.5vh;
 
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-	<script type="text/javascript" src="../js/materialize.min.js"></script>
+	<script type="text/javascript" src="../../resources/js/materialize.min.js"></script>
 	<script>
 // Initialize collapse button
 $(".button-collapse").sideNav();

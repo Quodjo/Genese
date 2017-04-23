@@ -3,7 +3,7 @@
 Order item class
 @author: Benedict Quartey
 */
-require_once('../database/dbconnectionclass.php');
+require_once('../../model/database/dbconnectionclass.php');
 
 class orderItem{
 public $orderNum; public $userId;
@@ -84,7 +84,7 @@ function exportOrder(){
  $this-> foodDetails();  $this-> drinkDetails(); $this->  userDetails();  $this-> staffDetails();
 
  $fullorder=new fullOrder($this->orderNum,$this->userFname,$this->userLname,$this->foodName,
- $this->drinkName,$this->staffFname,$this->staffLname);  //create new fullOrder object from retrieved info
+ $this->drinkName,$this->staffFname,$this->staffLname,$this->foodId);  //create new fullOrder object from retrieved info
 
  $myJSON = json_encode($fullorder);  //encode fullorder object in json format
 
@@ -102,9 +102,10 @@ class fullOrder{
 public $staffFname; public $staffLname;
 public $userFname; public $userLname;
 public $foodname; public $drinkname;
+public $foodid;
 
 
-function __construct($order,$userF,$userL,$food,$drink,$staffF,$staffL){
+function __construct($order,$userF,$userL,$food,$drink,$staffF,$staffL,$foodId){
 $this->orderNum=$order;
 $this->userFname=$userF;
 $this->userLname=$userL;
@@ -112,6 +113,7 @@ $this->foodname=$food;
 $this->drinkname=$drink;
 $this->staffFname=$staffF;
 $this->staffLname=$staffL;
+$this->foodid=$foodId;
 }
 
 }
