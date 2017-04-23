@@ -27,7 +27,7 @@
 
     <img class="responsive-img" src="../../resources/images/trans.jpg">
 
-    <div class="card bordered z-depth-2 " style="margin-right: 5%; width:40%; float: left;" id="transCard" >
+    <div class="card bordered z-depth-2 " style="margin-right: 5%; width:40%; float: left;" id="verifyCard" >
 
       <div class="card-content ">
         <form id ="indexPage" method="POST" action="">

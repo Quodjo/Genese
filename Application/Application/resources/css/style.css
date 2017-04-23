@@ -85,6 +85,26 @@ h5 {
     color: #ffffff;
 }
 
+#verifyCard {
+    position: relative;
+    left: 30%;
+    margin: 0 auto;
+    padding: 20px;
+    transform: translateY(-140%);
+    resize: vertical;
+    background-color: #be1e2d;
+    border-radius: 15px;
+}
+
+#verifyCard h4,
+h5 {
+    color: #ffffff;
+}
+
+#verifyCard h5 {
+    color: #ffffff;
+}
+
 #hbtn {
     background-color: #00ff00;
 }
@@ -95,6 +115,16 @@ h5 {
 }
 
 #transCard a {
+    background-color: #00ff00;
+    border-radius: 5em;
+}
+
+#verifyCard button {
+    background-color: #00ff00;
+    border-radius: 5em;
+}
+
+#verifyCard a {
     background-color: #00ff00;
     border-radius: 5em;
 }
