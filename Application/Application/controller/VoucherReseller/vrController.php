@@ -13,6 +13,9 @@ if(isset($_POST['idEnter'])){
   proceedToTrans();
 }
 
+if(isset($_POST['transBtn'])){
+  transAmt();
+}
 
 function proceedToTrans(){
   $idNumber = $_POST['idNumber'];
@@ -40,6 +43,21 @@ function proceedToTrans(){
     session_start();
     echo "<h3 class=\"center\" id=\"transName\"><strong>".$_SESSION['transName']."</strong></h3>";
     echo "<h5 class=\"center\" style=\"margin-top: -5%;\" id=\"transID\">".$_SESSION['transID']."</h5>";
-    session_destroy();
+  }
+
+  function verifytransDetails(){
+    echo "<h4 style=\"margin-top: 2.5%;\">".$_SESSION['transName']."</h4>";
+    echo "<h5 style=\"margin-top: -1%;\">".$_SESSION['transID']."</h5>";
+  }
+
+  function transAmt(){
+    session_start();
+    $_SESSION['transAmt'] = $_POST['transAmt'];
+      header('Location: '.BASEURL.'view/VoucherReseller/verifytrans.php');
+  }
+
+  function amt(){
+    session_start();
+    echo "<h1 style=\"margin-top: -6%; font-size: 6rem;\"><strong>GHS".$_SESSION['transAmt']."</strong></h1>";
   }
 ?>

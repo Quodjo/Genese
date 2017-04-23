@@ -38,15 +38,14 @@
          </div>
          <div class="input-field col s12">
            <div class="center">
-             <h1 style="margin-top: -6%; font-size: 6rem;"><strong>GHS500</strong></h1>
+             <?php amt(); ?>
            </div>
          </div>
          <div class="input-field col s12">
            <h5 class="center" style="margin-top: -12%;">To The Account:</h5>
          </div>
          <div class="input-field col s12">
-           <h4 style="margin-top: 2.5%;">Full Name</h4>
-           <h5 style="margin-top: -1%;">ID Number</h5>
+           <?php verifytransDetails(); ?>
          </div>
        </div>
        <a href = "transsuccess.php" class="btn-floating btn-large halfway-fab " type="submit" name="action" style="width: 35%; font-size: 30px">PROCEED

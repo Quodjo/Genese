@@ -20,6 +20,7 @@
   //
   // $view = new Session;
   // $view->verifyUserlogin();
+  // require_once(dirname(__FILE__).'/../../init.php');
   require_once('../../controller/VoucherReseller/vrController.php');
   ?>
 
@@ -48,7 +49,7 @@
     <ul id="slide-out" class="side-nav">
       <li><a href="transaction.php"><i class="material-icons">store</i></a></li>
       <li><a href="hompage.php"><i class="material-icons">credit_card</i></a></li>
-      <li><a href="#!" id="logOut" class="center"><i class="material-icons">lock</i></a></li>
+      <li><a href="".BASEURL."view/LogIn.logout.php" id="logOut" class="center"><i class="material-icons">lock</i></a></li>
     </ul>
     <a href="#slide-out" data-activates="slide-out" class="button-collapse show-on-large" ><i class="material-icons" style="font-size: 3rem;" id ="menuBtn">menu</i></a>
 

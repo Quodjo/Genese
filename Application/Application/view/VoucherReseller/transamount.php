@@ -31,18 +31,18 @@
     <div class="card bordered z-depth-2 " style="margin-right: 5%; width:40%; float: left;" id="transCard" >
 
       <div class="card-content ">
-        <form id ="indexPage" method="POST" action="verifytrans.php">
+        <form id ="indexPage" method="POST">
          <div class="row">
            <a href="hompage.php"><i class="material-icons" style="font-size: 3rem;" id ="backBtn">send</i></a>
            <div class="input-field col s12">
              <?php transDetails(); ?>
            </div>
            <div class="input-field col s12">
-             <input id="id_transAmt" type="text" class="validate" placeholder="Amount" >
+             <input id="id_transAmt" name="transAmt" type="text" class="validate" placeholder="Amount" >
            </div>
            <div class="center">
             <div class="input-field col s12">
-              <button class="waves-effect waves-light btn-large" type="submit" name="action" style="width: 70%; font-size: 30px" >TRANSFER<i class="material-icons right" style="font-size:2.5rem">send</i></button>
+              <button class="waves-effect waves-light btn-large" type="submit" name="transBtn" style="width: 70%; font-size: 30px" >TRANSFER<i class="material-icons right" style="font-size:2.5rem">send</i></button>
             </div>
           </div>
         </div>
