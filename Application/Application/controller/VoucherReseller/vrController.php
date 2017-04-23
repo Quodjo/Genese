@@ -13,6 +13,27 @@ if(isset($_POST['idEnter'])){
 
 
 function proceedTransAmt(){
+
+	$idNumber = $_POST['idNumber'];
+	$firstname = $_POST['firstname'];
+	$lastname = $_POST['lastname'];
+
+$sql = "SELECT (firstname, lastname) FROM user WHERE user_id = '?";
+
+$vModel = new VoucherReseller;
+	 
+	  $params = array($idNumber);
+
+	  $exec = $vModel->getUserDetails($sql, "i", $params);
+
+	  if($exec){
+		    echo '<p>User Added.</p>';
+	  }
+	  else{
+		    echo '<p>User Not Added.</p>';
+	  }
+}
+	/*$idNumber= $_POST['idNumber'];
 	$Outcome=array('$idNumber');
 	$sql = "SELECT * user(firstname, lastname) VALUES(?,?)";
 
@@ -22,6 +43,6 @@ function proceedTransAmt(){
 	// execute query
 	$dbexec= $proceedTransAmt->getUserDetails($sql, $Outcome);
 	var_dump($dbexec);
-}
+}*/
 
 ?>
