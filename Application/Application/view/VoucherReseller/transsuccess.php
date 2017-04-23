@@ -36,15 +36,7 @@
       <div class="card-content ">
         <form id ="indexPage" method="POST" action="">
          <div class="row">
-           <div class="input-field col s12">
-             <div style="text-align: center;">
-               <h2 style="font-size: 4rem; color: #be1e2d;"><strong>GHS500</strong><h4 style="padding-left: 0.15em;">transfered to</h4></h2>
-             </div>
-             <div class="input-field col s12">
-               <h3 class = "center" style="margin-top: 0%; color: #000000;">JOHN DOE</h3>
-               <h5 class = "center" style="margin-top: -5%; color: #000000;">ID : 87562018</h5>
-             </div>
-           </div>
+           <?php transSuccessDetails(); ?>
          </div>
        </div>
      </form>

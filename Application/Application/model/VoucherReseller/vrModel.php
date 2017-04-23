@@ -20,12 +20,26 @@ class VoucherReseller extends dbconnection {
     }
   }
 
-  function updateAmount(){
+  function updateAmount($sql, $paramTypes, $params){
+    $exec = $this->preparedSqlStatement($sql, $paramTypes, $params);
 
+    if($exec){
+      return true;
+    }
+    else{
+      return false;
+    }
   }
 
-  function getTransactions(){
+  function getTransFetch($sqlOldBal){
+    $result = $this->query($sqlOldBal);
+    $bal = "0";
+    if($result)
+    {
+    $bal = $this->fetch();
 
+      return $bal;
+    }
   }
 }
 ?>

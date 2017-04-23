@@ -24,7 +24,7 @@ if(isset($_POST['proceedBTN'])){
 function proceedToTrans(){
   $idNumber = $_POST['idNumber'];
 
-  $sql = "SELECT firstname, lastname FROM user WHERE idNumber = ?";
+  $sql = "SELECT user_id, firstname, lastname FROM user WHERE idNumber = ?";
 
   $vrModel = new VoucherReseller;
   $params = array($idNumber);
@@ -33,8 +33,9 @@ function proceedToTrans(){
 
   if(!empty($data)){
     session_start();
-    $_SESSION['transName'] = $data[0][0].' '.$data[0][1];
+    $_SESSION['transName'] = $data[0][1].' '.$data[0][2];
     $_SESSION['transID'] = $idNumber;
+    $_SESSION['userIDTrans'] = $data[0][0];
 
     header('Location: '.BASEURL.'view/VoucherReseller/transamount.php');
   }
@@ -66,20 +67,41 @@ function amt(){
 }
 
 function verifyTrans(){
-  $sql = "INSERT INTO user(firstname, lastname, idNumber, email, password, status, role_id)".
-  "VALUES(?, ?, ?, ?, ?,'active','6')";
+  session_start();
+  $vr = new VoucherReseller;
 
-  $signUpModel = new SignUp;
-  $params = array($firstname, $lastname, $idNumber, $email, $password);
+  $vendorID = 1;
+  $userID = $_SESSION['transID'];
+  $oldBal = "";
 
-  $exec = $signUpModel->signUpUser($sql, "ssiss", $params);
 
-  if($exec){
+  $sqlOldBal = "SELECT balance FROM foodPay WHERE user_id = '$userID'";
+  $data = $vr->getTransFetch($sqlOldBal);
+  var_dump($data);
+  if(!empty($data)){
+    $oldBal = $data;
+  }
+
+  $amt = $_SESSION['transAmt'];
+  $newBal = $oldBal + $amt;
+
+  $sqlRT = "INSERT INTO resellertransaction(vendor_id, user_id, old_balance, new_balance, amount)".
+  "VALUES(?, ?, ?, ?, ?)";
+
+  $paramsRT = array($vendorID, $userID, $oldBal, $newBal, $amt);
+  $execRT = $vr->updateAmount($sqlRT, "iiddd", $paramsRT);
+
+  $sqlFoodPay = "INSERT INTO foodPay(balance)".
+  "VALUES(?) WHERE user_id = ?";
+
+  $paramFP = array($newBal, $userID);
+  $execFP = $vr->updateAmount($sqlFoodPay, "di", $paramFP);
+
+  if($execRT && $execFP){
     header('Location: '.BASEURL.'view/VoucherReseller/transsuccess.php');
-    echo '<p>User Added.</p>';
   }
   else{
-    echo '<p>User Not Added.</p>';
+
   }
 }
 

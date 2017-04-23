@@ -71,7 +71,7 @@ class dbconnection
   *database fetch method
   *@return true or false
   */
-  function fetch()
+  public function fetch()
   {
     return mysqli_fetch_assoc($this->dboutcomes);
   }
