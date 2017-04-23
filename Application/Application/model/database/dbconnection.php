@@ -1,7 +1,9 @@
 <?php
-/*
-*Database connection class
-*/
+/**
+*@author Benedict Quartey
+*@author Kojo Nyamekye Anyinam-Boateng
+*@version 0.0.0.1
+**/
 
 /*
 *include database credentials file
