@@ -38,7 +38,7 @@
              <?php transDetails(); ?>
            </div>
            <div class="input-field col s12">
-             <input id="id_transAmt" name="transAmt" type="text" class="validate" placeholder="Amount" >
+             <input id="id_transAmt" name="transAmt" type="text" class="validate" placeholder="Amount" required>
            </div>
            <div class="center">
             <div class="input-field col s12">
