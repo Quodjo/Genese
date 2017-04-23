@@ -48,8 +48,7 @@
            <?php verifytransDetails(); ?>
          </div>
        </div>
-       <a href = "transsuccess.php" class="btn-floating btn-large halfway-fab " type="submit" name="action" style="width: 35%; font-size: 30px">PROCEED
-       </a>
+       <button class="btn-floating btn-large halfway-fab " type="submit" name="proceedBTN" style="width: 35%; font-size: 30px">PROCEED</button>
      </form>
    </div>
  </div>
