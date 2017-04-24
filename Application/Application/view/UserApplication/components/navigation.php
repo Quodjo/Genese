@@ -24,7 +24,7 @@
                         <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
                         <li>
                             <div class="chip profile">
-                                <img src="http://doubledutch.me/wp-content/uploads/teammembers/placeholder-user-photo.png" alt="Contact Person"> Ron +
+                                <img src="http://doubledutch.me/wp-content/uploads/teammembers/placeholder-user-photo.png" alt="Contact Person"><span id = 'username'> Ron +</span>
                             </div>
 
                             <!--  <div class="profileInfo">

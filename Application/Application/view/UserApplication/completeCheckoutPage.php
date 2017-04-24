@@ -11,7 +11,7 @@ require_once dirname(__FILE__).'/components/navigation.php';
                         <div class='checkImg'>
                             <p class=''><i class="fa fa-check-circle icon" aria-hidden="true"></i></p>
                         </div>
-                        <h5>Username</h5>
+                        <h5 id = "checkoutUsername">Username</h5>
                         <h4>Your order was successful.</h4>
                         <div class="row payBtns">
                             <div class="container  checkBtns">

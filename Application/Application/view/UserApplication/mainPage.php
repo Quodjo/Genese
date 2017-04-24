@@ -92,7 +92,7 @@ require_once dirname(__FILE__).'/components/categories.php';
                         <div class="valign-wrapper">
                             <div class="container">
                                 <!--Food row-->
-                                <div class="row foodRow">
+                                <div class="row foodRow" id = "foodBoard">
                                     <!--Meal card-->
                                     <?php 
 require_once dirname(__FILE__).'/components/mealCard.php';

@@ -161,7 +161,6 @@ body {
     right: 0;
     width: 100vw;
     margin: 0;
-    overflow-x: hidden;
     transition: top 1s ease-in-out;
 }
 

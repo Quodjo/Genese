@@ -467,3 +467,13 @@ nav {
 #paymentPage .billingDeets .deetsExpand, #paymentPage .billingText .deetsExpand, #paymentPage .paymentMethod .deetsExpand {
   margin-top: 5rem;
 }
+
+/* line 356, ../GeneseSass/sass/genese.scss */
+#orderedItems .orderedItem, #orderedItems .orderedItem img {
+  border-radius: 0px;
+}
+
+/* line 366, ../GeneseSass/sass/genese.scss */
+.mContent *, .mainVW * {
+  position: static;
+}

@@ -15,7 +15,7 @@ $itemDescription = 'A short description of the food item.';
 $mealCard = [
 'itemType' => 'Meal',
 'itemName' => 'Jollof',
-'itemPrice' => 40,
+'itemPrice' => 50,
 'itemQuantity' => 200,
 'itemCategories' => ['fullPID' => 'Full Portion', 'halfPID' => 'Half Portion'],
 'itemDescription' => 'A short description of the food item.'
@@ -23,7 +23,6 @@ $mealCard = [
 
 //end of test data
 
-prepareMealBoard($mealCard);
 
 //Sets the sub categories for the meal item
 function setSubCategory($arr){
@@ -91,3 +90,25 @@ function bindFoodData($mealData){
 
 
 ?>
+
+<!--<div class='card mealCard medium col m3 s12' data-itemType =''>
+    <div class='card-image waves-effect waves-block waves-light'>
+        <img class='activator' src='http://www.landingsumo.com/demos/Theme%2009/assets/img/food/2.png'>
+    </div>
+    <div class='card-content'>
+        <span class='card-title activator grey-text text-darken-4'>" . $mealData['itemName'] . "<i class='material-icons right'>more_vert</i></span>
+        <p>GHC" . $mealData['itemPrice'] . "</p>
+    </div>
+    <div class='card-reveal'>
+        <span class='card-title grey-text text-darken-4'>" . $mealData['itemName'] . "<i class='material-icons right'>close</i></span>
+        <p>" . $mealData['itemDescription']  . "</p>
+        <form action='#'>".
+	            setSubCategory($mealData['itemCategories'])
+	        ."</form>
+        <h3>GHC". $mealData['itemPrice'] ."</h3>
+        <a class='waves-effect waves-light btn addCartBtn' href = '" .$modalLink . "'>
+            <i class='fa fa-cart-plus' aria-hidden='true'></i>
+            <span> Add to Cart</span>
+        </a>
+    </div>
+</div>-->
