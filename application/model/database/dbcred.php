@@ -1,8 +1,8 @@
 <?php
 
 //defining the constants
-define('SERVER','localhost');
-define('USERNAME','root');
-define('PASSWORD','');
+define('SERVER','35.166.18.143');
+define('USERNAME','selasi.gborglah');
+define('PASSWORD','selasi.gborglah');
 define('DBNAME','G2018');
  ?>

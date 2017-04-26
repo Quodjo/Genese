@@ -1,4 +1,3 @@
-
 RewriteEngine On
 ErrorDocument 404 http://localhost/genese/application/view/404.php
 ErrorDocument 500 http://localhost/genese/application/view/404.php
