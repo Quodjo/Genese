@@ -1,3 +1,3 @@
 <?php
-define("BASEURL", "http://localhost:90/Gen2.0/genese/application/application/")
+define("BASEURL", $_SERVER['DOCUMENT_ROOT']."/Genese/application/");
 ?>
