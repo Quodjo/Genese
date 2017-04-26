@@ -59,7 +59,7 @@
 					<a href="#forgotPasswordModal" style="font-size: 12px" >Forgot Password?</a>
 				</div>
 				<div class="col s6 right-align text-p">
-					<a href="sign_up.php" style="font-size: 12px">Sign Up!</a>
+					<a href="../SignUp/sign_up.php" style="font-size: 12px">Sign Up!</a>
 				</div>
 
 			</div>

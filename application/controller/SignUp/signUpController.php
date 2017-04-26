@@ -3,8 +3,8 @@
 *@author Kojo Nyamekye Anyinam-Boateng
 *@version 0.0.0.1
 **/
-
-require_once(dirname(__FILE__).'/../../model/SignUp/signUpModel.php');
+require_once('../../init.php');
+require_once(BASEURL.'model/SignUp/signUpModel.php');
 
 if(isset($_POST['signup'])){
   validRegister();
@@ -70,19 +70,23 @@ function registerNewUser(){
   //Hashing password
   $password = password_hash($password, PASSWORD_DEFAULT);
   //Preparing Sql Statement
-  $sql = "INSERT INTO user(firstname, lastname, idNumber, email, password, status, role_id)".
-        "VALUES(?, ?, ?, ?, ?,'active','6')";
-
   $signUpModel = new SignUp;
-  $params = array($firstname, $lastname, $idNumber, $email, $password);
 
-  $exec = $signUpModel->signUpUser($sql, "ssiss", $params);
+  // $sql = "INSERT INTO user(firstname, lastname, idNumber, email, password, status, role_id)".
+  //       "VALUES(?, ?, ?, ?, ?,'active','6')";
+  // $params = array($firstname, $lastname, $idNumber, $email, $password);
+  // $exec = $signUpModel->signUpUser($sql, "ssiss", $params);
+
+  $sql = "INSERT INTO user(firstname, lastname, idNumber, email, password, status, role_id) VALUES('$firstname', '$lastname', '$idNumber', '$email', '$password', 'active','6')";
+  $exec = $signUpModel->insertUser($sql);
 
   if($exec){
-    echo '<p>User Added.</p>';
+    header('Location: '.BASE.'view/LogIn/');
   }
   else{
-    echo '<p>User Not Added.</p>';
+    echo "<script type=\"text/javascript\">";
+    echo "alert(\"User Not Added\")";
+    echo "</script>";
   }
 }
 
