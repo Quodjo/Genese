@@ -1,0 +1,66 @@
+* {
+    @include default-pad-and-marg();
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+}
+
+body {
+    @include set-background-color($default-color);
+}
+
+%bloodRed-grad {
+    background: #f85032;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #e73827, #f85032);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #e73827, #f85032);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+%shrimpy {
+    background: #e43a15;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #e65245, #e43a15);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #e65245, #e43a15);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+%buttonEffect {
+    cursor: pointer;
+    transition: transform 0.4s ease-in-out;
+    &:hover {
+        @include transform(scale(1.2));
+        color: $tomato;
+    }
+}
+
+%vMiddle {
+    display: block;
+    margin: 0 auto;
+}
+
+%buttons {
+    a {
+        display: inline-block;
+        @include border-radius(50px);
+        @include set-background-color($lawngreen);
+        &:hover {
+            @include set-ghost-btn($lawngreen);
+        }
+    }
+    .backToShop {
+        @include set-background-color($tomato);
+        &:hover {
+            @include set-ghost-btn($tomato);
+        }
+    }
+    .payBtns {
+        display: inline-block;
+    }
+    .checkBtns {
+        @extend .payBtns;
+    }
+}

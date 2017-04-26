@@ -1,0 +1,373 @@
+        @import "compass";
+        @import "partials/variables";
+        @import "partials/normalize";
+        @import "partials/mixins";
+        @import "partials/layout";
+        @import "partials/base";
+        @import "compass/css3";
+        @import "compass/css3/transform";
+        .fullpage {
+            overflow: hidden;
+            width: $full-width;
+            height: $full-height;
+            @include set-background-color($default-color);
+        }
+        
+        $backgURL: 'https://static.pexels.com/photos/83802/tomato-83802.jpeg';
+        .doneCheck {
+            @include set-background-fit($backgURL);
+        }
+        
+        .gNav {
+            $tColor: white;
+            color: $tColor;
+            padding: 0 2rem;
+            .brand-logo {
+                @include set-width-height($navHeight, $navHeight);
+                img {
+                    @include set-width-height(auto, inherit);
+                }
+            }
+            @include set-background-color(transparent);
+            @include box-shadow(none);
+            #searchKey {
+                border-bottom: 1px solid $tColor;
+            }
+            a {
+                color: $tColor;
+            }
+            .foodNav {
+                li {
+                    margin: 0 1rem;
+                }
+            }
+        }
+        
+        .oDeets {
+            @extend %shrimpy;
+            a {
+                color: white;
+            }
+        }
+        
+        .pDeets {
+            @extend .oDeets;
+        }
+        
+        $leftInfoSect-width: $full-width/3;
+        .leftInfoSect {
+            @extend .fullpage;
+            @include set-width($leftInfoSect-width);
+            @include set-background-color(white);
+            float: left;
+            @include box-shadow(-4px 0px 12px 0px rgba(50, 50, 50, 0.27))
+        }
+        
+        .rightFunctionSect {
+            @extend .leftInfoSect;
+            @include set-width($leftInfoSect-width*2);
+            //@include set-background-color($beige);
+            @include set-background-fit('https://static.pexels.com/photos/269252/pexels-photo-269252.jpeg');
+        }
+        
+        .center {
+            @include display-flex();
+            @include justify-content(center);
+            @include align-items(center);
+        }
+        
+        .vcenter {
+            @extend .center;
+            @include justify-content(space-between);
+        }
+        
+        nav {
+            @include set-absolute-width-height($full-width, $navHeight);
+            @include set-background-color(black);
+            z-index: 1;
+        }
+        
+        $infoWidth: 80%;
+        $infoHeight: 90%;
+        .info {
+            @include set-width($infoWidth);
+            @include set-height($infoHeight);
+            padding-top: 6rem;
+            //@include set-background-color($beige);
+            .text {
+                width: 100%;
+                height: $infoHeight - 10%;
+                //@include set-background-color(blue);
+            }
+            .buttons {
+                height: 18%;
+                @extend .center;
+                //  @include set-background-color(pink);
+            }
+            .checkBtns {
+                @include set-width($full-width);
+                a {
+                    @include border-radius(50px);
+                }
+                .proceed {
+                    @include set-background-color($lawngreen);
+                    &:hover {
+                        @include set-ghost-btn($lawngreen);
+                    }
+                }
+                .backToShop {
+                    @include set-background-color($tomato);
+                    &:hover {
+                        @include set-ghost-btn($tomato);
+                    }
+                }
+            }
+        }
+        
+        .function {
+            @include set-width($full-width);
+            @include set-height(100%);
+            // @include gradient-background(#232526, #414345);
+            margin: 0 auto;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+        
+        .progressBar {
+            @include set-absolute-width-height(100%, $navHeight);
+            @include set-background-color(black);
+            z-index: 1;
+            top: $navHeight;
+            left: 0;
+            color: white;
+            .complete {
+                color: $limegreen;
+            }
+            .incomplete {
+                color: $default-color;
+            }
+        }
+        
+        .orderDetails {
+            text-align: center;
+            padding: 0 2rem;
+            .container {
+                width: 100% !important;
+            }
+            nav {
+                margin-top: $navHeight;
+                position: fixed;
+                left: 0;
+                @include set-background-color(white);
+                color: $tomato;
+                @include set-width($leftInfoSect-width*2);
+                text-align: center !important;
+                .complete {
+                    color: $limegreen;
+                }
+                .incomplete {
+                    color: $default-color;
+                }
+            }
+            .itemQ {
+                margin-top: 2rem;
+            }
+            .itemBarHold {
+                padding-top: 7rem;
+                .totalCol {
+                    text-align: right;
+                }
+                .increaseQty {
+                    @extend %buttonEffect;
+                }
+                .decreaseQty {
+                    @extend %buttonEffect;
+                }
+                .deleteItem {
+                    @extend %buttonEffect;
+                    &:hover {
+                        color: red;
+                    }
+                }
+            }
+            $itemBarHeight:$full-height/5;
+            .itemBar {
+                @include set-height($itemBarHeight);
+                @extend .vcenter;
+                .item {
+                    height: 100%;
+                }
+            }
+            %itemFix {
+                float: left;
+            }
+            .itemHold {
+                @include set-height($itemBarHeight);
+                @include default-pad-and-marg();
+                .itemImage {
+                    height: inherit;
+                    @extend %itemFix;
+                    @include set-width($itemBarHeight);
+                    img {
+                        width: inherit;
+                        height: inherit;
+                    }
+                }
+                .itemDesc {
+                    @extend %itemFix;
+                    margin-left: 2rem;
+                }
+            }
+            .checkNav {
+                a {
+                    color: gray;
+                }
+            }
+        }
+        
+        .billingDeets {
+            position: absolute;
+            @include set-absolute-width-height($half-width, $full-height - ($full-height/5));
+            //@include set-background-color(brown);
+            right: -2rem;
+        }
+        
+        .billingText {
+            @extend .billingDeets;
+            right: 0;
+            left: 0;
+            top: $navHeight * 4;
+            @include set-background-color(white);
+            height: auto !important;
+            $iconSize: 200%;
+            i {
+                font-size: $iconSize;
+                color: darken($tomato, 20);
+                transition: transform 0.2s ease-in-out;
+                &:hover {
+                    //font-size: $iconSize + $iconSize/2;
+                    @include transform(scale(1.2));
+                    cursor: pointer;
+                }
+            }
+        }
+        
+        .paymentMethod {
+            @extend .billingText;
+            position: relative;
+            top: auto;
+            left: auto;
+            right: auto;
+            @include set-width-height($full-width, auto);
+            .options {
+                @include set-absolute-width-height($full-width, auto);
+            }
+            i {
+                color: gray;
+                &:hover {
+                    color: darken($tomato, 20);
+                }
+            }
+        }
+        
+        #paymentModal {
+            @include set-width($full-width/4);
+        }
+        
+        .payPlan {
+            @include set-width($full-width);
+            margin: 0 auto !important;
+            padding-top: 4rem !important;
+            @extend %buttons;
+        }
+        
+        .checkContent {
+            @include set-width-height($full-width, $full-height);
+            //  padding-top: $navHeight;
+            .mainWrap {
+                @include set-width-height($full-width, 100%);
+                .checkImg {
+                    @include set-width-height($dimension, auto);
+                    @extend %vMiddle;
+                }
+            }
+        }
+        
+        .checkImg {
+            .icon {
+                font-size: $dimension;
+                color: $lawngreen;
+            }
+        }
+        
+        .wrap {
+            @extend %buttons;
+            .payBtns {
+                @include set-width(100vw);
+            }
+        }
+        
+        #receipt {
+            @include set-height($full-height);
+            @include set-width($full-width/3);
+            text-align: left;
+            .logoHolder {
+                @include set-width-height($dimension/2, $dimension/2);
+                @extend %vMiddle;
+            }
+            .container {
+                @include set-width($full-width);
+            }
+            .headers {
+                color: tomato;
+                font-weight: bold;
+                margin: 0 !important;
+            }
+            .price {
+                text-align: right;
+            }
+            .quant {
+                text-align: center;
+            }
+            .date {
+                @extend .price;
+            }
+        }
+        
+        #orderDetailsOverview {
+            .gNav {
+                @include gradient-background(#f85032, #e73827, left);
+                a {
+                    color: white;
+                }
+            }
+        }
+        
+        #paymentPage {
+            @extend #orderDetailsOverview;
+            .billingDeets {
+                .deetsExpand {
+                    margin-top: 5rem;
+                }
+            }
+        }
+        
+        #orderedItems {
+            .orderedItem {
+                //@include box-shadow(0px 0px 5px 0px rgba(50, 50, 50, 0.27));
+                border-radius: 0px;
+                img {
+                    @extend .orderedItem;
+                }
+            }
+        }
+        
+        .mContent {
+            * {
+                position: static;
+            }
+        }
+        
+        .mainVW {
+            @extend .mContent;
+        }
