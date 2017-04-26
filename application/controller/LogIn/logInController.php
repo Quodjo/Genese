@@ -69,11 +69,11 @@ function login(){
       } else if($_SESSION['perID']=="6"){
         header('Location: '.BASE.'view/UserApplication/mainPage.php');
       }
-      //  echo $data[0][2];
-      echo '<p>login</p>';
   }
   else{
-    echo '<p>Not Login</p>';
+    echo "<script type=\"text/javascript\">";
+    echo "alert(\"User Not Logged In\")";
+    echo "</script>";
   }
 }
 ?>

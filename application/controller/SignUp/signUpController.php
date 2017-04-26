@@ -72,13 +72,10 @@ function registerNewUser(){
   //Preparing Sql Statement
   $signUpModel = new SignUp;
 
-  // $sql = "INSERT INTO user(firstname, lastname, idNumber, email, password, status, role_id)".
-  //       "VALUES(?, ?, ?, ?, ?,'active','6')";
-  // $params = array($firstname, $lastname, $idNumber, $email, $password);
-  // $exec = $signUpModel->signUpUser($sql, "ssiss", $params);
-
-  $sql = "INSERT INTO user(firstname, lastname, idNumber, email, password, status, role_id) VALUES('$firstname', '$lastname', '$idNumber', '$email', '$password', 'active','6')";
-  $exec = $signUpModel->insertUser($sql);
+  $sql = "INSERT INTO user(firstname, lastname, idNumber, email, password, status, role_id)".
+        "VALUES(?, ?, ?, ?, ?,'active','6')";
+  $params = array($firstname, $lastname, $idNumber, $email, $password);
+  $exec = $signUpModel->signUpUser($sql, "ssiss", $params);
 
   if($exec){
     header('Location: '.BASE.'view/LogIn/');

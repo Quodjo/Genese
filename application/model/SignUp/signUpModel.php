@@ -31,15 +31,5 @@ class SignUp extends dbconnection {
     // header('Location: ../index.php');
 
   }
-
-  function insertUser($sql){
-    if($this->query($sql)){
-
-      return true;
-    }else {
-
-      return false;
-    }
-  }
 }
 ?>
