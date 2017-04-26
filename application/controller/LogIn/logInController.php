@@ -3,7 +3,7 @@
 *@author Kojo Nyamekye Anyinam-Boateng
 *@version 0.0.0.1
 **/
-//require_once(dirname(__FILE__).'/../../init.php');
+require_once('../../init.php');
 require_once(BASEURL.'model/LogIn/logInModel.php');
 
 if(isset($_POST['login'])){
@@ -61,13 +61,13 @@ function login(){
       } else if($_SESSION['perID']=="2"){
 
       } else if($_SESSION['perID']=="3"){
-        header('Location: '.BASEURL.'view/Vendor%20Client/vendor.php');
+        header('Location: '.BASE.'view/Vendor%20Client/vendor.php');
       } else if($_SESSION['perID']=="4"){
-        header('Location: '.BASEURL.'view/VoucherReseller/hompage.php');
+        header('Location: '.BASE.'view/VoucherReseller/hompage.php');
       } else if($_SESSION['perID']=="5"){
 
       } else if($_SESSION['perID']=="6"){
-        header('Location: '.BASEURL.'view/UserApplication/mainPage.php');
+        header('Location: '.BASE.'view/UserApplication/mainPage.php');
       }
       //  echo $data[0][2];
       echo '<p>login</p>';

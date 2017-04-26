@@ -5,9 +5,10 @@
 *@version 0.0.0.1
 **/
 
-require_once(dirname(__FILE__).'/../../model/VoucherReseller/vrModel.php');
-require_once(dirname(__FILE__).'/../../init.php');
+require_once('../../init.php');
+require_once(BASEURL.'model/VoucherReseller/vrModel.php');
 
+session_start();
 
 if(isset($_POST['idEnter'])){
   proceedToTrans();
@@ -32,14 +33,12 @@ function proceedToTrans(){
   $data = $vrModel->getUserDetails($sql, "i", $params);
 
   if(!empty($data)){
-
-    session_start();
     $_SESSION['transName'] = $data[0][1].' '.$data[0][2];
     $_SESSION['transID'] = $idNumber;
     $_SESSION['userIDTrans'] = $data[0][0];
 
 
-    header('Location: '.BASEURL.'view/VoucherReseller/transamount.php');
+    header('Location: '.BASE.'view/VoucherReseller/transamount.php');
   }
   else{
 
@@ -47,7 +46,6 @@ function proceedToTrans(){
 }
 
 function transDetails(){
-  session_start();
   echo "<h3 class=\"center\" id=\"transName\"><strong>".$_SESSION['transName']."</strong></h3>";
   echo "<h5 class=\"center\" style=\"margin-top: -5%;\" id=\"transID\">".$_SESSION['transID']."</h5>";
 }
@@ -58,21 +56,18 @@ function verifytransDetails(){
 }
 
 function transAmt(){
-  session_start();
   $_SESSION['transAmt'] = $_POST['transAmt'];
-  header('Location: '.BASEURL.'view/VoucherReseller/verifytrans.php');
+  header('Location: '.BASE.'view/VoucherReseller/verifytrans.php');
 }
 
 function amt(){
-  session_start();
   echo "<h1 style=\"margin-top: -6%; font-size: 6rem;\"><strong>GHS".$_SESSION['transAmt']."</strong></h1>";
 }
 
 function verifyTrans(){
-  session_start();
   $vr = new VoucherReseller;
 
-  $vendorID = 1;
+  $vendorID = $_SESSION['userID'];
   $userID = $_SESSION['userIDTrans'];
   $oldBal = "0";
 
@@ -86,8 +81,12 @@ function verifyTrans(){
   $amt = $_SESSION['transAmt'];
   $newBal = $oldBal + $amt;
 
+  // $sqlRT = "INSERT INTO resellertransaction(vendor_id, user_id, old_balance, new_balance, amount) VALUES('$vendorID', '$userID', '$oldBal', '$newBal', '$amt')";
+  // $execRT = $vr->insertQ($sqlRT);
+
+
   $sqlRT = "INSERT INTO resellertransaction(vendor_id, user_id, old_balance, new_balance, amount)".
-  "VALUES(?, ?, ?, ?, ?)";
+"VALUES($vendorID, $userID, $oldBal, $newBal, $amt)";
 
   $paramsRT = array($vendorID, $userID, $oldBal, $newBal, $amt);
   $execRT = $vr->updateAmount($sqlRT, "iiddd", $paramsRT);
@@ -97,7 +96,7 @@ function verifyTrans(){
   $execFP = $vr->insertQ($sqlFoodPay);
 
   if($execRT && $execFP){
-    header('Location: '.BASEURL.'view/VoucherReseller/transsuccess.php');
+    header('Location: '.BASE.'view/VoucherReseller/transsuccess.php');
   }
   else{
 
@@ -105,7 +104,6 @@ function verifyTrans(){
 }
 
 function transSuccessDetails() {
-  session_start();
   echo  "<div class=\"input-field col s12\">";
   echo    "<div style=\"text-align: center;\">";
   echo      "<h2 style=\"font-size: 4rem; color: #be1e2d;\"><strong>GHS".$_SESSION['transAmt']."</strong><h4 style=\"padding-left: 0.15em;\">transfered to</h4></h2>";
@@ -115,5 +113,8 @@ function transSuccessDetails() {
   echo      "<h5 class = \"center\" style=\"margin-top: -5%; color: #000000;\">".$_SESSION['transID']."</h5>";
   echo    "</div>";
   echo  "</div>";
+}
+function userName(){
+  echo "<p style=\"padding-right: 1em ;\">".$_SESSION['firstname']."</p><img class=\"circle responsive-img\" src=\"../../resources/images/admin.jpg\" style=\"width:8%; height: 8%; border:0.25rem solid #be1e2d;\">";
 }
 ?>

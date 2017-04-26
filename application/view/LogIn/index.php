@@ -15,7 +15,7 @@
 </head>
 <body>
 	<?php
-	require_once(dirname(__FILE__).'/../../init.php');
+	require_once('../../init.php');
 	require_once(BASEURL.'controller/LogIn/logInController.php');
 	?>
 
